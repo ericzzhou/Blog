@@ -1,0 +1,31 @@
+<div class="lang-switch" data-lang-switch>
+  <button type="button" data-lang="zh">中文</button>
+  <button type="button" data-lang="en">EN</button>
+</div>
+
+<script>
+  const container = document.querySelector('[data-lang-switch]');
+  const zhSection = document.getElementById('intro-zh');
+  const enSection = document.getElementById('intro-en');
+  const tagline = document.getElementById('tagline');
+
+  function switchLang(lang) {
+    if (!zhSection || !enSection || !tagline) return;
+    zhSection.style.display = lang === 'zh' ? 'block' : 'none';
+    enSection.style.display = lang === 'en' ? 'block' : 'none';
+    tagline.textContent =
+      lang === 'zh'
+        ? '电商增长技术专家 | Growth Tech Specialist'
+        : 'Growth Tech Specialist | Focused on Marketing Automation';
+  }
+
+  container?.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLButtonElement)) return;
+    const lang = target.dataset.lang;
+    if (lang === 'zh' || lang === 'en') {
+      switchLang(lang);
+    }
+  });
+</script>
+

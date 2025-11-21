@@ -1,0 +1,61 @@
+---
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
+
+type StructuredData = Record<string, unknown> | Array<Record<string, unknown>>;
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+  structuredData?: StructuredData;
+  className?: string;
+}
+
+const {
+  title = '周兆坤 | Eric Zhou',
+  description = "I'm a growth engineer passionate about data, automation, and conversion.",
+  lang = 'zh',
+  structuredData,
+  className,
+}: Props = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const siteUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://zhouzk.com').toString();
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87T0P4Y9L1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-87T0P4Y9L1');
+    </script>
+    {structuredData && (
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+    )}
+  </head>
+  <body class={className}>
+    <NavBar currentPath={currentPath} />
+    <slot />
+    <Footer />
+  </body>
+</html>
+

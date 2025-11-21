@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  lang?: string;
+}
+
+interface Props {
+  frontmatter: Frontmatter;
+  structuredData?: unknown;
+}
+
+const { frontmatter, structuredData }: Props = Astro.props;
+---
+
+<BaseLayout
+  title={`${frontmatter.title} | 周兆坤`}
+  description={frontmatter.description}
+  lang={frontmatter.lang ?? 'zh'}
+  structuredData={structuredData}
+>
+  <slot />
+</BaseLayout>
+

@@ -1,0 +1,31 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  href: string;
+  date: string;
+  readingTime?: string;
+  tags?: string[];
+};
+
+const { title, description, href, date, readingTime, tags = [] }: Props = Astro.props;
+---
+
+<a class="item-card" href={href}>
+  <h3>{title}</h3>
+  <div class="meta">
+    <span><i class="far fa-calendar"></i> {date}</span>
+    {readingTime && (
+      <span style="margin-left: 1rem;"><i class="far fa-clock"></i> {readingTime}</span>
+    )}
+  </div>
+  <p class="description">{description}</p>
+  {tags.length > 0 && (
+    <div class="tags">
+      {tags.map((tag) => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+  )}
+</a>
+

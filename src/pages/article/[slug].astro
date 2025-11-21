@@ -1,0 +1,63 @@
+---
+import { getCollection, getEntryBySlug } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug('articles', slug);
+
+if (!entry) {
+  throw new Error(`Article not found for slug: ${slug}`);
+}
+
+const { Content } = await entry.render();
+const { data } = entry;
+const pageUrl = new URL(`/article/${entry.slug}/`, Astro.site ?? 'https://zhouzk.com').toString();
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: data.title,
+    description: data.description,
+    author: { '@type': 'Person', name: 'Eric Zhou' },
+    datePublished: data.date.toISOString(),
+    publisher: { '@type': 'Person', name: 'Eric Zhou' },
+    url: pageUrl,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zhouzk.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://zhouzk.com/article/' },
+      { '@type': 'ListItem', position: 3, name: data.title, item: pageUrl },
+    ],
+  },
+  data.faq
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: data.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null,
+].filter(Boolean);
+---
+
+<ArticleLayout frontmatter={data} structuredData={structuredData}>
+  <Content />
+</ArticleLayout>
+

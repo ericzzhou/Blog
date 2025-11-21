@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '../../components/ArticleCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = (await getCollection('articles')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('zh-CN', { dateStyle: 'medium' }).format(date);
+---
+
+<BaseLayout
+  title="文章 | 周兆坤"
+  description="周兆坤的文章和心得分享，涵盖营销自动化、用户增长、数据分析等技术实践与思考。"
+  lang="zh"
+>
+  <div class="container">
+    <div class="page-header">
+      <h1>文章</h1>
+      <p>技术实践、营销思考与工作心得</p>
+    </div>
+
+    {articles.length > 0 ? (
+      <div class="grid">
+        {articles.map((article) => (
+          <ArticleCard
+            href={`/article/${article.slug}/`}
+            title={article.data.title}
+            description={article.data.description}
+            date={formatDate(article.data.date)}
+            readingTime={article.data.readingTime}
+            tags={article.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <p>暂无文章</p>
+        <p>更多内容即将发布...</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>
+

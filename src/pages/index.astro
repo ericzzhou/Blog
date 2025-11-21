@@ -1,0 +1,262 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '../components/ArticleCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+
+const articles = (await getCollection('articles')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const latestArticles = articles.slice(0, 3);
+
+const formatDate = (date: Date) => date.toISOString().split('T')[0];
+---
+
+<BaseLayout
+  title="周兆坤 | Eric Zhou ` | Growth Tech Specialist at Yami"
+  description="电商增长技术专家，专注于营销自动化、用户增长与数据驱动营销。"
+  lang="zh"
+>
+  <style is:global>
+    * {
+      box-sizing: border-box;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #f9fafb;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .description {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .lang-switch {
+      margin-top: 1rem;
+    }
+    .lang-switch button {
+      margin: 0 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      background-color: #e5e7eb;
+      color: #333;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .social-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1.5rem;
+    }
+    .social-links a {
+      color: #1a1a1a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #2563eb;
+    }
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .section-title {
+      font-size: 1.75rem;
+      margin: 2rem 0 1.5rem 0;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .section-title a {
+      font-size: 1rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .section-title a:hover {
+      text-decoration: underline;
+    }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .preview-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .preview-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .preview-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+      font-size: 1.25rem;
+    }
+    .preview-card .meta {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .preview-card .description {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .skills-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: #f9fafb;
+      border-radius: 8px;
+    }
+    .skills-title {
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      text-align: center;
+      color: #1a1a1a;
+    }
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .skill-tag {
+      background-color: white;
+      color: #555;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      .description {
+        padding: 0 1rem;
+      }
+      .main-content {
+        padding: 2rem 1rem;
+      }
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <header>
+    <h1>周兆坤 | Eric Zhou</h1>
+    <h2 id="tagline">电商增长技术专家 | Growth Tech Specialist</h2>
+    <div class="description" id="intro-zh">
+      <p>
+        你好，我是周兆坤，目前在 Yami（北美电商）担任增长团队技术专家，专注于用户增长、营销自动化系统、用户生命周期管理、数据驱动营销等方向。
+      </p>
+      <p>
+        我正在建设属于自己的技术与营销知识体系，并积极向营销策略方向转型，目标是成为懂技术的营销负责人。
+      </p>
+    </div>
+    <div class="description" id="intro-en" style="display: none;">
+      <p>
+        Hi, I'm Eric Zhou. I'm a Growth Tech Specialist at Yami (US eCommerce),
+        focusing on user acquisition, marketing automation, lifecycle campaigns,
+        and data-driven growth.
+      </p>
+      <p>
+        I'm currently building my own marketing-tech skill stack, transitioning
+        from an engineering role toward strategic growth and marketing
+        leadership.
+      </p>
+    </div>
+    <LanguageSwitcher />
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/eric-z-zhou" target="_blank" rel="noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:eric.z.zhou@outlook.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://zhouzk.com" target="_blank" rel="noreferrer">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section>
+      <h2 class="section-title">
+        <span>最新文章</span>
+        <a href="/article/">查看全部 <i class="fas fa-arrow-right"></i></a>
+      </h2>
+      <div class="preview-grid">
+        {latestArticles.length > 0 ? (
+          latestArticles.map((article) => (
+            <ArticleCard
+              href={`/article/${article.slug}/`}
+              title={article.data.title}
+              description={article.data.description}
+              date={formatDate(article.data.date)}
+              readingTime={article.data.readingTime}
+              tags={article.data.tags}
+            />
+          ))
+        ) : (
+          <div class="preview-card" style="opacity: 0.7;">
+            <h3>内容筹备中</h3>
+            <p class="description">暂无文章更新，敬请期待。</p>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <h2 class="section-title">
+        <span>精选工具</span>
+        <a href="/tools/">查看全部 <i class="fas fa-arrow-right"></i></a>
+      </h2>
+      <div class="preview-grid">
+        <div class="preview-card" style="opacity: 0.7;">
+          <h3>工具开发中</h3>
+          <p class="description">更多实用工具即将上线，敬请期待...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <h2 class="skills-title">专业技能</h2>
+      <div class="skills-tags">
+        {['营销自动化', '用户增长', '数据分析', '用户生命周期管理', '数据驱动营销', 'Python', 'SQL', 'A/B测试', '营销策略'].map(
+          (skill) => (
+            <span class="skill-tag">{skill}</span>
+          ),
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
