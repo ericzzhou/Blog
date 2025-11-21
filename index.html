@@ -18,6 +18,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     rel="stylesheet"
   />
+  <link rel="stylesheet" href="assets/css/common.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -82,6 +83,105 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #888;
+      margin-top: 4rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* 主页特定样式 */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      margin: 2rem 0 1.5rem 0;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-title a {
+      font-size: 1rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    .section-title a:hover {
+      text-decoration: underline;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .preview-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .preview-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .preview-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+      font-size: 1.25rem;
+    }
+
+    .preview-card .meta {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .preview-card .description {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .skills-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: #f9fafb;
+      border-radius: 8px;
+    }
+
+    .skills-title {
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      text-align: center;
+      color: #1a1a1a;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .skill-tag {
+      background-color: white;
+      color: #555;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width: 600px) {
@@ -94,10 +194,27 @@
       .description {
         padding: 0 1rem;
       }
+      .main-content {
+        padding: 2rem 1rem;
+      }
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">周兆坤 | Eric Zhou</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="article/index.html">文章</a></li>
+        <li><a href="tools/index.html">工具</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header>
     <h1>周兆坤 | Eric Zhou</h1>
     <h2 id="tagline">电商增长技术专家 | Growth Tech Specialist</h2>
@@ -137,6 +254,60 @@
       ></a>
     </div>
   </header>
+
+  <main class="main-content">
+    <!-- 最新文章预览 -->
+    <div>
+      <h2 class="section-title">
+        <span>最新文章</span>
+        <a href="article/index.html">查看全部 <i class="fas fa-arrow-right"></i></a>
+      </h2>
+      <div class="preview-grid">
+        <a href="article/where-to-buy-asian-sunscreens-in-the-us.html" class="preview-card">
+          <h3>Where to Buy Asian Sunscreens in the U.S. (2025)</h3>
+          <div class="meta">
+            <span><i class="far fa-calendar"></i> 2025-11-21</span>
+            <span style="margin-left: 1rem;"><i class="far fa-clock"></i> 5 分钟</span>
+          </div>
+          <p class="description">
+            Compare Yami, Amazon, YesStyle and more — learn where to buy authentic Asian sunscreens in the U.S., delivery expectations, and a practical buying checklist.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <!-- 精选工具预览 -->
+    <div style="margin-top: 3rem;">
+      <h2 class="section-title">
+        <span>精选工具</span>
+        <a href="tools/index.html">查看全部 <i class="fas fa-arrow-right"></i></a>
+      </h2>
+      <div class="preview-grid">
+        <div class="preview-card" style="opacity: 0.7;">
+          <h3>工具开发中</h3>
+          <p class="description">
+            更多实用工具即将上线，敬请期待...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 技能标签 -->
+    <div class="skills-section">
+      <h2 class="skills-title">专业技能</h2>
+      <div class="skills-tags">
+        <span class="skill-tag">营销自动化</span>
+        <span class="skill-tag">用户增长</span>
+        <span class="skill-tag">数据分析</span>
+        <span class="skill-tag">用户生命周期管理</span>
+        <span class="skill-tag">数据驱动营销</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">A/B测试</span>
+        <span class="skill-tag">营销策略</span>
+      </div>
+    </div>
+  </main>
 
   <footer>© 2025 周兆坤 | zhouzk.com</footer>
 

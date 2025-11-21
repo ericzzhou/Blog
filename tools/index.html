@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>工具 | 周兆坤 | Eric Zhou</title>
+  <meta name="description" content="周兆坤开发的工作实践工具，涵盖营销自动化、数据分析、用户增长等领域"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-87T0P4Y9L1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-87T0P4Y9L1');
+  </script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../assets/css/common.css" />
+  <style>
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tool-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool-card .icon {
+      font-size: 2.5rem;
+      color: #2563eb;
+      margin-bottom: 1rem;
+    }
+
+    .tool-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+      font-size: 1.25rem;
+    }
+
+    .tool-card .description {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .tool-card .tech-stack {
+      margin: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tool-card .tech-tag {
+      background-color: #eff6ff;
+      color: #2563eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .tool-card .links {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .tool-card .links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .tool-card .links a:hover {
+      color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="../index.html" class="logo">周兆坤 | Eric Zhou</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../article/index.html">文章</a></li>
+        <li><a href="index.html" class="active">工具</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>工具</h1>
+      <p>工作实践中开发的实用工具和系统</p>
+    </div>
+
+    <div class="tool-grid">
+      <!-- 示例工具卡片 - 可以根据实际情况添加更多 -->
+      <!-- 
+      <div class="tool-card">
+        <div class="icon"><i class="fas fa-chart-line"></i></div>
+        <h3>营销自动化工作流引擎</h3>
+        <p class="description">
+          基于事件触发的营销自动化系统，支持用户生命周期管理、个性化推荐和A/B测试。
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">PostgreSQL</span>
+        </div>
+        <div class="links">
+          <a href="#"><i class="fas fa-external-link-alt"></i> 查看详情</a>
+          <a href="#"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      -->
+    </div>
+
+    <div class="empty-state">
+      <p><i class="fas fa-tools" style="font-size: 3rem; color: #e5e7eb; margin-bottom: 1rem;"></i></p>
+      <p>工具正在开发中</p>
+      <p>更多实用工具即将上线...</p>
+    </div>
+  </div>
+
+  <footer>© 2025 周兆坤 | zhouzk.com</footer>
+</body>
+</html>
+
