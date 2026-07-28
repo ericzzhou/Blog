@@ -96,6 +96,7 @@
 
         /* ===== Hero ===== */
         .hero {
+            position: relative;
             min-height: 100vh; display: flex; flex-direction: column;
             align-items: center; justify-content: center; text-align: center;
             padding: 120px 24px 80px;
@@ -272,7 +273,100 @@
             .scene-grid { grid-template-columns: 1fr; }
             .ingr-grid { grid-template-columns: 1fr; }
         }
+
+        /* Breadcrumb Navigation */
+        .breadcrumb-nav {
+            position: absolute; top: 56px; left: 0; right: 0;
+            text-align: center; font-size: 0.75rem; color: var(--gray);
+            z-index: 1;
+        }
+        .breadcrumb-nav a {
+            color: var(--primary); text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .breadcrumb-nav a:hover { opacity: 0.7; }
+        .breadcrumb-sep { color: var(--gray); opacity: 0.5; margin: 0 4px; }
+        .breadcrumb-current { color: var(--dark); }
+
+        /* Related Products */
+        .related-section {
+            padding: 80px 24px;
+            background: var(--primary-light);
+        }
+        .related-title {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 800; text-align: center;
+            margin-bottom: 12px; letter-spacing: -0.02em;
+            color: var(--dark);
+        }
+        .related-sub {
+            font-size: 0.95rem; color: var(--gray);
+            text-align: center; margin-bottom: 40px;
+        }
+        .related-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; max-width: 960px; margin: 0 auto;
+        }
+        .related-card {
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--white); border-radius: 16px;
+            padding: 20px 24px; text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+        }
+        .related-name {
+            font-size: 0.9rem; font-weight: 600;
+            color: var(--dark); line-height: 1.3;
+        }
+        .related-arrow {
+            color: var(--primary); font-size: 1.2rem;
+            flex-shrink: 0; margin-left: 12px;
+        }
+        .related-browse {
+            text-align: center; margin-top: 32px;
+        }
+        .related-browse-link {
+            color: var(--primary); text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .related-browse-link:hover { text-decoration: underline; }
     </style>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zhouzk.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Landing Pages",
+      "item": "https://zhouzk.com/landing-pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sauces & Condiments",
+      "item": "https://zhouzk.com/landing-pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "DONGWON Tuna with Chili Sauce 5.29oz*4 Packs"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <!-- Nav -->
@@ -292,6 +386,9 @@
 
     <!-- Hero -->
     <section class="hero" aria-label="Product hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/landing-pages/">Products</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current" aria-current="page">DONGWON Tuna with Chili Sauce 5.29oz*4 Packs</span>
+        </nav>
         <p class="hero-eyebrow fade-in">Korea's #1 Canned Tuna · #2 Most Liked on Yami</p>
         <h1 class="fade-in">DONGWON Tuna with Chili Sauce, 5.29oz*4 Packs</h1>
         <p class="hero-sub fade-in">Premium deep-sea tuna meets Korea's secret spicy sauce. High protein, bold flavor, ready in seconds. The canned tuna that actually tastes amazing.</p>
@@ -451,6 +548,33 @@
     </section>
 
     <!-- Footer -->
+
+    <!-- Related Products -->
+    <section class="related-section fade-in" aria-label="Related products">
+        <h2 class="related-title">Related Products</h2>
+        <p class="related-sub">You might also like these sauces & condiments products</p>
+        <div class="related-grid">
+            <a href="./laoganma-spicy-chili-crispy-7-4oz" class="related-card fade-in">
+                <span class="related-name">LAOGANMA Spicy Chili Crispy</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./laoganma-spicy-crispy-chili-oil-210g" class="related-card fade-in">
+                <span class="related-name">LAOGANMA Spicy Crispy Chili Oil</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./kikkoman-hello-kitty-soy-sauce-5oz" class="related-card fade-in">
+                <span class="related-name">KIKKOMAN Hello Kitty Soy Sauce 5oz</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./kikkoman-hello-kitty-soy-sauce-dispenser" class="related-card fade-in">
+                <span class="related-name">KIKKOMAN Hello Kitty Soy Sauce Dispenser</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+        </div>
+        <div class="related-browse">
+            <a href="/landing-pages/" class="related-browse-link">Browse all products &rarr;</a>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2026 This page is for marketing demonstration purposes. Product details sourced from <a href="https://www.yami.com/en/p/tuna-chunks-or-slices-with-chili-sauce-vegetables-5-29-oz-per-pack-4-packs/1147045731?utm_source=zhouzk.com">Yami</a>. All trademarks belong to their respective owners.</p>
     </footer>

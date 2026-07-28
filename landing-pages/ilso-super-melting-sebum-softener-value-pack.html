@@ -100,6 +100,7 @@
         .nav-cta:hover { background: var(--primary-deep); }
 
         .hero {
+            position: relative;
             min-height: 100vh; display: flex; flex-direction: column;
             align-items: center; justify-content: center; text-align: center;
             padding: 120px 24px 80px;
@@ -262,7 +263,100 @@
             .scene-grid { grid-template-columns: 1fr; }
             .ingr-grid { grid-template-columns: 1fr; }
         }
+
+        /* Breadcrumb Navigation */
+        .breadcrumb-nav {
+            position: absolute; top: 56px; left: 0; right: 0;
+            text-align: center; font-size: 0.75rem; color: var(--gray);
+            z-index: 1;
+        }
+        .breadcrumb-nav a {
+            color: var(--primary); text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .breadcrumb-nav a:hover { opacity: 0.7; }
+        .breadcrumb-sep { color: var(--gray); opacity: 0.5; margin: 0 4px; }
+        .breadcrumb-current { color: var(--dark); }
+
+        /* Related Products */
+        .related-section {
+            padding: 80px 24px;
+            background: var(--primary-light);
+        }
+        .related-title {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 800; text-align: center;
+            margin-bottom: 12px; letter-spacing: -0.02em;
+            color: var(--dark);
+        }
+        .related-sub {
+            font-size: 0.95rem; color: var(--gray);
+            text-align: center; margin-bottom: 40px;
+        }
+        .related-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; max-width: 960px; margin: 0 auto;
+        }
+        .related-card {
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--white); border-radius: 16px;
+            padding: 20px 24px; text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+        }
+        .related-name {
+            font-size: 0.9rem; font-weight: 600;
+            color: var(--dark); line-height: 1.3;
+        }
+        .related-arrow {
+            color: var(--primary); font-size: 1.2rem;
+            flex-shrink: 0; margin-left: 12px;
+        }
+        .related-browse {
+            text-align: center; margin-top: 32px;
+        }
+        .related-browse-link {
+            color: var(--primary); text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .related-browse-link:hover { text-decoration: underline; }
     </style>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zhouzk.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Landing Pages",
+      "item": "https://zhouzk.com/landing-pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Masks & Sets",
+      "item": "https://zhouzk.com/landing-pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "ILSO Super Melting Sebum Softener + Cotton Pad + Blackhead Remover Value Pack"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <nav class="nav" aria-label="Main navigation">
@@ -281,6 +375,9 @@
 
     <!-- Hero -->
     <section class="hero" aria-label="Product hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/landing-pages/">Products</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current" aria-current="page">ILSO Super Melting Sebum Softener + Cotton Pad + Blackhead Remover Value Pack</span>
+        </nav>
         <p class="hero-eyebrow fade-in">#1 Most Liked Blemish &amp; Acne Care · Korean Pore Care</p>
         <h1 class="fade-in">ILSO Super Melting Sebum Softener Value Pack</h1>
         <p class="hero-sub fade-in">Salon-inspired pore care at home. Enzymatic sebum softener, skin wrap cotton pads, and ergonomic blackhead tool — everything you need for clean, refined pores.</p>
@@ -440,6 +537,29 @@
     </section>
 
     <!-- Footer -->
+
+    <!-- Related Products -->
+    <section class="related-section fade-in" aria-label="Related products">
+        <h2 class="related-title">Related Products</h2>
+        <p class="related-sub">You might also like these masks & sets products</p>
+        <div class="related-grid">
+            <a href="./keana-nadeshiko-pore-care-rice-mask-10pcs" class="related-card fade-in">
+                <span class="related-name">Keana Nadeshiko Pore Care Rice Mask</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./skin1004-madagascar-centella-tone-brightening-skincare-set-value-pack" class="related-card fade-in">
+                <span class="related-name">SKIN1004 Centella Tone Brightening Set</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./skin1004-madagascar-centella-travel-kit" class="related-card fade-in">
+                <span class="related-name">SKIN1004 Centella Travel Kit</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+        </div>
+        <div class="related-browse">
+            <a href="/landing-pages/" class="related-browse-link">Browse all products &rarr;</a>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2026 This page is for marketing demonstration purposes. Product details sourced from <a href="https://www.yami.com/en/p/super-melting-sebum-softener-5-07-fl-oz-skin-wrap-cotton-pad-40pads-108-40mm/1022617921?utm_source=zhouzk.com">Yami</a>. All trademarks belong to their respective owners.</p>
     </footer>

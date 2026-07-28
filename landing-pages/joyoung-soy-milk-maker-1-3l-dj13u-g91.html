@@ -90,6 +90,7 @@
         .nav-cta:hover { background: var(--primary-deep); }
 
         .hero {
+            position: relative;
             padding: 120px 24px 80px;
             background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
             text-align: center;
@@ -133,6 +134,38 @@
         }
         .cta-button:hover { background: var(--primary-deep); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(55,71,79,0.3); }
 </style>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zhouzk.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Landing Pages",
+      "item": "https://zhouzk.com/landing-pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kitchen Appliances",
+      "item": "https://zhouzk.com/landing-pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "JOYOUNG Soy Milk Maker 1.3L DJ13U-G91"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -149,6 +182,9 @@
     </nav>
 
     <section class="hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/landing-pages/">Products</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current" aria-current="page">JOYOUNG Soy Milk Maker 1.3L DJ13U-G91</span>
+        </nav>
         <span class="hero-badge">#1 Top Searched · Soy Milk Makers & Blenders</span>
         <h1>JOYOUNG Soy Milk Maker DJ13U-G91</h1>
         <p class="hero-sub">Multi-Functional Intelligent Soy Milk & Nut Milk Maker with Warming Function — 1.3L capacity for 3-4 people</p>
@@ -287,6 +323,67 @@
             .hero-price .current { font-size: 28px; }
             .hero-sub { font-size: 15px; }
         }
+
+        /* Breadcrumb Navigation */
+        .breadcrumb-nav {
+            position: absolute; top: 56px; left: 0; right: 0;
+            text-align: center; font-size: 0.75rem; color: var(--gray);
+            z-index: 1;
+        }
+        .breadcrumb-nav a {
+            color: var(--primary); text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .breadcrumb-nav a:hover { opacity: 0.7; }
+        .breadcrumb-sep { color: var(--gray); opacity: 0.5; margin: 0 4px; }
+        .breadcrumb-current { color: var(--dark); }
+
+        /* Related Products */
+        .related-section {
+            padding: 80px 24px;
+            background: var(--primary-light);
+        }
+        .related-title {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 800; text-align: center;
+            margin-bottom: 12px; letter-spacing: -0.02em;
+            color: var(--dark);
+        }
+        .related-sub {
+            font-size: 0.95rem; color: var(--gray);
+            text-align: center; margin-bottom: 40px;
+        }
+        .related-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; max-width: 960px; margin: 0 auto;
+        }
+        .related-card {
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--white); border-radius: 16px;
+            padding: 20px 24px; text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+        }
+        .related-name {
+            font-size: 0.9rem; font-weight: 600;
+            color: var(--dark); line-height: 1.3;
+        }
+        .related-arrow {
+            color: var(--primary); font-size: 1.2rem;
+            flex-shrink: 0; margin-left: 12px;
+        }
+        .related-browse {
+            text-align: center; margin-top: 32px;
+        }
+        .related-browse-link {
+            color: var(--primary); text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .related-browse-link:hover { text-decoration: underline; }
     </style>
 
     <!-- Section 3: Pain Points -->
@@ -434,6 +531,33 @@
     </section>
 
     <!-- Section 9: Footer -->
+
+    <!-- Related Products -->
+    <section class="related-section fade-in" aria-label="Related products">
+        <h2 class="related-title">Related Products</h2>
+        <p class="related-sub">You might also like these kitchen appliances products</p>
+        <div class="related-grid">
+            <a href="./joyoung-low-purine-soy-milk-machine-dj12n-k7g" class="related-card fade-in">
+                <span class="related-name">JOYOUNG Low-Purine Soy Milk Machine</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./joyoung-multi-function-wellness-kettle-k08-wy601u" class="related-card fade-in">
+                <span class="related-name">JOYOUNG Multi-Function Wellness Kettle</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./joyoung-soy-milk-maker-dj10u-k1-brown" class="related-card fade-in">
+                <span class="related-name">JOYOUNG Soy Milk Maker DJ10U-K1</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+            <a href="./olayks-kitchen-dish-sterilizer-42l" class="related-card fade-in">
+                <span class="related-name">OLAYKS Kitchen Dish Sterilizer 42L</span>
+                <span class="related-arrow">&rarr;</span>
+            </a>
+        </div>
+        <div class="related-browse">
+            <a href="/landing-pages/" class="related-browse-link">Browse all products &rarr;</a>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2026 This page is for marketing demonstration purposes. Product details sourced from <a href="https://www.yami.com/en/p/joyoung-multi-functional-intelligent-soy-milk-maker-900-1300ml-dj13u-g91/1029016121?utm_source=zhouzk.com">Yami</a>. All trademarks belong to their respective owners.</p>
     </footer>
