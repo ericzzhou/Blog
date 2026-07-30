@@ -1,9 +1,30 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 Disallow: /landing-pages/backup/
 Disallow: /landing-pages/test-simple
 Disallow: /landing-pages/kikkoman-fixed
 Disallow: /public/
 
+LLMs-txt: https://zhouzk.com/llms.txt
+
 Sitemap: https://zhouzk.com/sitemap.xml
+Sitemap: https://zhouzk.com/growth-metrics-handbook/sitemap.xml
