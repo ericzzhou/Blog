@@ -1,0 +1,14 @@
+# zhouzk.com
+
+> Personal site of Eric Zhou (周兆坤), Growth Engineer at Yami (North American e-commerce).
+> Features an e-commerce growth metrics reference handbook and Asian product buying guides.
+
+## Sections
+
+- [E-commerce Growth Metrics Handbook](https://zhouzk.com/growth-metrics-handbook/): A comprehensive Chinese-language reference covering 37 core growth metrics across acquisition, activation, conversion, revenue, retention, and customer value. Includes interactive flashcards, comparison articles, and a practice dashboard.
+- [SEO Product Landing Pages](https://zhouzk.com/landing-pages/): 100+ SEO-optimized product pages for Asian food, beauty, and home products available in the U.S. market. Each page includes structured Product schema, buying guides, and purchase links.
+- [Buying Guides](https://zhouzk.com/article/where-to-buy-asian-sunscreens-in-the-us): In-depth editorial guides for purchasing Asian products in the United States, covering authenticity verification, retailer comparison, and practical checklists.
+
+## About
+
+Eric Zhou is a growth engineer specializing in e-commerce data analytics, marketing automation, and conversion optimization at Yami. This site serves as a knowledge base and experimental playground for growth engineering practices.
