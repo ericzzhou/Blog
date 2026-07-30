@@ -440,6 +440,73 @@
       margin: 0;
     }
 
+
+.compare-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+.compare-section .section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.compare-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.compare-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.compare-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.compare-card:hover {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.compare-card .vs-badge {
+  display: inline-block;
+  background: var(--primary, #2563eb);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.compare-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.compare-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.compare-card .compare-link {
+  font-size: 0.85rem;
+  color: var(--primary, #2563eb);
+  text-decoration: none;
+  font-weight: 500;
+}
+.compare-card .compare-link:hover {
+  text-decoration: underline;
+}
+
 </style>
 
     <script type="application/ld+json">
@@ -708,6 +775,27 @@
             <div class="tip-icon">🧹</div>
             <h3>Clean After Each Use</h3>
             <p>Wipe the device head with a soft cloth after every session. Buildup affects conductivity and can harbor bacteria.</p>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Compare Section -->
+    <section class="compare-section" aria-label="Product comparison">
+        <h2 class="section-title fade-in">Alternatives to Consider</h2>
+        <p class="section-subtitle fade-in">Find out what sets it apart from the competition.</p>
+        <div class="compare-grid">
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>Medicube Age-R Booster Pro #Pink vs YAMAN SPIII RF Beauty Device</h3>
+            <p>Medicube Booster Pro uses electrical currents to enhance serum absorption. YAMAN SPIII uses RF (radio frequency) and Hertz vibration for skin tightening and lifting. Booster Pro for product absorption; SPIII for firming and lifting.</p>
+            <a href="/landing-pages/yaman-sp-iii-star-edition-hertz-rf-beauty-device" class="compare-link">View YAMAN SPIII RF Beauty Device &rarr;</a>
+        </div>
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>Medicube Age-R Booster Pro #Pink vs FUJIKO Pon Pon Powder</h3>
+            <p>Medicube is an electronic beauty device for serum absorption and skin rejuvenation. FUJIKO is a simple powder puff for oil control and volume — no electronics needed. High-tech skincare vs quick touch-up tool.</p>
+            <a href="/landing-pages/fujiko-pon-pon-powder-natural-volume-8-5g" class="compare-link">View FUJIKO Pon Pon Powder &rarr;</a>
         </div>
         </div>
     </section>

@@ -447,6 +447,73 @@
       margin: 0;
     }
 
+
+.compare-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+.compare-section .section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.compare-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.compare-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.compare-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.compare-card:hover {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.compare-card .vs-badge {
+  display: inline-block;
+  background: var(--primary, #2563eb);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.compare-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.compare-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.compare-card .compare-link {
+  font-size: 0.85rem;
+  color: var(--primary, #2563eb);
+  text-decoration: none;
+  font-weight: 500;
+}
+.compare-card .compare-link:hover {
+  text-decoration: underline;
+}
+
 </style>
 
     <script type="application/ld+json">
@@ -718,6 +785,27 @@
             <div class="tip-icon">📅</div>
             <h3>Check Expiry Dates</h3>
             <p>Sunscreen loses effectiveness after expiration. Most products are good for 12 months after opening. Write the open date on the bottle.</p>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Compare Section -->
+    <section class="compare-section" aria-label="Product comparison">
+        <h2 class="section-title fade-in">Alternatives to Consider</h2>
+        <p class="section-subtitle fade-in">See how it stacks up against similar products in its category.</p>
+        <div class="compare-grid">
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>SKIN1004 Madagascar Centella Hyalu-Cica Water... vs SKIN1004 Sun Serum (Single)</h3>
+            <p>The value pack gives you two 50ml bottles — ideal if this is your daily sunscreen. The single bottle is enough for first-time users to test the centella formula.</p>
+            <a href="/landing-pages/skin1004-madagascar-centella-hyalu-cica-sun-serum-spf50-50ml" class="compare-link">View SKIN1004 Sun Serum (Single) &rarr;</a>
+        </div>
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>SKIN1004 Madagascar Centella Hyalu-Cica Water... vs Biore UV Aqua Rich</h3>
+            <p>SKIN1004 uses centella asiatica for calming and hyaluronic acid for hydration — a serum-sunscreen hybrid. Biore focuses on pure UV protection with a lighter, more matte finish. Sensitive skin benefits more from SKIN1004.</p>
+            <a href="/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g" class="compare-link">View Biore UV Aqua Rich &rarr;</a>
         </div>
         </div>
     </section>

@@ -220,6 +220,73 @@
       margin: 0;
     }
 
+
+.compare-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+.compare-section .section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.compare-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.compare-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.compare-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.compare-card:hover {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.compare-card .vs-badge {
+  display: inline-block;
+  background: var(--primary, #2563eb);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.compare-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.compare-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.compare-card .compare-link {
+  font-size: 0.85rem;
+  color: var(--primary, #2563eb);
+  text-decoration: none;
+  font-weight: 500;
+}
+.compare-card .compare-link:hover {
+  text-decoration: underline;
+}
+
 </style>
 
     <script type="application/ld+json">
@@ -762,6 +829,27 @@
             <div class="tip-icon">💧</div>
             <h3>Less Is More</h3>
             <p>A pea-sized amount covers the full face. Over-applying serum doesn't increase benefits — it wastes product and can cause pilling.</p>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Compare Section -->
+    <section class="compare-section" aria-label="Product comparison">
+        <h2 class="section-title fade-in">Beauty of Joseon Revive Eye Serum Ginseng + R... vs the Rest</h2>
+        <p class="section-subtitle fade-in">Not sure which one to pick? Here's a quick comparison.</p>
+        <div class="compare-grid">
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>Beauty of Joseon Revive Eye Serum Ginseng + R... vs Sulwhasoo Ginseng Serum</h3>
+            <p>Beauty of Joseon offers traditional Korean ingredients at an accessible price point. Sulwhasoo is a luxury brand with premium pricing and a more refined sensory experience. Both use ginseng — Beauty of Joseon for value, Sulwhasoo for luxury.</p>
+            <a href="/landing-pages/sulwhasoo-concentrated-ginseng-renewing-serum-20g" class="compare-link">View Sulwhasoo Ginseng Serum &rarr;</a>
+        </div>
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>Beauty of Joseon Revive Eye Serum Ginseng + R... vs REJURAN Dual Effect Ampoule</h3>
+            <p>Beauty of Joseon uses ginseng and retinal for anti-aging with a focus on traditional ingredients. REJURAN uses salmon DNA (PDRN) for cellular repair — more clinical and fragrance-free. Beauty of Joseon for traditional skincare; REJURAN for science-forward.</p>
+            <a href="/landing-pages/rejuran-healer-dual-effect-ampoule-1oz" class="compare-link">View REJURAN Dual Effect Ampoule &rarr;</a>
         </div>
         </div>
     </section>

@@ -456,6 +456,73 @@
       margin: 0;
     }
 
+
+.compare-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+.compare-section .section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.compare-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.compare-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.compare-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.compare-card:hover {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.compare-card .vs-badge {
+  display: inline-block;
+  background: var(--primary, #2563eb);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.compare-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.compare-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.compare-card .compare-link {
+  font-size: 0.85rem;
+  color: var(--primary, #2563eb);
+  text-decoration: none;
+  font-weight: 500;
+}
+.compare-card .compare-link:hover {
+  text-decoration: underline;
+}
+
 </style>
 
     <script type="application/ld+json">
@@ -725,6 +792,27 @@
             <div class="tip-icon">📅</div>
             <h3>Check the Date</h3>
             <p>Artisanal sauces often have shorter shelf lives than mass-produced ones. Use within 3-6 months of opening for peak flavor.</p>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Compare Section -->
+    <section class="compare-section" aria-label="Product comparison">
+        <h2 class="section-title fade-in">How It Compares</h2>
+        <p class="section-subtitle fade-in">Find out what sets it apart from the competition.</p>
+        <div class="compare-grid">
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>DONGWON Tuna with Chili Sauce 5.29oz*4 packs vs Laoganma Spicy Chili Crispy</h3>
+            <p>Dongwon tuna is a Korean canned seafood product — protein-rich, ready to eat. Laoganma is a Chinese chili condiment — used as a flavor booster. Tuna for meals; Laoganma for seasoning.</p>
+            <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz" class="compare-link">View Laoganma Spicy Chili Crispy &rarr;</a>
+        </div>
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>DONGWON Tuna with Chili Sauce 5.29oz*4 packs vs Samyang Buldak Carbonara</h3>
+            <p>Dongwon tuna is a versatile Korean canned protein — eat straight, mix with rice, or cook. Samyang Buldak is spicy instant ramen — a complete meal. Tuna for quick protein; ramen for a satisfying spicy bowl.</p>
+            <a href="/landing-pages/samyang-buldak-carbonara-hot-chicken-flavor-ramen-5-packs" class="compare-link">View Samyang Buldak Carbonara &rarr;</a>
         </div>
         </div>
     </section>

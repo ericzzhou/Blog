@@ -446,6 +446,73 @@
       margin: 0;
     }
 
+
+.compare-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+.compare-section .section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.compare-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.compare-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.compare-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.compare-card:hover {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.compare-card .vs-badge {
+  display: inline-block;
+  background: var(--primary, #2563eb);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.compare-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.compare-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.compare-card .compare-link {
+  font-size: 0.85rem;
+  color: var(--primary, #2563eb);
+  text-decoration: none;
+  font-weight: 500;
+}
+.compare-card .compare-link:hover {
+  text-decoration: underline;
+}
+
 </style>
 
     <script type="application/ld+json">
@@ -714,6 +781,27 @@
             <div class="tip-icon">⏳</div>
             <h3>Give It 4-6 Weeks</h3>
             <p>Skin cycles take about 28 days. Most acne treatments need 4-6 weeks of consistent use before you see significant improvement.</p>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Compare Section -->
+    <section class="compare-section" aria-label="Product comparison">
+        <h2 class="section-title fade-in">Making the Right Choice</h2>
+        <p class="section-subtitle fade-in">Not sure which one to pick? Here's a quick comparison.</p>
+        <div class="compare-grid">
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>PAIR Acne Creamy Face Wash Foam 80g vs LION PAIR Acne Cream</h3>
+            <p>The Face Wash cleanses and preps skin — your first step. The Acne Cream is a leave-on treatment — apply after washing. Use together for the complete PAIR acne system.</p>
+            <a href="/landing-pages/lion-pair-acne-cream-13g-3" class="compare-link">View LION PAIR Acne Cream &rarr;</a>
+        </div>
+        <div class="compare-card">
+            <div class="vs-badge">VS</div>
+            <h3>PAIR Acne Creamy Face Wash Foam 80g vs DONGA Acnon Cream</h3>
+            <p>PAIR Face Wash is a gentle Japanese cleanser for daily acne prevention. DONGA Acnon is a Korean pharmaceutical spot treatment for active breakouts. Prevention vs treatment — use the wash daily, DONGA as needed.</p>
+            <a href="/landing-pages/donga-pharm-acnon-cream-13g" class="compare-link">View DONGA Acnon Cream &rarr;</a>
         </div>
         </div>
     </section>
