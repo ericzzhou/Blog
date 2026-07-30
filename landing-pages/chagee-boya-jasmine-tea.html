@@ -53,7 +53,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "4",
+            "ratingCount": "4",
             "bestRating": "5",
             "worstRating": "1"
         }
@@ -629,7 +629,121 @@
             font-weight: 600; font-size: 0.9rem;
         }
         .related-browse-link:hover { text-decoration: underline; }
-    </style>
+    
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 2rem;
+      background: #fafafa;
+    }
+    .faq-section .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .faq-section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq-list details {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-list details[open] {
+      border-color: var(--primary, #2563eb);
+    }
+    .faq-list summary {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #999;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::after {
+      content: '−';
+    }
+    .faq-list .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .faq-list .faq-answer a {
+      color: var(--primary, #2563eb);
+      text-decoration: underline;
+    }
+
+
+    /* Tips Section */
+    .tips-section {
+      padding: 4rem 2rem;
+      background: var(--cream, #fefcf8);
+    }
+    .tips-section .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .tips-section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .tips-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .tip-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1.2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .tip-card:hover {
+      border-color: var(--primary, #2563eb);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .tip-card .tip-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .tip-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .tip-card p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+</style>
 
     <script type="application/ld+json">
     {
@@ -658,6 +772,46 @@
       "@type": "ListItem",
       "position": 4,
       "name": "CHAGEE BOYA Jasmine Green Tea Bags 8-Pack"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How should I store CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Store in a cool, dry place away from direct sunlight. Once opened, refrigerate and consume within 5-7 days for best flavor. Unopened shelf-stable packages can be kept at room temperature until the best-by date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g suitable for a low-sugar diet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the nutrition label on the product page for specific sugar content. Many Asian beverages now offer sugar-free or reduced-sugar options. CHAGEE products vary — some use natural sweeteners while others contain added sugar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Asian beverages different from Western equivalents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Asian beverages often use different ingredients and flavor profiles — matcha instead of coffee, real fruit extracts instead of artificial flavors, and traditional recipes passed down through generations. The taste experience is typically more nuanced and less overly sweet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I buy CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g in bulk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g is available in multi-pack options on Yami. Bulk purchases often come with a per-unit discount. Check the product page for current bundle deals and value packs."
+      }
     }
   ]
 }
@@ -813,6 +967,60 @@
     </section>
 
     <!-- CTA Section -->
+
+
+    <!-- Pro Tips Section -->
+    <section class="tips-section" aria-label="Pro tips">
+        <h2 class="section-title">Pro Tips for CHAGEE BOYA Jasmine Green Tea Bags, 8-Pa</h2>
+        <p class="section-subtitle">Get the most out of your purchase with these practical tips</p>
+        <div class="tips-grid">
+        <div class="tip-card">
+            <div class="tip-icon">🌡️</div>
+            <h3>Serve at Right Temperature</h3>
+            <p>Green/jasmine tea: 175°F (80°C). Black tea: 200°F (93°C). Matcha: 160°F (70°C). Wrong temperature kills flavor.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">🫖</div>
+            <h3>Steep Time Matters</h3>
+            <p>Green tea: 1-2 minutes. Black tea: 3-5 minutes. Over-steeping makes tea bitter. Use a timer for consistent results.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">🧊</div>
+            <h3>Iced Tea Shortcut</h3>
+            <p>Brew double-strength hot tea, then pour over ice. This prevents dilution and keeps the full flavor profile intact.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">📦</div>
+            <h3>Storage Tips</h3>
+            <p>Keep tea in an airtight container away from light, heat, and moisture. Never store near spices — tea absorbs surrounding odors.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" aria-label="Frequently asked questions">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions about CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g</p>
+        <div class="faq-list">
+        <details>
+            <summary>How should I store CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g?</summary>
+            <div class="faq-answer">Store in a cool, dry place away from direct sunlight. Once opened, refrigerate and consume within 5-7 days for best flavor. Unopened shelf-stable packages can be kept at room temperature until the best-by date.</div>
+        </details>
+        <details>
+            <summary>Is CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g suitable for a low-sugar diet?</summary>
+            <div class="faq-answer">Check the nutrition label on the product page for specific sugar content. Many Asian beverages now offer sugar-free or reduced-sugar options. CHAGEE products vary — some use natural sweeteners while others contain added sugar.</div>
+        </details>
+        <details>
+            <summary>Are Asian beverages different from Western equivalents?</summary>
+            <div class="faq-answer">Asian beverages often use different ingredients and flavor profiles — matcha instead of coffee, real fruit extracts instead of artificial flavors, and traditional recipes passed down through generations. The taste experience is typically more nuanced and less overly sweet.</div>
+        </details>
+        <details>
+            <summary>Can I buy CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g in bulk?</summary>
+            <div class="faq-answer">Yes, CHAGEE BOYA Jasmine Green Tea Bags, 8-Pack, 24g is available in multi-pack options on Yami. Bulk purchases often come with a per-unit discount. Check the product page for current bundle deals and value packs.</div>
+        </details>
+        </div>
+    </section>
+
     <section class="cta-section">
         <h2 class="fade-in">Ready to Taste the Difference?</h2>
         <p class="fade-in">Join 700+ tea lovers who've discovered authentic Chinese jasmine tea. Yami Exclusive — shipped from US warehouse.</p>
@@ -851,6 +1059,15 @@
         </div>
     </section>
     <footer>
+        <nav style="margin-bottom:1rem;line-height:2" aria-label="Category navigation">
+            <a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Sunscreen</a> · <a href="/landing-pages/sulwhasoo-first-care-activating-serum-90ml">Serums & Ampoules</a> · <a href="/landing-pages/fino-premium-touch-hair-mask-230g">Hair Care</a> · <a href="/landing-pages/zojirushi-induction-heating-rice-cooker-np-hcc10">Rice Cookers</a> · <a href="/landing-pages/ichiran-ramen-classic-hakata-thin-noodles-5-packs">Noodles & Ramen</a> · <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz">Sauces & Condiments</a> · <a href="/landing-pages/korean-honey-butter-potato-chips-2-11oz-3-value-pack">Snacks</a> · <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Beverages & Tea</a> · <a href="/landing-pages/medicube-age-r-booster-pro-pink">Beauty Devices</a> · <a href="/landing-pages/lion-pair-acne-cream-14g-3">Acne Treatment</a>
+        </nav>
+        <nav style="margin-bottom:1rem;line-height:2" aria-label="Buying guides">
+            <a href="/article/where-to-buy-asian-sunscreens-in-the-us">Asian Sunscreen Guide</a> · <a href="/article/where-to-buy-asian-snacks-online-us">Asian Snacks & Ramen</a> · <a href="/article/where-to-buy-korean-skincare-online-us">Korean Skincare Guide</a> · <a href="/article/best-japanese-drugstore-products-us">Japanese Drugstore Picks</a> · <a href="/article/best-asian-kitchen-appliances-us">Asian Kitchen Appliances</a>
+        </nav>
+        <p style="margin-bottom:0.5rem"><a href="/landing-pages/">Browse all 105 products →</a> · <a href="/">Home</a></p>
+
+
         <p>© 2026 This page is for marketing demonstration purposes. Product details sourced from <a href="https://www.yami.com/en/p/boya-breaks-the-strings/1157060681">Yami</a>. All trademarks belong to their respective owners.</p>
     </footer>
 

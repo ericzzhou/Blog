@@ -326,7 +326,121 @@
             font-weight: 600; font-size: 0.9rem;
         }
         .related-browse-link:hover { text-decoration: underline; }
-    </style>
+    
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 2rem;
+      background: #fafafa;
+    }
+    .faq-section .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .faq-section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq-list details {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-list details[open] {
+      border-color: var(--primary, #2563eb);
+    }
+    .faq-list summary {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #999;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::after {
+      content: '−';
+    }
+    .faq-list .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .faq-list .faq-answer a {
+      color: var(--primary, #2563eb);
+      text-decoration: underline;
+    }
+
+
+    /* Tips Section */
+    .tips-section {
+      padding: 4rem 2rem;
+      background: var(--cream, #fefcf8);
+    }
+    .tips-section .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .tips-section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .tips-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .tip-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1.2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .tip-card:hover {
+      border-color: var(--primary, #2563eb);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .tip-card .tip-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .tip-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .tip-card p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+</style>
 
     <script type="application/ld+json">
     {
@@ -355,6 +469,46 @@
       "@type": "ListItem",
       "position": 4,
       "name": "Sulwhasoo Concentrated Ginseng Renewing Serum 20g"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should I apply Sulwhasoo Concentrated Ginseng Renewing Serum 20g in my skincare routine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apply Sulwhasoo Concentrated Ginseng Renewing Serum 20g after cleansing and toning, but before moisturizer. Serums and ampoules are concentrated treatments designed to penetrate deeply. SULWHASOO recommends pressing (not rubbing) the product into skin for maximum absorption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see results from Sulwhasoo Concentrated Ginseng Renewing Serum 20g?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most users notice initial improvements in hydration and texture within 1-2 weeks. Significant results for concerns like fine lines, dark spots, or elasticity typically require 4-8 weeks of consistent use. Sulwhasoo Concentrated Ginseng Renewing Serum 20g is formulated for daily use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I layer Sulwhasoo Concentrated Ginseng Renewing Serum 20g with other active ingredients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sulwhasoo Concentrated Ginseng Renewing Serum 20g can generally be layered with complementary ingredients. However, avoid combining with strong exfoliants (AHA/BHA) or retinol in the same routine unless directed. When in doubt, alternate AM/PM usage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sulwhasoo Concentrated Ginseng Renewing Serum 20g suitable for all skin types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SULWHASOO formulates for a range of skin types. Sulwhasoo Concentrated Ginseng Renewing Serum 20g is generally suitable for normal to dry skin. If you have oily or acne-prone skin, check the texture and ingredient list on the product page for compatibility."
+      }
     }
   ]
 }
@@ -449,7 +603,7 @@
 
     <!-- Stats -->
     <section id="stats" class="section" aria-label="Product stats">
-        <h2 class="section-title fade-in">The Numbers Speak</h2>
+        <h2 class="section-title fade-in">Numbers Don't Lie</h2>
         <p class="section-sub fade-in">Why skincare enthusiasts choose Sulwhasoo Ginseng Serum.</p>
         <div class="stats-row">
             <div class="fade-in">
@@ -528,6 +682,60 @@
         </div>
     </section>
 
+
+
+    <!-- Pro Tips Section -->
+    <section class="tips-section" aria-label="Pro tips">
+        <h2 class="section-title">Pro Tips for Sulwhasoo Concentrated Ginseng Renewing </h2>
+        <p class="section-subtitle">Get the most out of your purchase with these practical tips</p>
+        <div class="tips-grid">
+        <div class="tip-card">
+            <div class="tip-icon">🤲</div>
+            <h3>Press, Don't Rub</h3>
+            <p>Korean serums are best applied by gently pressing into skin. Rubbing creates friction and can irritate. Pat until fully absorbed.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">📐</div>
+            <h3>Thinnest to Thickest</h3>
+            <p>Apply in order of texture: watery toner → serum/ampoule → essence → moisturizer. This ensures each layer penetrates properly.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">🌙</div>
+            <h3>Night Is Prime Time</h3>
+            <p>Skin repair peaks at night. Use active serums (retinol, peptides, vitamin C) in your PM routine for maximum effectiveness.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">💧</div>
+            <h3>Less Is More</h3>
+            <p>A pea-sized amount covers the full face. Over-applying serum doesn't increase benefits — it wastes product and can cause pilling.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" aria-label="Frequently asked questions">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions about Sulwhasoo Concentrated Ginseng Renewing Serum 20g</p>
+        <div class="faq-list">
+        <details>
+            <summary>When should I apply Sulwhasoo Concentrated Ginseng Renewing Serum 20g in my skincare routine?</summary>
+            <div class="faq-answer">Apply Sulwhasoo Concentrated Ginseng Renewing Serum 20g after cleansing and toning, but before moisturizer. Serums and ampoules are concentrated treatments designed to penetrate deeply. SULWHASOO recommends pressing (not rubbing) the product into skin for maximum absorption.</div>
+        </details>
+        <details>
+            <summary>How long does it take to see results from Sulwhasoo Concentrated Ginseng Renewing Serum 20g?</summary>
+            <div class="faq-answer">Most users notice initial improvements in hydration and texture within 1-2 weeks. Significant results for concerns like fine lines, dark spots, or elasticity typically require 4-8 weeks of consistent use. Sulwhasoo Concentrated Ginseng Renewing Serum 20g is formulated for daily use.</div>
+        </details>
+        <details>
+            <summary>Can I layer Sulwhasoo Concentrated Ginseng Renewing Serum 20g with other active ingredients?</summary>
+            <div class="faq-answer">Sulwhasoo Concentrated Ginseng Renewing Serum 20g can generally be layered with complementary ingredients. However, avoid combining with strong exfoliants (AHA/BHA) or retinol in the same routine unless directed. When in doubt, alternate AM/PM usage.</div>
+        </details>
+        <details>
+            <summary>Is Sulwhasoo Concentrated Ginseng Renewing Serum 20g suitable for all skin types?</summary>
+            <div class="faq-answer">SULWHASOO formulates for a range of skin types. Sulwhasoo Concentrated Ginseng Renewing Serum 20g is generally suitable for normal to dry skin. If you have oily or acne-prone skin, check the texture and ingredient list on the product page for compatibility.</div>
+        </details>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
         <h2 class="fade-in">Ready to Experience Ginseng-Powered Renewal?</h2>
@@ -567,6 +775,15 @@
         </div>
     </section>
     <footer>
+        <nav style="margin-bottom:1rem;line-height:2" aria-label="Category navigation">
+            <a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Sunscreen</a> · <a href="/landing-pages/sulwhasoo-first-care-activating-serum-90ml">Serums & Ampoules</a> · <a href="/landing-pages/fino-premium-touch-hair-mask-230g">Hair Care</a> · <a href="/landing-pages/zojirushi-induction-heating-rice-cooker-np-hcc10">Rice Cookers</a> · <a href="/landing-pages/ichiran-ramen-classic-hakata-thin-noodles-5-packs">Noodles & Ramen</a> · <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz">Sauces & Condiments</a> · <a href="/landing-pages/korean-honey-butter-potato-chips-2-11oz-3-value-pack">Snacks</a> · <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Beverages & Tea</a> · <a href="/landing-pages/medicube-age-r-booster-pro-pink">Beauty Devices</a> · <a href="/landing-pages/lion-pair-acne-cream-14g-3">Acne Treatment</a>
+        </nav>
+        <nav style="margin-bottom:1rem;line-height:2" aria-label="Buying guides">
+            <a href="/article/where-to-buy-asian-sunscreens-in-the-us">Asian Sunscreen Guide</a> · <a href="/article/where-to-buy-asian-snacks-online-us">Asian Snacks & Ramen</a> · <a href="/article/where-to-buy-korean-skincare-online-us">Korean Skincare Guide</a> · <a href="/article/best-japanese-drugstore-products-us">Japanese Drugstore Picks</a> · <a href="/article/best-asian-kitchen-appliances-us">Asian Kitchen Appliances</a>
+        </nav>
+        <p style="margin-bottom:0.5rem"><a href="/landing-pages/">Browse all 105 products →</a> · <a href="/">Home</a></p>
+
+
         <p>&copy; 2026 This page is for marketing demonstration purposes. Product details sourced from <a href="https://www.yami.com/en/p/concentrated-ginseng-renewing-serum-20g/3022558871?utm_source=zhouzk.com">Yami</a>. All trademarks belong to their respective owners.</p>
     </footer>
 

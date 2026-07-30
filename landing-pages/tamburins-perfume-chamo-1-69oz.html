@@ -264,7 +264,121 @@
             font-weight: 600; font-size: 0.9rem;
         }
         .related-browse-link:hover { text-decoration: underline; }
-    </style>
+    
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 2rem;
+      background: #fafafa;
+    }
+    .faq-section .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .faq-section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq-list details {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-list details[open] {
+      border-color: var(--primary, #2563eb);
+    }
+    .faq-list summary {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #999;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::after {
+      content: '−';
+    }
+    .faq-list .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .faq-list .faq-answer a {
+      color: var(--primary, #2563eb);
+      text-decoration: underline;
+    }
+
+
+    /* Tips Section */
+    .tips-section {
+      padding: 4rem 2rem;
+      background: var(--cream, #fefcf8);
+    }
+    .tips-section .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .tips-section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .tips-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .tip-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1.2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .tip-card:hover {
+      border-color: var(--primary, #2563eb);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .tip-card .tip-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .tip-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .tip-card p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+</style>
 
     <script type="application/ld+json">
     {
@@ -293,6 +407,46 @@
       "@type": "ListItem",
       "position": 4,
       "name": "TAMBURINS Perfume #CHAMO 1.69 fl oz"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] last on skin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] by TAMBURINS is an eau de parfum concentration, typically lasting 6-8 hours on skin. The amber and musk base notes provide excellent longevity. Apply to pulse points (wrists, neck, behind ears) for best projection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] the same fragrance worn by Jennie from BLACKPINK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] (#CHAMO) is the signature fragrance associated with Jennie. It features chamomile, clary sage, and warm musk notes. The scent is unisex-leaning-feminine and evolves beautifully throughout the day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I layer TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] with other fragrances?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] has a complex scent profile that works well on its own. If you wish to layer, pair with unscented body products or a complementary scent from the same TAMBURINS line. Avoid mixing with strongly competing fragrances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] worth the price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At $145.11 (20% off), TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] offers Korean luxury perfumery at a competitive price point compared to Western niche fragrances ($200-400+). The quality of ingredients and unique botanical blend make it a standout value in the luxury fragrance category."
+      }
     }
   ]
 }
@@ -471,6 +625,60 @@
         </div>
     </section>
 
+
+
+    <!-- Pro Tips Section -->
+    <section class="tips-section" aria-label="Pro tips">
+        <h2 class="section-title">Pro Tips for TAMBURINS Perfume #CHAMO 1.69 fl oz [Jen</h2>
+        <p class="section-subtitle">Get the most out of your purchase with these practical tips</p>
+        <div class="tips-grid">
+        <div class="tip-card">
+            <div class="tip-icon">💫</div>
+            <h3>Pulse Points</h3>
+            <p>Apply to wrists, inner elbows, behind ears, and base of throat. Body heat at these points helps project the fragrance throughout the day.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">🚫</div>
+            <h3>Don't Rub Wrists</h3>
+            <p>After spraying, let the fragrance dry naturally. Rubbing breaks down top notes and changes the scent profile.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">👕</div>
+            <h3>Fabric Lasts Longer</h3>
+            <p>Fragrance lasts longer on fabric than skin. Lightly spritz on clothing collar or scarf for all-day wear (test on inconspicuous area first).</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">📦</div>
+            <h3>Store Away from Light</h3>
+            <p>Keep perfume in its box or a dark drawer. UV light and heat degrade fragrance oils, changing the scent over time.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" aria-label="Frequently asked questions">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions about TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style]</p>
+        <div class="faq-list">
+        <details>
+            <summary>How long does TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] last on skin?</summary>
+            <div class="faq-answer">TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] by TAMBURINS is an eau de parfum concentration, typically lasting 6-8 hours on skin. The amber and musk base notes provide excellent longevity. Apply to pulse points (wrists, neck, behind ears) for best projection.</div>
+        </details>
+        <details>
+            <summary>Is TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] the same fragrance worn by Jennie from BLACKPINK?</summary>
+            <div class="faq-answer">Yes — TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] (#CHAMO) is the signature fragrance associated with Jennie. It features chamomile, clary sage, and warm musk notes. The scent is unisex-leaning-feminine and evolves beautifully throughout the day.</div>
+        </details>
+        <details>
+            <summary>Can I layer TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] with other fragrances?</summary>
+            <div class="faq-answer">TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] has a complex scent profile that works well on its own. If you wish to layer, pair with unscented body products or a complementary scent from the same TAMBURINS line. Avoid mixing with strongly competing fragrances.</div>
+        </details>
+        <details>
+            <summary>Is TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] worth the price?</summary>
+            <div class="faq-answer">At $145.11 (20% off), TAMBURINS Perfume #CHAMO 1.69 fl oz [Jennie's Same Style] offers Korean luxury perfumery at a competitive price point compared to Western niche fragrances ($200-400+). The quality of ingredients and unique botanical blend make it a standout value in the luxury fragrance category.</div>
+        </details>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
         <h2 class="fade-in">Get TAMBURINS #CHAMO</h2>
@@ -483,22 +691,22 @@
     <!-- Related Products -->
     <section class="related-section fade-in" aria-label="Related products">
         <h2 class="related-title">Related Products</h2>
-        <p class="related-sub">You might also like these fragrance products</p>
+        <p class="related-sub">You might also like these premium beauty products</p>
         <div class="related-grid">
-            <a href="./beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml" class="related-card fade-in">
-                <span class="related-name">Relief Sun: Rice + Probiotics SPF50+</span>
+            <a href="./sulwhasoo-first-care-activating-serum-90ml" class="related-card fade-in">
+                <span class="related-name">Sulwhasoo First Care Activating Serum</span>
                 <span class="related-arrow">&rarr;</span>
             </a>
-            <a href="./beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml-value-pack" class="related-card fade-in">
-                <span class="related-name">Relief Sun SPF50+ 50ml Value Pack</span>
+            <a href="./rejuran-healer-dual-effect-ampoule-1oz" class="related-card fade-in">
+                <span class="related-name">REJURAN Healer Dual Effect Ampoule</span>
                 <span class="related-arrow">&rarr;</span>
             </a>
-            <a href="./beauty-of-joseon-matte-sun-stick-mugwort-camelia-spf50-0-63oz" class="related-card fade-in">
-                <span class="related-name">Matte Sun Stick Mugwort + Camelia</span>
+            <a href="./skin1004-madagascar-centella-travel-kit" class="related-card fade-in">
+                <span class="related-name">SKIN1004 Madagascar Centella Travel Kit</span>
                 <span class="related-arrow">&rarr;</span>
             </a>
-            <a href="./matte-sun-stick-mugwort-camelia-spf50-value-pack" class="related-card fade-in">
-                <span class="related-name">Matte Sun Stick Value Pack</span>
+            <a href="./spiii-star-edition-hertz-rf-beauty-device" class="related-card fade-in">
+                <span class="related-name">SPIII Star Edition Hertz RF Beauty Device</span>
                 <span class="related-arrow">&rarr;</span>
             </a>
         </div>
@@ -507,6 +715,15 @@
         </div>
     </section>
     <footer>
+        <nav style="margin-bottom:1rem;line-height:2" aria-label="Category navigation">
+            <a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Sunscreen</a> · <a href="/landing-pages/sulwhasoo-first-care-activating-serum-90ml">Serums & Ampoules</a> · <a href="/landing-pages/fino-premium-touch-hair-mask-230g">Hair Care</a> · <a href="/landing-pages/zojirushi-induction-heating-rice-cooker-np-hcc10">Rice Cookers</a> · <a href="/landing-pages/ichiran-ramen-classic-hakata-thin-noodles-5-packs">Noodles & Ramen</a> · <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz">Sauces & Condiments</a> · <a href="/landing-pages/korean-honey-butter-potato-chips-2-11oz-3-value-pack">Snacks</a> · <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Beverages & Tea</a> · <a href="/landing-pages/medicube-age-r-booster-pro-pink">Beauty Devices</a> · <a href="/landing-pages/lion-pair-acne-cream-14g-3">Acne Treatment</a>
+        </nav>
+        <nav style="margin-bottom:1rem;line-height:2" aria-label="Buying guides">
+            <a href="/article/where-to-buy-asian-sunscreens-in-the-us">Asian Sunscreen Guide</a> · <a href="/article/where-to-buy-asian-snacks-online-us">Asian Snacks & Ramen</a> · <a href="/article/where-to-buy-korean-skincare-online-us">Korean Skincare Guide</a> · <a href="/article/best-japanese-drugstore-products-us">Japanese Drugstore Picks</a> · <a href="/article/best-asian-kitchen-appliances-us">Asian Kitchen Appliances</a>
+        </nav>
+        <p style="margin-bottom:0.5rem"><a href="/landing-pages/">Browse all 105 products →</a> · <a href="/">Home</a></p>
+
+
         <p>&copy; 2026 This page is for marketing demonstration purposes. Product details sourced from <a href="https://www.yami.com/en/p/perfume-chamo-1-69-fl-oz-jennie-s-same-style/1023403461?utm_source=zhouzk.com">Yami</a>. All trademarks belong to their respective owners.</p>
     </footer>
 
