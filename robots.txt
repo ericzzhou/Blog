@@ -27,4 +27,5 @@ Disallow: /public/
 LLMs-txt: https://zhouzk.com/llms.txt
 
 Sitemap: https://zhouzk.com/sitemap.xml
+Sitemap: https://zhouzk.com/blog/sitemap-index.xml
 Sitemap: https://zhouzk.com/growth-metrics-handbook/sitemap.xml
