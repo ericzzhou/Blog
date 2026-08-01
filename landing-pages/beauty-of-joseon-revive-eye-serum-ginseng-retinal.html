@@ -287,6 +287,52 @@
   text-decoration: underline;
 }
 
+
+    /* Trending Products Section */
+    .trending-section {
+      padding: 3rem 1.5rem;
+      background: var(--light-gray, #f5f5f7);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .trending-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark, #1d1d1f);
+    }
+    .trending-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .trending-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white, #fff);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--dark, #1d1d1f);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .trending-card:hover {
+      border-color: var(--primary, #E65100);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .trending-arrow {
+      color: var(--primary, #E65100);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
 </style>
 
     <script type="application/ld+json">
@@ -512,7 +558,53 @@
             font-weight: 600; font-size: 0.9rem;
         }
         .related-browse-link:hover { text-decoration: underline; }
-    </style>
+    
+    /* Trending Products Section */
+    .trending-section {
+      padding: 3rem 1.5rem;
+      background: var(--light-gray, #f5f5f7);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .trending-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark, #1d1d1f);
+    }
+    .trending-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .trending-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white, #fff);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--dark, #1d1d1f);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .trending-card:hover {
+      border-color: var(--primary, #E65100);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .trending-arrow {
+      color: var(--primary, #E65100);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
+</style>
     <section class="hero">
         <nav class="breadcrumb-nav" aria-label="Breadcrumb">
             <a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/landing-pages/">Products</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current" aria-current="page">Beauty of Joseon Revive Eye Serum Ginseng + Retinal 1.01oz</span>
@@ -664,7 +756,53 @@
             .scene-grid { grid-template-columns: 1fr; }
             .ingr-grid { grid-template-columns: 1fr; }
         }
-    </style>
+    
+    /* Trending Products Section */
+    .trending-section {
+      padding: 3rem 1.5rem;
+      background: var(--light-gray, #f5f5f7);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .trending-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark, #1d1d1f);
+    }
+    .trending-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .trending-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white, #fff);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--dark, #1d1d1f);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .trending-card:hover {
+      border-color: var(--primary, #E65100);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .trending-arrow {
+      color: var(--primary, #E65100);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
+</style>
 
     <section id="pain" class="section section-dark" aria-label="Why you need this">
         <h2 class="section-title fade-in">Tired Eyes Giving Away Your Age?</h2>
@@ -915,6 +1053,21 @@
             <a href="/landing-pages/" class="related-browse-link">Browse all products &rarr;</a>
         </div>
     </section>
+        <!-- Trending Products (Internal Links) -->
+    <section class="trending-section" aria-label="Trending products">
+        <h2 class="trending-title">Trending Products</h2>
+        <div class="trending-grid">
+<a href="./sulwhasoo-the-ultimate-s-cream-60ml" class="trending-card">Sulwhasoo The Ultimate S Cream 60Ml<span class="trending-arrow">&rarr;</span></a>
+<a href="./skin1004-madagascar-centella-hyalu-cica-sun-serum-value-pack" class="trending-card">Skin1004 Madagascar Centella Hyalu Ci...<span class="trending-arrow">&rarr;</span></a>
+<a href="./okamoto-001-extra-lubricated-condoms-large-fit-6pcs-value-pack" class="trending-card">Okamoto 001 Extra Lubricated Condoms ...<span class="trending-arrow">&rarr;</span></a>
+<a href="./galan-lang-lanzhou-ramen-beef-flavor-noodles-2-servings" class="trending-card">Galan Lang Lanzhou Ramen Beef Flavor ...<span class="trending-arrow">&rarr;</span></a>
+<a href="./foodology-coleology-cutting-jelly-250g" class="trending-card">Foodology Coleology Cutting Jelly 250G<span class="trending-arrow">&rarr;</span></a>
+<a href="./pair-acne-treatment-cream-24g" class="trending-card">Pair Acne Treatment Cream 24G<span class="trending-arrow">&rarr;</span></a>
+<a href="./egg-tarts-cake-14-1oz" class="trending-card">Egg Tarts Cake 14 1Oz<span class="trending-arrow">&rarr;</span></a>
+<a href="./samyang-buldak-quattro-cheese-hot-chicken-ramen-5-packs" class="trending-card">Samyang Buldak Quattro Cheese Hot Chi...<span class="trending-arrow">&rarr;</span></a>
+        </div>
+    </section>
+
     <footer>
         <nav style="margin-bottom:1rem;line-height:2" aria-label="Category navigation">
             <a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Sunscreen</a> · <a href="/landing-pages/sulwhasoo-first-care-activating-serum-90ml">Serums & Ampoules</a> · <a href="/landing-pages/fino-premium-touch-hair-mask-230g">Hair Care</a> · <a href="/landing-pages/zojirushi-induction-heating-rice-cooker-np-hcc10">Rice Cookers</a> · <a href="/landing-pages/ichiran-ramen-classic-hakata-thin-noodles-5-packs">Noodles & Ramen</a> · <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz">Sauces & Condiments</a> · <a href="/landing-pages/korean-honey-butter-potato-chips-2-11oz-3-value-pack">Snacks</a> · <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Beverages & Tea</a> · <a href="/landing-pages/medicube-age-r-booster-pro-pink">Beauty Devices</a> · <a href="/landing-pages/lion-pair-acne-cream-14g-3">Acne Treatment</a>

@@ -482,6 +482,52 @@
   text-decoration: underline;
 }
 
+
+    /* Trending Products Section */
+    .trending-section {
+      padding: 3rem 1.5rem;
+      background: var(--light-gray, #f5f5f7);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .trending-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark, #1d1d1f);
+    }
+    .trending-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .trending-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white, #fff);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--dark, #1d1d1f);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .trending-card:hover {
+      border-color: var(--primary, #E65100);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .trending-arrow {
+      color: var(--primary, #E65100);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
 </style>
 
     <script type="application/ld+json">
@@ -838,6 +884,21 @@
             <a href="/landing-pages/" class="related-browse-link">Browse all products &rarr;</a>
         </div>
     </section>
+        <!-- Trending Products (Internal Links) -->
+    <section class="trending-section" aria-label="Trending products">
+        <h2 class="trending-title">Trending Products</h2>
+        <div class="trending-grid">
+<a href="./fino-premium-touch-hair-mask-230g" class="trending-card">Fino Premium Touch Hair Mask 230G<span class="trending-arrow">&rarr;</span></a>
+<a href="./tsubaki-premium-repair-hair-mask-180g" class="trending-card">Tsubaki Premium Repair Hair Mask 180G<span class="trending-arrow">&rarr;</span></a>
+<a href="./fino-repair-shampoo-conditioner-550ml" class="trending-card">Fino Repair Shampoo Conditioner 550Ml<span class="trending-arrow">&rarr;</span></a>
+<a href="./fino-shampoo-conditioner-hair-mask-value-pack" class="trending-card">Fino Shampoo Conditioner Hair Mask Va...<span class="trending-arrow">&rarr;</span></a>
+<a href="./fino-premium-touch-hair-mask-shampoo-conditioner-hair-oil-value-pack" class="trending-card">Fino Premium Touch Hair Mask Shampoo ...<span class="trending-arrow">&rarr;</span></a>
+<a href="./fujiko-pon-pon-powder-natural-volume" class="trending-card">Fujiko Pon Pon Powder Natural Volume<span class="trending-arrow">&rarr;</span></a>
+<a href="./beauty-of-joseon-matte-sun-stick-mugwort-camelia-spf50-0-63oz" class="trending-card">Beauty Of Joseon Matte Sun Stick Mugw...<span class="trending-arrow">&rarr;</span></a>
+<a href="./okamoto-001-ultra-thin-condoms-15pcs-value-pack" class="trending-card">Okamoto 001 Ultra Thin Condoms 15Pcs ...<span class="trending-arrow">&rarr;</span></a>
+        </div>
+    </section>
+
     <footer>
         <nav style="margin-bottom:1rem;line-height:2" aria-label="Category navigation">
             <a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Sunscreen</a> · <a href="/landing-pages/sulwhasoo-first-care-activating-serum-90ml">Serums & Ampoules</a> · <a href="/landing-pages/fino-premium-touch-hair-mask-230g">Hair Care</a> · <a href="/landing-pages/zojirushi-induction-heating-rice-cooker-np-hcc10">Rice Cookers</a> · <a href="/landing-pages/ichiran-ramen-classic-hakata-thin-noodles-5-packs">Noodles & Ramen</a> · <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz">Sauces & Condiments</a> · <a href="/landing-pages/korean-honey-butter-potato-chips-2-11oz-3-value-pack">Snacks</a> · <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Beverages & Tea</a> · <a href="/landing-pages/medicube-age-r-booster-pro-pink">Beauty Devices</a> · <a href="/landing-pages/lion-pair-acne-cream-14g-3">Acne Treatment</a>

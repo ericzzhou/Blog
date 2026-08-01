@@ -383,6 +383,52 @@
   text-decoration: underline;
 }
 
+
+    /* Trending Products Section */
+    .trending-section {
+      padding: 3rem 1.5rem;
+      background: var(--light-gray, #f5f5f7);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .trending-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark, #1d1d1f);
+    }
+    .trending-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .trending-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white, #fff);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--dark, #1d1d1f);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .trending-card:hover {
+      border-color: var(--primary, #E65100);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .trending-arrow {
+      color: var(--primary, #E65100);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
 </style>
 
     <script type="application/ld+json">
@@ -613,7 +659,53 @@
             .hero-price .current { font-size: 28px; }
             .hero-sub { font-size: 15px; }
         }
-    </style>
+    
+    /* Trending Products Section */
+    .trending-section {
+      padding: 3rem 1.5rem;
+      background: var(--light-gray, #f5f5f7);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .trending-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark, #1d1d1f);
+    }
+    .trending-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .trending-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white, #fff);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--dark, #1d1d1f);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .trending-card:hover {
+      border-color: var(--primary, #E65100);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .trending-arrow {
+      color: var(--primary, #E65100);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
+</style>
 
     <!-- Section 3: Pain Points -->
     <section id="features" class="section section-dark" aria-label="Why you need this">
@@ -862,6 +954,21 @@
             <a href="/landing-pages/" class="related-browse-link">Browse all products &rarr;</a>
         </div>
     </section>
+        <!-- Trending Products (Internal Links) -->
+    <section class="trending-section" aria-label="Trending products">
+        <h2 class="trending-title">Trending Products</h2>
+        <div class="trending-grid">
+<a href="./zojirushi-induction-heating-rice-cooker-np-hcc10" class="trending-card">Zojirushi Induction Heating Rice Cook...<span class="trending-arrow">&rarr;</span></a>
+<a href="./zojirushi-induction-heating-rice-cooker-np-hcc18" class="trending-card">Zojirushi Induction Heating Rice Cook...<span class="trending-arrow">&rarr;</span></a>
+<a href="./zojirushi-micom-rice-cooker-ns-tsc10" class="trending-card">Zojirushi Micom Rice Cooker Ns Tsc10<span class="trending-arrow">&rarr;</span></a>
+<a href="./zojirushi-micom-rice-cooker-ns-tsc18" class="trending-card">Zojirushi Micom Rice Cooker Ns Tsc18<span class="trending-arrow">&rarr;</span></a>
+<a href="./tatung-multi-functional-rice-cooker-tac-6g-sf-white" class="trending-card">Tatung Multi Functional Rice Cooker T...<span class="trending-arrow">&rarr;</span></a>
+<a href="./tatung-pearl-white-rice-cooker-tac-10g-10-cup" class="trending-card">Tatung Pearl White Rice Cooker Tac 10...<span class="trending-arrow">&rarr;</span></a>
+<a href="./tatung-stainless-steel-vanilla-cream-rice-cooker-tac-06in" class="trending-card">Tatung Stainless Steel Vanilla Cream ...<span class="trending-arrow">&rarr;</span></a>
+<a href="./tatung-tac-06kn-ul-rice-cooker-6-cups" class="trending-card">Tatung Tac 06Kn Ul Rice Cooker 6 Cups<span class="trending-arrow">&rarr;</span></a>
+        </div>
+    </section>
+
     <footer>
         <nav style="margin-bottom:1rem;line-height:2" aria-label="Category navigation">
             <a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Sunscreen</a> · <a href="/landing-pages/sulwhasoo-first-care-activating-serum-90ml">Serums & Ampoules</a> · <a href="/landing-pages/fino-premium-touch-hair-mask-230g">Hair Care</a> · <a href="/landing-pages/zojirushi-induction-heating-rice-cooker-np-hcc10">Rice Cookers</a> · <a href="/landing-pages/ichiran-ramen-classic-hakata-thin-noodles-5-packs">Noodles & Ramen</a> · <a href="/landing-pages/laoganma-spicy-chili-crispy-7-4oz">Sauces & Condiments</a> · <a href="/landing-pages/korean-honey-butter-potato-chips-2-11oz-3-value-pack">Snacks</a> · <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Beverages & Tea</a> · <a href="/landing-pages/medicube-age-r-booster-pro-pink">Beauty Devices</a> · <a href="/landing-pages/lion-pair-acne-cream-14g-3">Acne Treatment</a>
