@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /landing-pages/backup/
+Disallow: /landing-pages/test-simple
+Disallow: /landing-pages/kikkoman-fixed
+Disallow: /public/
 
 User-agent: GPTBot
 Allow: /
@@ -18,13 +22,6 @@ Allow: /
 
 User-agent: Bytespider
 Allow: /
-
-Disallow: /landing-pages/backup/
-Disallow: /landing-pages/test-simple
-Disallow: /landing-pages/kikkoman-fixed
-Disallow: /public/
-
-LLMs-txt: https://zhouzk.com/llms.txt
 
 Sitemap: https://zhouzk.com/sitemap.xml
 Sitemap: https://zhouzk.com/blog/sitemap-index.xml
