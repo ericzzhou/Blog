@@ -1,0 +1,30 @@
+name: IndexNow Submit
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      submit_all:
+        description: "Submit all sitemap URLs instead of only lastmod==today"
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Submit changed URLs to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.submit_all }}" = "true" ]; then
+            python3 scripts/indexnow-submit.py --all
+          else
+            python3 scripts/indexnow-submit.py
+          fi
