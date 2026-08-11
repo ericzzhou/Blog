@@ -23,7 +23,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 SITEMAP = ROOT / "sitemap.xml"
-DEFAULT_KEY = os.environ.get("INDEXNOW_KEY", "6eb66562bfae2661cfc2854418b6ae19")
+DEFAULT_KEY = os.environ.get("INDEXNOW_KEY") or "6eb66562bfae2661cfc2854418b6ae19"
 HOST = "zhouzk.com"
 ENDPOINT = "https://api.indexnow.org/indexnow"
 NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
