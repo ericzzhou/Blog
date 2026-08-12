@@ -17,6 +17,9 @@
   <meta name="description" content="In August 2026 a Cardi B TikTok feature sent Missha's US TikTok Shop sales up 816% and BB cream searches up 329% in a week. Here's what the Missha M Perfect Cover BB cream is, and why this trend is different from past K-beauty moments." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href="https://zhouzk.com/article/missha-bb-cream-cardi-b-tiktok-boom" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="The Missha BB Cream Boom: What Cardi B Started (2026)" />
@@ -25,91 +28,241 @@
   <meta property="og:url" content="https://zhouzk.com/article/missha-bb-cream-cardi-b-tiktok-boom" />
 
   <style>
-    :root{--accent:#E4007F;--muted:#6b7280;--bg:#fbfbfd;--max:1200px}
+    :root{
+      --paper:#faf8f4;
+      --paper-deep:#f1ece3;
+      --ink:#1c1917;
+      --ink-soft:#292524;
+      --muted:#78716c;
+      --rule:#e7e2da;
+      --accent:#a61e4d;
+      --accent-soft:#fbeef3;
+      --card:#ffffff;
+    }
     *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#0f172a;margin:0;background:var(--bg);line-height:1.65}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);margin:0;background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #eef0f3}
-    .logo{font-weight:700;color:#111}
-    .eyebrow{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-    .hero{background:#fff;border-radius:12px;padding:32px;margin:24px 0;box-shadow:0 8px 30px rgba(15,23,42,.05)}
-    h1{margin:0 0 14px;font-size:34px;line-height:1.2}
-    .meta{color:var(--muted);font-size:14px;margin-bottom:16px}
-    .grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
-    @media (max-width:920px){.grid{grid-template-columns:1fr}}
-    section.card{background:#fff;padding:22px;border-radius:10px;box-shadow:0 6px 18px rgba(12,15,20,.04);margin-bottom:20px}
-    h2{margin:4px 0 12px;font-size:23px}
-    h3{font-size:17px;margin:18px 0 8px}
-    .box{background:#fbf6f9;border:1px solid #f3e3ec;border-radius:8px;padding:14px 16px;margin:14px 0}
-    .cta{display:inline-block;background:var(--accent);color:#fff;padding:11px 18px;border-radius:8px;font-weight:700}
-    ul{padding-left:22px}
-    li{margin:6px 0}
-    aside .card{position:sticky;top:20px}
-    .note{font-size:13px;color:var(--muted)}
+    a:hover{text-decoration:underline}
+    img{max-width:100%}
+
+    .container{max-width:1160px;margin:0 auto;padding:0 28px}
+    header.site{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--rule)}
+    .logo{font-weight:700;font-size:16px;letter-spacing:-.01em;color:var(--ink)}
+    .site-links a{font-size:13.5px;color:var(--muted);margin-left:22px}
+
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:56px 0 48px;border-bottom:1px solid var(--rule);margin-bottom:44px}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 14px}
+    h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+    .dek{font-size:18px;color:var(--ink-soft);margin:0 0 22px;max-width:56ch}
+    .dek strong{color:var(--ink)}
+    .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-bottom:0}
+    .meta span{display:inline-flex;align-items:center;gap:6px}
+    .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+
+    .hero-visual{position:relative}
+    .hero-blob{position:absolute;inset:8% 6%;background:linear-gradient(160deg,#f9d7e4,#f3c6d8 55%,#ecd8e4);border-radius:48% 52% 55% 45%/46% 42% 58% 54%;filter:blur(2px)}
+    .hero-visual img{position:relative;width:100%;max-width:400px;border-radius:22px;box-shadow:0 30px 60px rgba(28,25,23,.16);display:block;margin:0 auto;transform:rotate(-2deg)}
+    .hero-caption{position:relative;text-align:center;font-size:12.5px;color:var(--muted);margin-top:14px}
+
+    .layout{display:grid;grid-template-columns:minmax(0,720px) 300px;gap:64px;padding-bottom:56px}
+    main article p{font-size:17px;color:var(--ink-soft);margin:0 0 1.25em}
+    main article p strong{color:var(--ink)}
+    main article ul{padding-left:0;list-style:none;margin:0 0 1.4em}
+    main article ul li{position:relative;padding-left:26px;margin-bottom:.75em;color:var(--ink-soft);font-size:17px}
+    main article ul li::before{content:"";position:absolute;left:4px;top:.62em;width:9px;height:9px;border-radius:2px;background:var(--accent);opacity:.75}
+
+    h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:30px;line-height:1.2;letter-spacing:-.01em;margin:0 0 18px;padding-top:10px}
+    .sec-num{display:block;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+    section.story{margin-bottom:48px}
+    section.story:first-of-type h2{padding-top:0}
+
+    blockquote.pull{margin:34px 0;padding:6px 0 6px 28px;border-left:3px solid var(--accent);font-family:Fraunces,Georgia,serif;font-size:23px;line-height:1.45;color:var(--ink)}
+    blockquote.pull p{margin:0;font-size:inherit;color:inherit}
+    blockquote.pull cite{display:block;font-family:Inter,sans-serif;font-size:12.5px;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+    .callout{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:10px;padding:18px 20px;margin:22px 0}
+    .callout .label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+    .callout p{margin:0;font-size:15.5px}
+
+    .product-card{display:flex;gap:18px;align-items:center;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:16px;margin:26px 0}
+    .product-card img{width:88px;height:88px;object-fit:cover;border-radius:10px;flex:none}
+    .product-card h4{font-family:Fraunces,Georgia,serif;font-size:17px;margin:0 0 4px}
+    .product-card .price{font-weight:700;color:var(--ink);font-size:14px}
+    .product-card .price small{color:var(--muted);font-weight:400}
+    .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:14px;padding:10px 18px;border-radius:999px}
+    .btn:hover{background:#8f1840;text-decoration:none}
+
+    .bottom-line{background:var(--ink);color:#f5f1ea;border-radius:16px;padding:30px 32px;margin:34px 0}
+    .bottom-line .label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#e8b7c9;font-weight:700;margin-bottom:8px}
+    .bottom-line p{color:#e7e2da;font-size:17px;margin:0}
+    .bottom-line a{color:#ffd7e5;font-weight:600}
+
+    .sources{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+
+    aside .side-card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px;margin-bottom:22px}
+    aside .side-card h3{font-family:Fraunces,Georgia,serif;font-size:16px;margin:0 0 12px}
+    aside nav.toc a{display:block;font-size:14px;color:var(--ink-soft);padding:7px 0;border-bottom:1px dashed var(--rule)}
+    aside nav.toc a:last-child{border-bottom:none}
+    aside nav.toc a:hover{color:var(--accent);text-decoration:none}
+    aside .related-list{list-style:none;margin:0;padding:0;counter-reset:rel}
+    aside .related-list li{counter-increment:rel;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14px}
+    aside .related-list li::before{content:counter(rel,decimal-leading-zero);font-family:Fraunces,serif;color:var(--accent);margin-right:8px;font-size:13px}
+    aside .mini{display:flex;gap:12px;align-items:center}
+    aside .mini img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+    aside .mini .price{font-size:13px;font-weight:700}
+    aside .side-cta{display:block;text-align:center;background:var(--accent-soft);border:1px solid #f0d5e0;border-radius:12px;padding:16px;font-size:14px;font-weight:600;color:var(--accent)}
+
+    footer.site{border-top:1px solid var(--rule);padding:26px 0 40px;font-size:12.5px;color:var(--muted)}
+    footer.site a{color:var(--muted);text-decoration:underline}
+
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr;padding-top:36px}
+      .hero-visual img{max-width:340px}
+      .layout{grid-template-columns:1fr;gap:40px}
+      aside .side-card{position:static}
+    }
+    @media (max-width:520px){
+      .product-card{flex-wrap:wrap}
+      .container{padding:0 18px}
+    }
   </style>
 </head>
 <body>
 <div class="container">
-  <header>
+  <header class="site">
     <a class="logo" href="/">zhouzk.com</a>
-    <span class="eyebrow">Trend Report · Beauty</span>
+    <nav class="site-links">
+      <a href="/article/where-to-buy-korean-skincare-online-us">Korean Skincare</a>
+      <a href="/landing-pages/korean-vs-japanese-sunscreen-2026">Sunscreen Guide</a>
+    </nav>
   </header>
 
   <div class="hero">
-    <div class="eyebrow">Trend Report</div>
-    <h1>The Missha BB Cream Boom: What Cardi B Started</h1>
-    <p class="meta">Published August 11, 2026 · Updated August 11, 2026</p>
-    <p>In the first week of August 2026, a single TikTok feature by Cardi B changed the US market for one of K-beauty's oldest products. Missha's US TikTok Shop sales jumped <strong>816% in January–July</strong>, and searches for its BB cream surged <strong>329% in a single week</strong> after the video. The product at the center: the <a href="/landing-pages/missha-m-perfect-cover-bb-cream-spf42-50ml">MISSHA M Perfect Cover BB Cream</a> — a formula that has been quietly selling for over a decade.</p>
+    <div>
+      <p class="kicker">Trend Report · Beauty</p>
+      <h1>The Missha BB Cream Boom: What Cardi B Started</h1>
+      <p class="dek">A single TikTok feature sent Missha's US sales up <strong>816%</strong> and BB cream searches up <strong>329% in a week</strong>. Here's what the M Perfect Cover BB cream is — and why this moment is different from past K-beauty virality.</p>
+      <p class="meta">
+        <span>Eric Zhou</span>
+        <span class="dot"></span>
+        <span>Aug 11, 2026</span>
+        <span class="dot"></span>
+        <span>4 min read</span>
+      </p>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-blob"></div>
+      <img src="https://cdn.yamibuy.net/item/26f9896085ce352e0e27ef2137b50544_757x757.webp" alt="MISSHA M Perfect Cover BB Cream SPF42 PA+++ 50ml" width="400" height="400" loading="eager" fetchpriority="high" />
+      <p class="hero-caption">MISSHA M Perfect Cover BB Cream · #23 Natural Beige · SPF42 PA+++</p>
+    </div>
   </div>
 
-  <div class="grid">
-    <div>
-      <section class="card">
-        <h2>Why this one went viral</h2>
-        <p>The usual K-beauty virality cycle is "new ingredient → new product → TikTok hype." The Missha moment is the opposite: a <strong>decade-old, drugstore-priced product</strong> got a celebrity demo and the market responded in days. That's a sign the demand was already there — the video just told people where to point it.</p>
-        <p>It also fits the 2026 beauty mood. After two years of "glass skin" and heavy glow, the trend has shifted toward <a href="/article/bloom-skin-2026-k-beauty-trend">barrier-first skin and "bloom skin"</a> — natural, skin-like finishes over full-coverage looks. A BB cream that blurs without caking is exactly the kind of product that benefits.</p>
-      </section>
+  <div class="layout">
+    <main>
+      <article>
+        <section class="story" id="spike">
+          <span class="sec-num">01 · The Spike</span>
+          <h2>Why this one went viral</h2>
+          <p>The usual K-beauty virality cycle is "new ingredient → new product → TikTok hype." The Missha moment is the opposite: a <strong>decade-old, drugstore-priced product</strong> got a celebrity demo and the market responded in days. That's a sign the demand was already there — the video just told people where to point it.</p>
+          <blockquote class="pull">
+            <p>"The demand was already there — the video just told people where to point it."</p>
+            <cite>Why this moment differs from past K-beauty cycles</cite>
+          </blockquote>
+          <p>It also fits the 2026 beauty mood. After two years of "glass skin" and heavy glow, the trend has shifted toward <a href="/article/bloom-skin-2026-k-beauty-trend">barrier-first skin and "bloom skin"</a> — natural, skin-like finishes over full-coverage looks. A BB cream that blurs without caking is exactly the kind of product that benefits.</p>
+        </section>
 
-      <section class="card">
-        <h2>What M Perfect Cover actually is</h2>
-        <ul>
-          <li><strong>BB cream, not foundation</strong> — medium coverage with a skin-like finish, applied with fingers in two minutes.</li>
-          <li><strong>SPF42 PA+++ built in</strong> — moisturizer, tone-up, coverage, and sun protection in one step.</li>
-          <li><strong>#23 Natural Beige</strong> — the classic light-to-medium shade with neutral undertones, and the shade that made Missha a household name in Korea.</li>
-          <li><strong>50ml, $13.69 on Yami</strong> — drugstore pricing with 99+ verified reviews on the listing.</li>
-        </ul>
-        <p>This is a "replacement product": it removes steps from a morning routine instead of adding them. That's rare in a market that usually sells you more products, which is part of why the one-tube pitch lands so well on short video.</p>
-      </section>
+        <section class="story" id="product">
+          <span class="sec-num">02 · The Product</span>
+          <h2>What M Perfect Cover actually is</h2>
+          <ul>
+            <li><strong>BB cream, not foundation</strong> — medium coverage with a skin-like finish, applied with fingers in two minutes.</li>
+            <li><strong>SPF42 PA+++ built in</strong> — moisturizer, tone-up, coverage, and sun protection in one step.</li>
+            <li><strong>#23 Natural Beige</strong> — the classic light-to-medium shade with neutral undertones, and the shade that made Missha a household name in Korea.</li>
+            <li><strong>50ml, $13.69 on Yami</strong> — drugstore pricing with 99+ verified reviews on the listing.</li>
+          </ul>
+          <p>This is a "replacement product": it removes steps from a morning routine instead of adding them. That's rare in a market that usually sells you more products, which is part of why the one-tube pitch lands so well on short video.</p>
+        </section>
 
-      <section class="card">
-        <h2>What to know before you buy</h2>
-        <div class="box"><strong>Shade check:</strong> #23 Natural Beige suits light-to-medium skin with neutral undertones. If you usually buy "natural beige" in Korean cushions, this is the same family. Darker or deeper tones should look for other Missha BB shades.</div>
-        <div class="box"><strong>SPF expectations:</strong> SPF42 PA+++ is fine for daily commute use. If you're spending hours outdoors, apply a dedicated sunscreen underneath — BB cream is not a beach sunscreen.</div>
-        <div class="box"><strong>Trend vs. staple:</strong> The 816%/329% numbers are TikTok Shop sales and search spikes. If the hype fades, the product still has a decade of Korean skincare reputation behind it — this isn't a novelty buy.</div>
-      </section>
+        <section class="story" id="buy">
+          <span class="sec-num">03 · Before You Buy</span>
+          <h2>What to know before you buy</h2>
+          <div class="callout">
+            <span class="label">Shade check</span>
+            <p>#23 Natural Beige suits light-to-medium skin with neutral undertones. If you usually buy "natural beige" in Korean cushions, this is the same family. Darker or deeper tones should look for other Missha BB shades.</p>
+          </div>
+          <div class="callout">
+            <span class="label">SPF expectations</span>
+            <p>SPF42 PA+++ is fine for daily commute use. If you're spending hours outdoors, apply a dedicated sunscreen underneath — BB cream is not a beach sunscreen.</p>
+          </div>
+          <div class="callout">
+            <span class="label">Trend vs. staple</span>
+            <p>The 816%/329% numbers are TikTok Shop sales and search spikes. If the hype fades, the product still has a decade of Korean skincare reputation behind it — this isn't a novelty buy.</p>
+          </div>
 
-      <section class="card">
-        <h2>The bottom line</h2>
-        <p>The Missha boom is a useful reminder that K-beauty virality isn't only about new launches — a good, cheap, one-step staple can go mainstream overnight when the right person demos it. If you've been curious about Korean BB creams, the <a href="/landing-pages/missha-m-perfect-cover-bb-cream-spf42-50ml">M Perfect Cover BB cream</a> is the exact product at the center of this moment.</p>
-        <p style="margin-top:14px;"><a class="cta" href="https://www.yami.com/us/en/p/korea-missha-m-perfect-cover-bb-cream-21-50ml-spf42-pa-23-natural-beige/3194008861?utm_source=zhouzk.com">Buy on Yami — $13.69</a></p>
-      </section>
+          <div class="product-card">
+            <img src="https://cdn.yamibuy.net/item/26f9896085ce352e0e27ef2137b50544_757x757.webp" alt="MISSHA M Perfect Cover BB Cream" width="88" height="88" loading="lazy" />
+            <div style="flex:1">
+              <h4>MISSHA M Perfect Cover BB Cream</h4>
+              <p class="price">$13.69 <small>· 50ml · SPF42 PA+++ · #23 Natural Beige</small></p>
+            </div>
+            <a class="btn" href="https://www.yami.com/us/en/p/korea-missha-m-perfect-cover-bb-cream-21-50ml-spf42-pa-23-natural-beige/3194008861?utm_source=zhouzk.com">Buy on Yami</a>
+          </div>
+        </section>
 
-      <p class="note">Sources: Korean media reporting on Missha's US TikTok Shop performance (August 2026); Yami product listing data. Sales figures reflect TikTok Shop channel performance reported by the brand and media, not Yami or zhouzk.com data.</p>
-    </div>
+        <section class="story" id="verdict">
+          <span class="sec-num">04 · The Verdict</span>
+          <h2>The bottom line</h2>
+          <p>The Missha boom is a useful reminder that K-beauty virality isn't only about new launches — a good, cheap, one-step staple can go mainstream overnight when the right person demos it. If you've been curious about Korean BB creams, the <a href="/landing-pages/missha-m-perfect-cover-bb-cream-spf42-50ml">M Perfect Cover BB cream</a> is the exact product at the center of this moment.</p>
+          <div class="bottom-line">
+            <span class="label">TL;DR</span>
+            <p>A decade-old, drugstore-priced K-beauty staple went viral because it's a one-step replacement, not a novelty. At <strong>$13.69 with SPF42 built in</strong>, it's a low-risk way to try the <a href="/landing-pages/missha-m-perfect-cover-bb-cream-spf42-50ml">BB cream behind the boom</a>.</p>
+          </div>
+        </section>
+
+        <p class="sources">Sources: Korean media reporting on Missha's US TikTok Shop performance (August 2026); Yami product listing data. Sales figures reflect TikTok Shop channel performance reported by the brand and media, not Yami or zhouzk.com data.</p>
+      </article>
+    </main>
 
     <aside>
-      <div class="card">
+      <div class="side-card">
+        <h3>In this report</h3>
+        <nav class="toc">
+          <a href="#spike">01 · Why this went viral</a>
+          <a href="#product">02 · What M Perfect Cover is</a>
+          <a href="#buy">03 · Before you buy</a>
+          <a href="#verdict">04 · The bottom line</a>
+        </nav>
+      </div>
+
+      <div class="side-card">
         <h3>Related reading</h3>
-        <ul>
+        <ol class="related-list">
           <li><a href="/landing-pages/missha-m-perfect-cover-bb-cream-spf42-50ml">MISSHA M Perfect Cover BB Cream</a></li>
           <li><a href="/article/bloom-skin-2026-k-beauty-trend">Bloom Skin: The 2026 K-Beauty Trend</a></li>
           <li><a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">Beauty of Joseon vs Round Lab</a></li>
-          <li><a href="/article/where-to-buy-korean-skincare-online-us">Where to Buy Korean Skincare Online</a></li>
-        </ul>
+          <li><a href="/article/where-to-buy-korean-skincare-online-us">Where to Buy Korean Skincare</a></li>
+        </ol>
+      </div>
+
+      <div class="side-card">
+        <h3>At a glance</h3>
+        <div class="mini">
+          <img src="https://cdn.yamibuy.net/item/26f9896085ce352e0e27ef2137b50544_757x757.webp" alt="MISSHA M Perfect Cover BB Cream" width="56" height="56" loading="lazy" />
+          <div>
+            <div style="font-size:13.5px;line-height:1.35">MISSHA M Perfect Cover BB Cream</div>
+            <div class="price">$13.69 · SPF42</div>
+          </div>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)">99+ verified reviews on Yami · ships from the US</p>
+        <a class="side-cta" style="display:block;margin-top:14px" href="https://www.yami.com/us/en/p/korea-missha-m-perfect-cover-bb-cream-21-50ml-spf42-pa-23-natural-beige/3194008861?utm_source=zhouzk.com">Buy on Yami →</a>
       </div>
     </aside>
   </div>
+
+  <footer class="site">
+    <p>© 2026 zhouzk.com · Independent buyer's guide · Some links include affiliate tracking · <a href="/landing-pages/">All guides</a></p>
+  </footer>
 </div>
 </body>
 </html>
