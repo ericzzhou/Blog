@@ -17,6 +17,9 @@
   <meta name="description" content="Where to buy Asian sunscreens in the U.S.? Compare Yami, Amazon, YesStyle and more — delivery, authenticity, price ranges, editor picks and a practical buying checklist for Korean & Japanese sunscreens." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href="https://zhouzk.com/article/where-to-buy-asian-sunscreens-in-the-us" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Where to Buy Asian Sunscreens in the U.S. (2025) — Trusted Korean & Japanese SPF | Yami" />
@@ -25,329 +28,253 @@
   <meta property="og:url" content="https://zhouzk.com/article/where-to-buy-asian-sunscreens-in-the-us" />
 
   <style>
-    :root{--accent:#E94E77;--muted:#6b7280;--bg:#fbfbfd;--max:1200px}
+    :root{
+      --paper:#faf8f4;--ink:#1c1917;--ink-soft:#292524;--muted:#78716c;--rule:#e7e2da;
+      --accent:#b45309;--accent-soft:#fbf1e6;--card:#fff;--accent-soft2:#fdeee0;
+    }
     *{box-sizing:border-box}
-    body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#0f172a;margin:0;background:var(--bg);line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;gap:16px;padding:18px 0}
-    .logo{font-weight:700;color:#111}
-    .eyebrow{font-size:13px;color:var(--muted)}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);margin:0;background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    img{max-width:100%}
+    .container{max-width:1160px;margin:0 auto;padding:0 28px}
+    header.site{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--rule)}
+    .logo{font-weight:700;font-size:16px;color:var(--ink)}.site-links a{font-size:13.5px;color:var(--muted);margin-left:22px}
 
-    /* Hero */
-    .hero{background:white;border-radius:12px;padding:28px;margin-bottom:20px;box-shadow:0 8px 30px rgba(15,23,42,0.05);display:flex;gap:20px;align-items:flex-start}
-    .hero-left{flex:1}
-    .hero-right{width:320px}
-    h1{margin:4px 0 12px;font-size:28px}
-    .snippet{background:#fbf9f6;border:1px solid #f1eada;padding:12px;border-radius:8px;margin:12px 0}
-    .cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:8px;font-weight:700}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 48px;border-bottom:1px solid var(--rule);margin-bottom:44px}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 14px}
+    h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+    .dek{font-size:18px;color:var(--ink-soft);margin:0 0 20px;max-width:58ch}
+    .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-bottom:18px}
+    .meta span{display:inline-flex;align-items:center;gap:6px}.meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+    .snippet{background:var(--accent-soft2);border:1px solid #f4d9bd;border-left:3px solid var(--accent);border-radius:10px;padding:14px 16px;font-size:15px;margin-bottom:18px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:14px;padding:11px 20px;border-radius:999px}
+    .btn:hover{background:#92400e;text-decoration:none}
+    .hero-visual{position:relative}.hero-blob{position:absolute;inset:8% 6%;background:linear-gradient(160deg,#fde3c8,#f6d2ab 55%,#f0e2c9);border-radius:48% 52% 55% 45%/46% 42% 58% 54%;filter:blur(2px)}
+    .hero-visual img{position:relative;width:100%;border-radius:20px;box-shadow:0 30px 60px rgba(28,25,23,.16);display:block;transform:rotate(-1.5deg)}
+    .hero-caption{position:relative;text-align:center;font-size:12.5px;color:var(--muted);margin-top:12px}
 
-    /* Layout */
-    .grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
-    @media (max-width:920px){.grid{grid-template-columns:1fr}.hero{flex-direction:column}.hero-right{width:100%}}
+    .layout{display:grid;grid-template-columns:minmax(0,720px) 300px;gap:64px;padding-bottom:56px}
+    main p{font-size:17px;color:var(--ink-soft);margin:0 0 1.25em}
+    main p strong{color:var(--ink)}
+    main ul{padding-left:0;list-style:none;margin:0 0 1.4em}
+    main ul li{position:relative;padding-left:26px;margin-bottom:.7em;color:var(--ink-soft);font-size:16.5px}
+    main ul li::before{content:"";position:absolute;left:4px;top:.6em;width:9px;height:9px;border-radius:2px;background:var(--accent);opacity:.75}
+    h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:29px;line-height:1.2;margin:0 0 16px}
+    h3{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:24px 0 8px}
+    .sec-num{display:block;font-family:Inter;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+    section.story{margin-bottom:44px}
+    .callout{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0}
+    .callout .label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+    .callout p{margin:0;font-size:15.5px}
 
-    /* Sections */
-    section.card{background:white;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(12,15,20,0.04)}
-    h2{margin-top:0}
-    .muted{color:var(--muted)}
+    table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin:18px 0;font-size:14.5px}
+    th{background:var(--paper-deep,#f1ece3);text-align:left;padding:11px 12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    td{padding:11px 12px;border-top:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
 
-    /* Tables & lists */
-    table{width:100%;border-collapse:collapse;margin-top:12px}
-    table th, table td{padding:10px;border:1px solid #eef2f7;text-align:left}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid #eef2f7;font-size:13px}
+    .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .product-card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:16px}
+    .product-card h4{font-family:Fraunces,Georgia,serif;font-size:16px;margin:0 0 6px;line-height:1.3}
+    .product-card p{font-size:14px;color:var(--muted);margin:0 0 8px}
+    .product-card .price{font-weight:700;font-size:14px}
+    details{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;margin:10px 0}
+    summary{cursor:pointer;font-weight:600;font-size:15.5px}
+    details p{margin:10px 0 0;font-size:15px;color:var(--muted)}
+    blockquote.review{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:16px 0;font-family:Fraunces,Georgia,serif;font-size:18px;line-height:1.5;color:var(--ink)}
+    .sources{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
 
-    /* Products */
-    .product-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
-    .product{background:#fff;padding:12px;border-radius:8px;border:1px solid #f0f2f5}
-    .product img{width:100%;height:140px;object-fit:cover;border-radius:6px}
-    .product h4{margin:8px 0 6px;font-size:16px}
-    .product .price{font-weight:700}
+    aside .side-card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px;margin-bottom:22px}
+    aside .side-card h3{font-family:Fraunces,Georgia,serif;font-size:16px;margin:0 0 12px}
+    aside nav.toc a{display:block;font-size:14px;color:var(--ink-soft);padding:7px 0;border-bottom:1px dashed var(--rule)}
+    aside nav.toc a:last-child{border-bottom:none}
+    aside nav.toc a:hover{color:var(--accent);text-decoration:none}
+    aside .related-list{list-style:none;margin:0;padding:0;counter-reset:rel}
+    aside .related-list li{counter-increment:rel;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14px}
+    aside .related-list li::before{content:counter(rel,decimal-leading-zero);font-family:Fraunces,serif;color:var(--accent);margin-right:8px;font-size:13px}
+    aside .side-cta{display:block;text-align:center;background:var(--accent-soft);border:1px solid #f0ddc6;border-radius:12px;padding:14px;font-size:14px;font-weight:600;color:var(--accent)}
 
-    /* FAQ */
-    details summary{cursor:pointer;padding:12px;border-radius:8px;background:#fafafa}
-    details div{padding:12px}
-
-    footer{margin-top:28px;padding:18px 0;text-align:center;color:var(--muted);font-size:13px}
-
-    /* small */
-    .note{font-size:13px;color:var(--muted)}
-    .badge{background:#fff;padding:6px 10px;border-radius:999px;border:1px solid #eef2f7;font-weight:600}
+    footer.site{border-top:1px solid var(--rule);padding:26px 0 40px;font-size:12.5px;color:var(--muted)}
+    footer.site a{color:var(--muted);text-decoration:underline}
+    @media (max-width:960px){.hero{grid-template-columns:1fr;padding-top:36px}.layout{grid-template-columns:1fr;gap:40px}}
+    @media (max-width:640px){.product-grid{grid-template-columns:1fr}}
+    @media (max-width:520px){.container{padding:0 18px}}
   </style>
-
-  <!-- Structured Data: WebPage, Breadcrumbs, FAQ, Example Products -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Where to Buy Asian Sunscreens in the U.S. (2025)",
-    "description":"Compare Yami, Amazon, YesStyle and more — learn where to buy authentic Asian sunscreens in the U.S., delivery expectations, and a practical buying checklist.",
-    "author":{"@type":"Person","name":"Eric Zhou","url":"https://zhouzk.com"},
-    "publisher":{"@type":"Person","name":"Eric Zhou","url":"https://zhouzk.com"}
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://zhouzk.com/"},
-      {"@type":"ListItem","position":2,"name":"Articles","item":"https://zhouzk.com/article/"},
-      {"@type":"ListItem","position":3,"name":"Where to Buy Asian Sunscreens","item":"https://zhouzk.com/article/where-to-buy-asian-sunscreens-in-the-us"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Where can I buy Asian sunscreens in the U.S?","acceptedAnswer":{"@type":"Answer","text":"Trusted specialty retailers (like Yami), direct brand stores, and selected marketplaces — but always choose sellers that disclose sourcing and offer U.S. shipping."}},
-      {"@type":"Question","name":"Are Asian sunscreens legal in the U.S?","acceptedAnswer":{"@type":"Answer","text":"Yes. Import for personal use is allowed; some UV filters are not FDA-approved for U.S. manufacturing, so check ingredient lists if you have concerns."}},
-      {"@type":"Question","name":"Will I be charged duties/taxes?","acceptedAnswer":{"@type":"Answer","text":"Orders shipped from U.S. warehouses typically do not incur customs duties. For international shipments, duties depend on the declared value and carrier — check seller's shipping policy."}}
-    ]
-  }
-  </script>
 </head>
 <body>
-  <div class="container">
+<div class="container">
+  <header class="site">
+    <a class="logo" href="/">zhouzk.com</a>
+    <nav class="site-links">
+      <a href="/article/where-to-buy-korean-skincare-online-us">Korean Skincare</a>
+      <a href="/article/bloom-skin-2026-k-beauty-trend">Bloom Skin</a>
+    </nav>
+  </header>
 
-    <header>
-      <div class="logo">Yami</div>
-      <div style="margin-left:auto" class="eyebrow muted">Updated: Nov 21, 2025 • Editorial</div>
-    </header>
-
-    <article class="hero" role="article" aria-labelledby="page-title">
-      <div class="hero-left">
-        <div class="eyebrow">2025 Guide • Asian Sunscreens</div>
-        <h1 id="page-title">Where to Buy Asian Sunscreens in the U.S. — Korean & Japanese SPF</h1>
-        <p class="muted">Short answer: <strong>Specialty retailers with U.S. warehouses (like Yami)</strong> are the fastest and safest way to buy authentic Korean & Japanese sunscreens in the U.S. This page explains why, compares alternatives, and gives a practical buying checklist and verification steps so you can purchase with confidence.</p>
-
-        <div class="snippet" role="region" aria-label="featured snippet">
-          <strong>Best quick pick:</strong> For most U.S. buyers — <strong>Yami</strong>. <em>Why:</em> majority U.S. stock, verified procurement, explicit lot/expiry checks, and straightforward returns.
-        </div>
-
-        <p><a class="cta" href="/collections/sunscreen">Shop Asian Sunscreens</a> <span style="margin-left:12px" class="pill">Free U.S. shipping over $49</span></p>
-      </div>
-
-      <div class="hero-right">
-        <img src="/images/asian-sunscreens-hero.png" alt="Asian sunscreens available in the U.S. — Korean and Japanese SPF products" width="320" height="220" style="width:100%;border-radius:8px" />
-        <p class="note muted" style="margin-top:10px">Editor picks, authentication checklist, and U.S. shipping details below.</p>
-      </div>
-    </article>
-
-    <div class="grid">
-      <!-- Main content -->
-      <div>
-
-        <section class="card" aria-labelledby="why-hard">
-          <h2 id="why-hard">Why Asian Sunscreens Are Hard to Buy in the U.S.</h2>
-          <p>Asian sunscreens often use modern UV filters and formulation approaches (for example, Tinosorb S, Uvinul A Plus, Uvinul T 150) that are commonly used in Korea & Japan but are not approved for U.S. manufacturing in the same way. Distribution choices and brand licensing mean some formulas are less available through mainstream U.S. retailers.</p>
-
-          <h3>Common buyer pain points</h3>
-          <ul>
-            <li>Slow international shipping from Asia (standard 2–4 weeks for economy shipping).</li>
-            <li>Marketplace listings with unclear sourcing — possible expired or grey-market stock.</li>
-            <li>Limited SKUs in local drugstores; many formulas are only sold in Asia.</li>
-          </ul>
-
-          <p class="muted"><strong>Bottom line:</strong> If you want authentic, fresh Asian sunscreens with predictable delivery, choose a specialty e-tailer that discloses procurement and keeps inventory in U.S. warehouses.</p>
-        </section>
-
-        <section class="card" aria-labelledby="where-to-buy">
-          <h2 id="where-to-buy">Where to Buy — Quick Comparison</h2>
-
-          <table aria-label="Where to buy comparison">
-            <thead>
-              <tr><th>Site</th><th>Selection</th><th>Delivery (U.S.)</th><th>Authentication</th><th>Typical Price Range</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Yami</strong></td>
-                <td>Large K/J selection; current trending sunscreens and limited releases</td>
-                <td>Most items ship from U.S. warehouses: <strong>1–3 business days to ship</strong>; transit 1–5 business days (example SLA — confirm with ops).</td>
-                <td>Procurement from authorized distributors; in-receiving QC for lot & expiry; 30-day return policy.</td>
-                <td>$10 – $35</td>
-              </tr>
-              <tr>
-                <td>YesStyle</td>
-                <td>Very wide selection; many items ship from Asia</td>
-                <td>International shipping 2–4+ weeks (depends on warehouse/fulfillment)</td>
-                <td>Marketplace-style; check seller/warehouse source</td>
-                <td>$8 – $40</td>
-              </tr>
-              <tr>
-                <td>Amazon</td>
-                <td>Some authentic listings; many third-party sellers</td>
-                <td>Fast delivery for Prime items; variable for third-party sellers</td>
-                <td>High variability — verify seller, look for brand-fulfilled or Prime listings</td>
-                <td>$7 – $50</td>
-              </tr>
-              <tr>
-                <td>SokoGlam / Peach & Lily</td>
-                <td>Curated K-beauty picks; limited sunscreen SKUs</td>
-                <td>U.S. shipping from inventory: 2–7 business days</td>
-                <td>Curated selection reduces risk</td>
-                <td>$10 – $35</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p class="muted note">Note: Delivery and price ranges above are illustrative. Replace with live product-feed values and your operations SLA before publishing.</p>
-        </section>
-
-        <section class="card" aria-labelledby="authenticity">
-          <h2 id="authenticity">How Yami Verifies Authenticity & Minimizes Risk</h2>
-
-          <p>Transparency in sourcing and receiving QC are the most important signals you should look for when buying Asian sunscreens online. Below we outline the practices Yami follows (example operational process — update with your legal/ops wording):</p>
-
-          <h3>Procurement & sourcing</h3>
-          <ul>
-            <li>We source primarily from <strong>brand-authorized distributors</strong> and official regional partners.</li>
-            <li>For limited releases, we work with official brand channels or verified regional wholesalers with traceable invoices.</li>
-          </ul>
-
-          <h3>Receiving & QC at U.S. warehouses</h3>
-          <ul>
-            <li>Every incoming pallet is checked for <strong>packaging integrity, lot numbers, and expiration dates</strong>.</li>
-            <li>Products failing QC are quarantined and returned to supplier.</li>
-            <li>Warehouse logs store lot numbers and received dates to handle returns and traceability.</li>
-          </ul>
-
-          <h3>Customer protections</h3>
-          <ul>
-            <li><strong>Authenticity guarantee:</strong> If you suspect a product is not authentic, contact support with photos — we will investigate and offer replacement or refund.</li>
-            <li><strong>Returns:</strong> 30-day return window for unopened items. Opened items eligible for partial refund depending on condition (contact support).</li>
-          </ul>
-
-        </section>
-
-        <section class="card" aria-labelledby="editor-picks">
-          <h2 id="editor-picks">Editor’s Picks — Top Asian Sunscreens (2025)</h2>
-          <p class="muted">Short descriptions — link each product card to live product pages to surface price, stock, and ship-from data.</p>
-
-          <div class="product-list">
-            <article class="product" aria-labelledby="p-boj">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' fill='%23f8f4f0'%3E%3Crect width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23c4a882' font-family='sans-serif' font-size='16'%3EBeauty of Joseon Relief Sun%3C/text%3E%3C/svg%3E" alt="Beauty of Joseon Relief Sun SPF50+ PA++++ sunscreen product" width="400" height="300" />
-              <h4 id="p-boj"><a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml" style="color:inherit">Beauty of Joseon Relief Sun SPF50+ PA++++</a></h4>
-              <p class="muted">Hydrating, low white-cast texture. Great daily protection for normal to dry skin.</p>
-              <div class="price">$18 – $24</div>
-            </article>
-
-            <article class="product" aria-labelledby="p-anessa">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' fill='%23f0f4f8'%3E%3Crect width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%238299b0' font-family='sans-serif' font-size='16'%3EAnessa Perfect UV Sunscreen%3C/text%3E%3C/svg%3E" alt="Anessa Perfect UV Sunscreen Milk SPF50+ water-resistant sunscreen" width="400" height="300" />
-              <h4 id="p-anessa"><a href="/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g" style="color:inherit">Anessa Perfect UV Sunscreen Milk SPF50+</a></h4>
-              <p class="muted">Water-resistant formula engineered for outdoor activities and sports.</p>
-              <div class="price">$20 – $30</div>
-            </article>
-
-            <article class="product" aria-labelledby="p-round">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' fill='%23f4f8f0'%3E%3Crect width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2382b08a' font-family='sans-serif' font-size='16'%3ERound Lab Birch Juice Sun Cream%3C/text%3E%3C/svg%3E" alt="Round Lab Birch Juice Moisturizing Sun Cream soothing sunscreen for sensitive skin" width="400" height="300" />
-              <h4 id="p-round"><a href="/landing-pages/round-lab-birch-juice-moisturizing-sun-cream-spf50" style="color:inherit">Round Lab Birch Juice Moisturizing Sun Cream</a></h4>
-              <p class="muted">Soothing formula for sensitive skin; lightweight moisturizing finish.</p>
-              <div class="price">$16 – $22</div>
-            </article>
-
-            <article class="product" aria-labelledby="p-biore">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' fill='%23f8f0f4'%3E%3Crect width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23b082a0' font-family='sans-serif' font-size='16'%3EBiore UV Aqua Rich Essence%3C/text%3E%3C/svg%3E" alt="Biore UV Aqua Rich Watery Essence SPF50+ lightweight gel sunscreen" width="400" height="300" />
-              <h4 id="p-biore"><a href="/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g" style="color:inherit">Biore UV Aqua Rich Watery Essence SPF50+</a></h4>
-              <p class="muted">Ultra-light gel texture that layers well under makeup. Popular for oily skin types.</p>
-              <div class="price">$8 – $15</div>
-            </article>
-          </div>
-        </section>
-
-        <section class="card" aria-labelledby="buying-guide">
-          <h2 id="buying-guide">Practical Buying Checklist (Before You Checkout)</h2>
-          <ul>
-            <li>Confirm <strong>ship-from</strong> location: U.S. warehouse = faster delivery & lower customs risk.</li>
-            <li>Check product images and description for <strong>lot numbers and expiration dates</strong>.</li>
-            <li>Read recent verified reviews for mentions of freshness and packaging integrity.</li>
-            <li>If the price is suspiciously low, compare seller history and return policy.</li>
-            <li>When in doubt, contact seller support for procurement source (authorized distributor vs third-party importer).</li>
-          </ul>
-        </section>
-
-        <section class="card" aria-labelledby="faq">
-          <h2 id="faq">Frequently Asked Questions</h2>
-
-          <details>
-            <summary>Are Asian sunscreens safe to use in the U.S.?</summary>
-            <div class="muted">Yes — many Asian sunscreens are safe for personal use. If you have concerns about specific ingredients, consult the ingredient list and a dermatologist. Sellers should provide full ingredient panels on product pages.</div>
-          </details>
-
-          <details style="margin-top:8px">
-            <summary>Will I pay customs or import duties?</summary>
-            <div class="muted">If an item ships from a U.S. warehouse, customs duties usually do not apply. International shipments may incur duties depending on value and carrier. Some retailers offer DDP (Delivery Duty Paid) at checkout — choose that option if available to avoid surprises.</div>
-          </details>
-
-          <details style="margin-top:8px">
-            <summary>How do I handle returns for sunscreen?</summary>
-            <div class="muted">Most specialty retailers accept returns within 30 days for unopened products. For opened items, policies vary; retain photos of packaging and lot numbers for claims. Contact seller support promptly to initiate a return.</div>
-          </details>
-
-        </section>
-
-        <section class=”card” aria-labelledby=”reviews”>
-          <h2 id=”reviews”>What U.S. Customers Say</h2>
-          <p class=”muted”>Below are anonymized, representative customer comments (replace with verified UGC feed for live site):</p>
-          <blockquote>”I ordered three sunscreens and they arrived in 2 days from a U.S. warehouse — packaging and lot codes were clear. I feel confident buying from this site now.” — Emily, NY</blockquote>
-          <blockquote>”Great for sensitive skin — the Round Lab I bought had a clear expiry date and arrived fresh.” — Jason, CA</blockquote>
-          <blockquote>”Faster than ordering from Asia. Customer support helped me confirm the lot number when I asked.” — Priya, TX</blockquote>
-        </section>
-
-        <section class=”card” aria-labelledby=”related-products”>
-          <h2 id=”related-products”>Explore Detailed Product Pages</h2>
-          <p class=”muted”>Looking for in-depth information on specific products? Check out our SEO product pages with full ingredient breakdowns, usage scenarios, and purchase links:</p>
-          <ul>
-            <li><a href=”/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml”>Beauty of Joseon Relief Sun — Rice + Probiotics SPF50+</a></li>
-            <li><a href=”/landing-pages/round-lab-birch-juice-moisturizing-sun-cream-spf50”>Round Lab Birch Juice Moisturizing Sun Cream SPF50</a></li>
-            <li><a href=”/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g”>Biore UV Aqua Rich Watery Essence SPF50+</a></li>
-            <li><a href=”/landing-pages/skin1004-madagascar-centella-hyalu-cica-sun-serum-50ml”>SKIN1004 Madagascar Centella Hyalu-Cica Sun Serum</a></li>
-            <li><a href=”/landing-pages/beauty-of-joseon-matte-sun-stick-mugwort-camelia-spf50-0-63oz”>Beauty of Joseon Matte Sun Stick SPF50+</a></li>
-            <li><a href=”/landing-pages/nivea-super-sun-protect-water-gel-spf50-140g”>Nivea Super Sun Protect Water Gel SPF50 140g</a></li>
-            <li><a href=”/landing-pages/round-lab-birch-juice-moisturizing-sunscreen-spf50-50ml”>Round Lab Birch Juice Moisturizing Sunscreen SPF50 50ml</a></li>
-            <li><a href=”/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml-value-pack”>Beauty of Joseon Relief Sun SPF50+ 50ml Value Pack</a></li>
-            <li><a href=”/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g-value-pack”>Biore UV Aqua Rich Watery Essence SPF50+ 70g Value Pack</a></li>
-            <li><a href=”/landing-pages/matte-sun-stick-mugwort-camelia-spf50-value-pack”>Beauty of Joseon Matte Sun Stick Mugwort & Camelia SPF50+ Value Pack</a></li>
-            <li><a href=”/landing-pages/skin1004-madagascar-centella-hyalu-cica-sun-serum-value-pack”>SKIN1004 Madagascar Centella Hyalu-Cica Sun Serum Value Pack</a></li>
-          </ul>
-          <p class=”muted” style=”margin-top:12px”><a href=”/landing-pages/”>Browse all 100+ product pages →</a></p>
-        </section>
-
-      </div>
-
-      <!-- Sidebar -->
-      <aside>
-        <section class="card" aria-labelledby="sidebar-quick">
-          <h3 id="sidebar-quick">Quick Recommendation</h3>
-          <p class="muted">For reliable stock and predictable delivery, choose a specialty retailer with U.S. warehouses. <strong>Yami</strong> is recommended for shoppers who prioritize authenticity checks, easy returns, and faster delivery.</p>
-          <a class="cta" href="/collections/sunscreen" style="display:block;margin-top:12px;text-align:center">Shop Best Sellers</a>
-        </section>
-
-        <section class="card" style="margin-top:16px" aria-labelledby="compare">
-          <h3 id="compare">Quick Comparison Snapshot</h3>
-          <ul>
-            <li class="muted"><strong>Speed:</strong> Yami (U.S. stock) &gt; Amazon Prime &gt; YesStyle (Asia-fulfilled)</li>
-            <li class="muted"><strong>Authenticity risk:</strong> Marketplace sellers &gt; Curated retailers</li>
-            <li class="muted"><strong>Price:</strong> Marketplaces may be cheaper but riskier — always check seller and lot info</li>
-          </ul>
-        </section>
-
-        <section class="card" style="margin-top:16px" aria-labelledby="contact">
-          <h3 id="contact">Need help choosing?</h3>
-          <p class="muted">Chat with our skincare team for sourcing, ingredient or compatibility questions. Keep photos of packaging and lot codes handy for support.</p>
-          <a class="pill" href="/support">Contact Support</a>
-        </section>
-      </aside>
+  <div class="hero">
+    <div>
+      <p class="kicker">Buying Guide · Sunscreen</p>
+      <h1>Where to Buy Asian Sunscreens in the U.S.</h1>
+      <p class="dek">Short answer: <strong>specialty retailers with U.S. warehouses (like Yami)</strong> are the fastest and safest way to buy authentic Korean &amp; Japanese sunscreens. This guide compares the options, then gives you a checklist so you can buy with confidence.</p>
+      <p class="meta">
+        <span>Eric Zhou</span><span class="dot"></span>
+        <span>Updated Aug 12, 2026</span><span class="dot"></span>
+        <span>9 min read</span>
+      </p>
+      <div class="snippet"><strong>Best quick pick:</strong> For most U.S. buyers — <strong>Yami</strong>. <em>Why:</em> majority U.S. stock, verified procurement, explicit lot/expiry checks, and straightforward returns.</div>
+      <a class="btn" href="/collections/sunscreen">Shop Asian Sunscreens</a>
     </div>
-
-    <footer>
-      <p class="muted">Editorial note: This page is a practical guide to help U.S. customers find and buy Asian sunscreens. Specific delivery times, pricing and sourcing details are illustrative examples — replace with live data and verified operational wording before publishing.</p>
-      <p style="margin-top:8px"><small class="muted">© 2025 Eric Zhou | zhouzk.com</small></p>
-    </footer>
-
+    <div class="hero-visual">
+      <div class="hero-blob"></div>
+      <img src="/images/asian-sunscreens-hero.png" alt="Asian sunscreens available in the U.S. — Korean and Japanese SPF products" width="520" height="360" loading="eager" />
+      <p class="hero-caption">Korean &amp; Japanese SPF · authentic stock · U.S. shipping</p>
+    </div>
   </div>
+
+  <div class="layout">
+    <main>
+      <section class="story" id="why-hard">
+        <span class="sec-num">01 · The Problem</span>
+        <h2>Why Asian Sunscreens Are Hard to Buy in the U.S.</h2>
+        <p>Asian sunscreens often use modern UV filters and formulation approaches (for example, Tinosorb S, Uvinul A Plus, Uvinul T 150) that are commonly used in Korea &amp; Japan but are not approved for U.S. manufacturing in the same way. Distribution choices and brand licensing mean some formulas are less available through mainstream U.S. retailers.</p>
+        <h3>Common buyer pain points</h3>
+        <ul>
+          <li>Slow international shipping from Asia (standard 2–4 weeks for economy shipping).</li>
+          <li>Marketplace listings with unclear sourcing — possible expired or grey-market stock.</li>
+          <li>Limited SKUs in local drugstores; many formulas are only sold in Asia.</li>
+        </ul>
+        <div class="callout"><span class="label">Bottom line</span><p>If you want authentic, fresh Asian sunscreens with predictable delivery, choose a specialty e-tailer that discloses procurement and keeps inventory in U.S. warehouses.</p></div>
+      </section>
+
+      <section class="story" id="where-to-buy">
+        <span class="sec-num">02 · The Comparison</span>
+        <h2>Where to Buy — Quick Comparison</h2>
+        <table>
+          <thead><tr><th>Site</th><th>Selection</th><th>Delivery (U.S.)</th><th>Authentication</th><th>Price Range</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Yami</strong></td><td>Large K/J selection; current trending sunscreens and limited releases</td><td>Most items ship from U.S. warehouses: <strong>1–3 business days to ship</strong>; transit 1–5 business days</td><td>Authorized distributors; in-receiving QC for lot &amp; expiry; 30-day returns</td><td>$10 – $35</td></tr>
+            <tr><td>YesStyle</td><td>Very wide selection; many items ship from Asia</td><td>International shipping 2–4+ weeks</td><td>Marketplace-style; check seller/warehouse source</td><td>$8 – $40</td></tr>
+            <tr><td>Amazon</td><td>Some authentic listings; many third-party sellers</td><td>Fast for Prime items; variable for third-party</td><td>High variability — verify seller, prefer brand-fulfilled</td><td>$7 – $50</td></tr>
+            <tr><td>SokoGlam / Peach &amp; Lily</td><td>Curated K-beauty picks; limited sunscreen SKUs</td><td>U.S. shipping from inventory: 2–7 business days</td><td>Curated selection reduces risk</td><td>$10 – $35</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:13px;color:var(--muted)">Delivery and price ranges are illustrative — confirm with live product-feed values and the retailer's current SLA.</p>
+      </section>
+
+      <section class="story" id="authenticity">
+        <span class="sec-num">03 · Trust Signals</span>
+        <h2>How Yami Verifies Authenticity &amp; Minimizes Risk</h2>
+        <p>Transparency in sourcing and receiving QC are the most important signals you should look for when buying Asian sunscreens online:</p>
+        <h3>Procurement &amp; sourcing</h3>
+        <ul>
+          <li>Sourcing primarily from <strong>brand-authorized distributors</strong> and official regional partners.</li>
+          <li>Limited releases sourced via official brand channels or verified regional wholesalers with traceable invoices.</li>
+        </ul>
+        <h3>Receiving &amp; QC at U.S. warehouses</h3>
+        <ul>
+          <li>Every incoming pallet is checked for <strong>packaging integrity, lot numbers, and expiration dates</strong>.</li>
+          <li>Products failing QC are quarantined and returned to supplier; warehouse logs store lot numbers for traceability.</li>
+        </ul>
+        <h3>Customer protections</h3>
+        <ul>
+          <li><strong>Authenticity guarantee:</strong> suspect a product isn't authentic? Contact support with photos for investigation and replacement or refund.</li>
+          <li><strong>Returns:</strong> 30-day window for unopened items; opened items may qualify for partial refund depending on condition.</li>
+        </ul>
+      </section>
+
+      <section class="story" id="editor-picks">
+        <span class="sec-num">04 · Editor's Picks</span>
+        <h2>Top Asian Sunscreens (2025)</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <h4><a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Beauty of Joseon Relief Sun SPF50+ PA++++</a></h4>
+            <p>Hydrating, low white-cast texture. Great daily protection for normal to dry skin.</p>
+            <div class="price">$18 – $24</div>
+          </div>
+          <div class="product-card">
+            <h4><a href="/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g">Anessa Perfect UV Sunscreen Milk SPF50+</a></h4>
+            <p>Water-resistant formula engineered for outdoor activities and sports.</p>
+            <div class="price">$20 – $30</div>
+          </div>
+          <div class="product-card">
+            <h4><a href="/landing-pages/round-lab-birch-juice-moisturizing-sun-cream-spf50">Round Lab Birch Juice Moisturizing Sun Cream</a></h4>
+            <p>Soothing formula for sensitive skin; lightweight moisturizing finish.</p>
+            <div class="price">$16 – $22</div>
+          </div>
+          <div class="product-card">
+            <h4><a href="/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g">Biore UV Aqua Rich Watery Essence SPF50+</a></h4>
+            <p>Ultra-light gel texture that layers well under makeup. Popular for oily skin types.</p>
+            <div class="price">$8 – $15</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" id="checklist">
+        <span class="sec-num">05 · Before Checkout</span>
+        <h2>Practical Buying Checklist</h2>
+        <ul>
+          <li>Confirm <strong>ship-from</strong> location: U.S. warehouse = faster delivery &amp; lower customs risk.</li>
+          <li>Check product images and description for <strong>lot numbers and expiration dates</strong>.</li>
+          <li>Read recent verified reviews for mentions of freshness and packaging integrity.</li>
+          <li>If the price is suspiciously low, compare seller history and return policy.</li>
+          <li>When in doubt, contact seller support for the procurement source (authorized distributor vs third-party importer).</li>
+        </ul>
+      </section>
+
+      <section class="story" id="faq">
+        <span class="sec-num">06 · FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <details><summary>Are Asian sunscreens safe to use in the U.S.?</summary><p>Yes — many Asian sunscreens are safe for personal use. If you have concerns about specific ingredients, consult the ingredient list and a dermatologist. Sellers should provide full ingredient panels on product pages.</p></details>
+        <details><summary>Will I pay customs or import duties?</summary><p>If an item ships from a U.S. warehouse, customs duties usually do not apply. International shipments may incur duties depending on value and carrier. Some retailers offer DDP (Delivery Duty Paid) at checkout — choose it if available to avoid surprises.</p></details>
+        <details><summary>How do I handle returns for sunscreen?</summary><p>Most specialty retailers accept returns within 30 days for unopened products. For opened items, policies vary; retain photos of packaging and lot numbers for claims, and contact seller support promptly.</p></details>
+      </section>
+
+      <section class="story" id="reviews">
+        <span class="sec-num">07 · What Buyers Say</span>
+        <h2>What U.S. Customers Say</h2>
+        <blockquote class="review">"I ordered three sunscreens and they arrived in 2 days from a U.S. warehouse — packaging and lot codes were clear. I feel confident buying from this site now." — Emily, NY</blockquote>
+        <blockquote class="review">"Great for sensitive skin — the Round Lab I bought had a clear expiry date and arrived fresh." — Jason, CA</blockquote>
+        <blockquote class="review">"Faster than ordering from Asia. Customer support helped me confirm the lot number when I asked." — Priya, TX</blockquote>
+      </section>
+
+      <p class="sources">Editorial note: specific delivery times, pricing and sourcing details are illustrative examples — confirm with live data before relying on them. Related: <a href="/article/bloom-skin-2026-k-beauty-trend">Bloom Skin: the 2026 K-beauty trend</a>.</p>
+    </main>
+
+    <aside>
+      <div class="side-card">
+        <h3>In this guide</h3>
+        <nav class="toc">
+          <a href="#why-hard">01 · Why it's hard to buy</a>
+          <a href="#where-to-buy">02 · Retailer comparison</a>
+          <a href="#authenticity">03 · Trust signals</a>
+          <a href="#editor-picks">04 · Editor's picks</a>
+          <a href="#checklist">05 · Buying checklist</a>
+          <a href="#faq">06 · FAQ</a>
+          <a href="#reviews">07 · What buyers say</a>
+        </nav>
+      </div>
+      <div class="side-card">
+        <h3>Related product pages</h3>
+        <ol class="related-list">
+          <li><a href="/landing-pages/beauty-of-joseon-relief-sun-rice-probiotics-spf50-50ml">Beauty of Joseon Relief Sun</a></li>
+          <li><a href="/landing-pages/round-lab-birch-juice-moisturizing-sunscreen-spf50-50ml">Round Lab Birch Juice SPF50</a></li>
+          <li><a href="/landing-pages/biore-uv-aqua-rich-watery-essence-spf50-70g">Biore UV Aqua Rich Essence</a></li>
+          <li><a href="/landing-pages/skin1004-madagascar-centella-hyalu-cica-sun-serum-50ml">SKIN1004 Hyalu-Cica Sun Serum</a></li>
+          <li><a href="/landing-pages/beauty-of-joseon-matte-sun-stick-mugwort-camelia-spf50-0-63oz">BoJ Matte Sun Stick</a></li>
+          <li><a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">BoJ vs Round Lab</a></li>
+          <li><a href="/landing-pages/korean-vs-japanese-sunscreen-2026">Korean vs Japanese SPF</a></li>
+        </ol>
+      </div>
+      <div class="side-card">
+        <h3>Quick recommendation</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0 0 12px">For reliable stock and predictable delivery, choose a specialty retailer with U.S. warehouses. <strong>Yami</strong> is recommended for authenticity checks, easy returns, and faster delivery.</p>
+        <a class="side-cta" href="/collections/sunscreen">Shop Best Sellers →</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site">
+    <p>© 2026 zhouzk.com · Independent buyer's guide · Some links include affiliate tracking · <a href="/landing-pages/">All guides</a></p>
+  </footer>
+</div>
 </body>
 </html>

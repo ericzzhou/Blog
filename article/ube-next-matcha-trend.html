@@ -17,6 +17,9 @@
   <meta name="description" content="Ube is being called the next matcha — Starbucks expanded its ube lineup in 2026 and the purple yam trend keeps growing. What it is, why it's trending, and what to buy if you're in the US." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href="https://zhouzk.com/article/ube-next-matcha-trend" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Why Ube Is Becoming the Next Matcha (2026)" />
@@ -25,92 +28,187 @@
   <meta property="og:url" content="https://zhouzk.com/article/ube-next-matcha-trend" />
 
   <style>
-    :root{--accent:#7C3AED;--muted:#6b7280;--bg:#fbfbfd;--max:1200px}
+    :root{
+      --paper:#faf8f4;
+      --paper-deep:#f1ece3;
+      --ink:#1c1917;
+      --ink-soft:#292524;
+      --muted:#78716c;
+      --rule:#e7e2da;
+      --accent:#6d28d9;
+      --accent-soft:#f2edfc;
+      --card:#ffffff;
+    }
     *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#0f172a;margin:0;background:var(--bg);line-height:1.65}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);margin:0;background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #eef0f3}
-    .logo{font-weight:700;color:#111}
-    .eyebrow{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-    .hero{background:#fff;border-radius:12px;padding:32px;margin:24px 0;box-shadow:0 8px 30px rgba(15,23,42,.05)}
-    h1{margin:0 0 14px;font-size:34px;line-height:1.2}
-    .meta{color:var(--muted);font-size:14px;margin-bottom:16px}
-    .grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
-    @media (max-width:920px){.grid{grid-template-columns:1fr}}
-    section.card{background:#fff;padding:22px;border-radius:10px;box-shadow:0 6px 18px rgba(12,15,20,.04);margin-bottom:20px}
-    h2{margin:4px 0 12px;font-size:23px}
-    h3{font-size:17px;margin:18px 0 8px}
-    .box{background:#f5f1fe;border:1px solid #e6defa;border-radius:8px;padding:14px 16px;margin:14px 0}
-    ul{padding-left:22px}
-    li{margin:6px 0}
-    aside .card{position:sticky;top:20px}
-    .note{font-size:13px;color:var(--muted)}
+    a:hover{text-decoration:underline}
+    img{max-width:100%}
+
+    .container{max-width:1160px;margin:0 auto;padding:0 28px}
+    header.site{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--rule)}
+    .logo{font-weight:700;font-size:16px;letter-spacing:-.01em;color:var(--ink)}
+    .site-links a{font-size:13.5px;color:var(--muted);margin-left:22px}
+
+    .hero{padding:56px 0 48px;border-bottom:1px solid var(--rule);margin-bottom:44px;max-width:820px}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 14px}
+    h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+    .dek{font-size:18px;color:var(--ink-soft);margin:0 0 22px;max-width:60ch}
+    .dek strong{color:var(--ink)}
+    .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+    .meta span{display:inline-flex;align-items:center;gap:6px}
+    .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+
+    .layout{display:grid;grid-template-columns:minmax(0,720px) 300px;gap:64px;padding-bottom:56px}
+    main article p{font-size:17px;color:var(--ink-soft);margin:0 0 1.25em}
+    main article p strong{color:var(--ink)}
+    main article ul{padding-left:0;list-style:none;margin:0 0 1.4em}
+    main article ul li{position:relative;padding-left:26px;margin-bottom:.75em;color:var(--ink-soft);font-size:17px}
+    main article ul li::before{content:"";position:absolute;left:4px;top:.62em;width:9px;height:9px;border-radius:2px;background:var(--accent);opacity:.75}
+
+    h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:30px;line-height:1.2;letter-spacing:-.01em;margin:0 0 18px;padding-top:10px}
+    .sec-num{display:block;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+    section.story{margin-bottom:48px}
+    section.story:first-of-type h2{padding-top:0}
+
+    blockquote.pull{margin:34px 0;padding:6px 0 6px 28px;border-left:3px solid var(--accent);font-family:Fraunces,Georgia,serif;font-size:23px;line-height:1.45;color:var(--ink)}
+    blockquote.pull p{margin:0;font-size:inherit;color:inherit}
+    blockquote.pull cite{display:block;font-family:Inter,sans-serif;font-size:12.5px;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+    .callout{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:10px;padding:18px 20px;margin:22px 0}
+    .callout .label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+    .callout p{margin:0;font-size:15.5px}
+
+    .bottom-line{background:var(--ink);color:#f5f1ea;border-radius:16px;padding:30px 32px;margin:34px 0}
+    .bottom-line .label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#d8c6f5;font-weight:700;margin-bottom:8px}
+    .bottom-line p{color:#e7e2da;font-size:17px;margin:0}
+    .bottom-line a{color:#e4d7fa;font-weight:600}
+
+    .sources{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+
+    aside .side-card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px;margin-bottom:22px}
+    aside .side-card h3{font-family:Fraunces,Georgia,serif;font-size:16px;margin:0 0 12px}
+    aside nav.toc a{display:block;font-size:14px;color:var(--ink-soft);padding:7px 0;border-bottom:1px dashed var(--rule)}
+    aside nav.toc a:last-child{border-bottom:none}
+    aside nav.toc a:hover{color:var(--accent);text-decoration:none}
+    aside .related-list{list-style:none;margin:0;padding:0;counter-reset:rel}
+    aside .related-list li{counter-increment:rel;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14px}
+    aside .related-list li::before{content:counter(rel,decimal-leading-zero);font-family:Fraunces,serif;color:var(--accent);margin-right:8px;font-size:13px}
+
+    footer.site{border-top:1px solid var(--rule);padding:26px 0 40px;font-size:12.5px;color:var(--muted)}
+    footer.site a{color:var(--muted);text-decoration:underline}
+
+    @media (max-width:960px){
+      .hero{padding-top:36px}
+      .layout{grid-template-columns:1fr;gap:40px}
+      aside .side-card{position:static}
+    }
+    @media (max-width:520px){
+      .container{padding:0 18px}
+    }
   </style>
 </head>
 <body>
 <div class="container">
-  <header>
+  <header class="site">
     <a class="logo" href="/">zhouzk.com</a>
-    <span class="eyebrow">Trend Report · Food &amp; Drink</span>
+    <nav class="site-links">
+      <a href="/article/where-to-buy-asian-snacks-online-us">Asian Snacks</a>
+      <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Matcha</a>
+    </nav>
   </header>
 
   <div class="hero">
-    <div class="eyebrow">Trend Report</div>
+    <p class="kicker">Trend Report · Food &amp; Drink</p>
     <h1>Why Ube Is Becoming the Next Matcha</h1>
-    <p class="meta">Published August 11, 2026 · Updated August 11, 2026</p>
-    <p>Matcha's rise followed a familiar path: an Asian staple → Instagram/TikTok visual → Starbucks menu → mainstream US grocery. In 2025–2026, <strong>ube</strong> started running the same playbook. Starbucks launched ube drinks in 2025 and expanded the lineup in spring 2026, and by mid-2026 trade press was already calling it "the next matcha."</p>
+    <p class="dek">Matcha's rise followed a familiar path: an Asian staple → Instagram/TikTok visual → Starbucks menu → mainstream US grocery. In 2025–2026, <strong>ube</strong> started running the same playbook.</p>
+    <p class="meta">
+      <span>Eric Zhou</span>
+      <span class="dot"></span>
+      <span>Aug 11, 2026</span>
+      <span class="dot"></span>
+      <span>3 min read</span>
+    </p>
   </div>
 
-  <div class="grid">
-    <div>
-      <section class="card">
-        <h2>What ube is</h2>
-        <p>Ube is purple yam — a Filipino staple with a mild, nutty, vanilla-like sweetness and an unmistakable bright purple color. It's not the same as purple sweet potato (which is starchier and less sweet), though the two get mixed up constantly online. The visual is the hook: on camera, ube looks like nothing else on a menu.</p>
-      </section>
+  <div class="layout">
+    <main>
+      <article>
+        <section class="story" id="what">
+          <span class="sec-num">01 · The Ingredient</span>
+          <h2>What ube is</h2>
+          <p>Ube is purple yam — a Filipino staple with a mild, nutty, vanilla-like sweetness and an unmistakable bright purple color. It's not the same as purple sweet potato (which is starchier and less sweet), though the two get mixed up constantly online.</p>
+          <blockquote class="pull">
+            <p>"On camera, ube looks like nothing else on a menu."</p>
+            <cite>Why the ingredient travels so well</cite>
+          </blockquote>
+        </section>
 
-      <section class="card">
-        <h2>The matcha pattern</h2>
-        <ul>
-          <li><strong>Chain validation:</strong> Starbucks' 2025 Iced Ube Coconut Latte and Ube Espresso Martini gave the ingredient mainstream US exposure; its 2026 spring lineup (Ube Matcha Latte, Ube Vanilla Macchiato) extended it.</li>
-          <li><strong>Social engine:</strong> purple drinks and pastries are built for short video — the same dynamic that pushed matcha (green) and taro (purple-ish) before it.</li>
-          <li><strong>Supply catching up:</strong> ube powder, ube halaya (jam), and ube-flavored snacks are moving from Filipino grocery channels into general Asian e-commerce, the same way matcha powder did years ago.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>What to buy in the US right now</h2>
-        <p>Real ube (ube halaya, Filipino ube powder) is still scarce on mainstream Asian grocery platforms. The closest family that's widely available is <strong>purple sweet potato</strong> — same color story, similar snack appeal — plus matcha itself if you're already on the trend train.</p>
-        <div class="box"><strong>If you want the ube-adjacent experience today:</strong>
+        <section class="story" id="pattern">
+          <span class="sec-num">02 · The Pattern</span>
+          <h2>The matcha playbook</h2>
           <ul>
-            <li><a href="https://www.yami.com/us/en/p/purple-sweet-potato-powder-in-bags-150g/5149120661?utm_source=zhouzk.com">Purple Sweet Potato Powder (150g)</a> — mix into lattes, smoothies, and baking for the purple drink effect.</li>
-            <li><a href="https://www.yami.com/us/en/p/purple-sweet-potato-bites-100g/3019602051?utm_source=zhouzk.com">Purple Sweet Potato Bites (100g)</a> — the chewy-snack version of the trend.</li>
-            <li>Already a matcha drinker? <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Marukyu Koyamaen matcha</a> is the reference standard.</li>
+            <li><strong>Chain validation:</strong> Starbucks' 2025 Iced Ube Coconut Latte and Ube Espresso Martini gave the ingredient mainstream US exposure; its 2026 spring lineup (Ube Matcha Latte, Ube Vanilla Macchiato) extended it.</li>
+            <li><strong>Social engine:</strong> purple drinks and pastries are built for short video — the same dynamic that pushed matcha (green) and taro (purple-ish) before it.</li>
+            <li><strong>Supply catching up:</strong> ube powder, ube halaya (jam), and ube-flavored snacks are moving from Filipino grocery channels into general Asian e-commerce, the same way matcha powder did years ago.</li>
           </ul>
-        </div>
-        <p style="font-size:14px;color:var(--muted);">Note: as of August 2026, Yami doesn't stock genuine Filipino ube halaya/ube powder — we're not pretending purple sweet potato is ube. If you want the real thing, look for Philippine specialty grocers or wait for supply to catch up with the trend.</p>
-      </section>
+        </section>
 
-      <section class="card">
-        <h2>The bottom line</h2>
-        <p>Ube is following matcha's exact playbook, and the ingredient is one to watch for the next 12–18 months. For now, the practical US takeaway is simple: the trend is real, genuine ube products are still catching up, and purple sweet potato is the closest thing you can buy today.</p>
-      </section>
+        <section class="story" id="buy">
+          <span class="sec-num">03 · What to Buy Now</span>
+          <h2>What to buy in the US right now</h2>
+          <p>Real ube (ube halaya, Filipino ube powder) is still scarce on mainstream Asian grocery platforms. The closest family that's widely available is <strong>purple sweet potato</strong> — same color story, similar snack appeal — plus matcha itself if you're already on the trend train.</p>
+          <div class="callout">
+            <span class="label">If you want the ube-adjacent experience today</span>
+            <p style="font-size:15.5px">
+              <a href="https://www.yami.com/us/en/p/purple-sweet-potato-powder-in-bags-150g/5149120661?utm_source=zhouzk.com">Purple Sweet Potato Powder (150g)</a> — mix into lattes, smoothies, and baking for the purple drink effect.<br />
+              <a href="https://www.yami.com/us/en/p/purple-sweet-potato-bites-100g/3019602051?utm_source=zhouzk.com">Purple Sweet Potato Bites (100g)</a> — the chewy-snack version of the trend.<br />
+              Already a matcha drinker? <a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Marukyu Koyamaen matcha</a> is the reference standard.
+            </p>
+          </div>
+          <p style="font-size:14px;color:var(--muted)">Note: as of August 2026, Yami doesn't stock genuine Filipino ube halaya/ube powder — we're not pretending purple sweet potato is ube. If you want the real thing, look for Philippine specialty grocers or wait for supply to catch up with the trend.</p>
+        </section>
 
-      <p class="note">Trend references: Starbucks ube lineup reporting (2025–2026); Manila Times coverage of ube as "the next matcha" (July 2026).</p>
-    </div>
+        <section class="story" id="verdict">
+          <span class="sec-num">04 · The Verdict</span>
+          <h2>The bottom line</h2>
+          <p>Ube is following matcha's exact playbook, and the ingredient is one to watch for the next 12–18 months. For now, the practical US takeaway is simple: the trend is real, genuine ube products are still catching up, and purple sweet potato is the closest thing you can buy today.</p>
+          <div class="bottom-line">
+            <span class="label">TL;DR</span>
+            <p>Watch the trend, don't chase fake ube. Try <a href="https://www.yami.com/us/en/p/purple-sweet-potato-powder-in-bags-150g/5149120661?utm_source=zhouzk.com">purple sweet potato powder</a> for the color and flavor story until real ube lands on US shelves.</p>
+          </div>
+        </section>
+
+        <p class="sources">Trend references: Starbucks ube lineup reporting (2025–2026); Manila Times coverage of ube as "the next matcha" (July 2026).</p>
+      </article>
+    </main>
 
     <aside>
-      <div class="card">
+      <div class="side-card">
+        <h3>In this report</h3>
+        <nav class="toc">
+          <a href="#what">01 · What ube is</a>
+          <a href="#pattern">02 · The matcha playbook</a>
+          <a href="#buy">03 · What to buy now</a>
+          <a href="#verdict">04 · The verdict</a>
+        </nav>
+      </div>
+      <div class="side-card">
         <h3>Related reading</h3>
-        <ul>
+        <ol class="related-list">
           <li><a href="/article/missha-bb-cream-cardi-b-tiktok-boom">The Missha BB Cream Boom</a></li>
           <li><a href="/article/bloom-skin-2026-k-beauty-trend">Bloom Skin: The 2026 K-Beauty Trend</a></li>
           <li><a href="/landing-pages/marukyu-koyamaen-matcha-powder-1-41oz">Marukyu Koyamaen Matcha</a></li>
           <li><a href="/article/where-to-buy-asian-snacks-online-us">Where to Buy Asian Snacks Online</a></li>
-        </ul>
+        </ol>
       </div>
     </aside>
   </div>
+
+  <footer class="site">
+    <p>© 2026 zhouzk.com · Independent buyer's guide · Some links include affiliate tracking · <a href="/landing-pages/">All guides</a></p>
+  </footer>
 </div>
 </body>
 </html>

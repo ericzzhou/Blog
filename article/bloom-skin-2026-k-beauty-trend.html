@@ -17,6 +17,9 @@
   <meta name="description" content="Bloom skin is the 2026 K-beauty trend replacing glass skin — barrier-first skincare with ceramides, natural glow, and sunscreen as a pillar. What it is, and which Korean products fit." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href="https://zhouzk.com/article/bloom-skin-2026-k-beauty-trend" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Bloom Skin: The 2026 K-Beauty Trend Replacing Glass Skin" />
@@ -25,93 +28,196 @@
   <meta property="og:url" content="https://zhouzk.com/article/bloom-skin-2026-k-beauty-trend" />
 
   <style>
-    :root{--accent:#0E9F6E;--muted:#6b7280;--bg:#fbfbfd;--max:1200px}
+    :root{
+      --paper:#faf8f4;
+      --paper-deep:#f1ece3;
+      --ink:#1c1917;
+      --ink-soft:#292524;
+      --muted:#78716c;
+      --rule:#e7e2da;
+      --accent:#0b7a54;
+      --accent-soft:#e9f5ef;
+      --card:#ffffff;
+    }
     *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#0f172a;margin:0;background:var(--bg);line-height:1.65}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);margin:0;background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #eef0f3}
-    .logo{font-weight:700;color:#111}
-    .eyebrow{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-    .hero{background:#fff;border-radius:12px;padding:32px;margin:24px 0;box-shadow:0 8px 30px rgba(15,23,42,.05)}
-    h1{margin:0 0 14px;font-size:34px;line-height:1.2}
-    .meta{color:var(--muted);font-size:14px;margin-bottom:16px}
-    .grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
-    @media (max-width:920px){.grid{grid-template-columns:1fr}}
-    section.card{background:#fff;padding:22px;border-radius:10px;box-shadow:0 6px 18px rgba(12,15,20,.04);margin-bottom:20px}
-    h2{margin:4px 0 12px;font-size:23px}
-    h3{font-size:17px;margin:18px 0 8px}
-    .box{background:#f0faf6;border:1px solid #d9f0e6;border-radius:8px;padding:14px 16px;margin:14px 0}
-    ul{padding-left:22px}
-    li{margin:6px 0}
-    aside .card{position:sticky;top:20px}
-    .note{font-size:13px;color:var(--muted)}
+    a:hover{text-decoration:underline}
+    img{max-width:100%}
+
+    .container{max-width:1160px;margin:0 auto;padding:0 28px}
+    header.site{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--rule)}
+    .logo{font-weight:700;font-size:16px;letter-spacing:-.01em;color:var(--ink)}
+    .site-links a{font-size:13.5px;color:var(--muted);margin-left:22px}
+
+    .hero{padding:56px 0 48px;border-bottom:1px solid var(--rule);margin-bottom:44px;max-width:820px}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 14px}
+    h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+    .dek{font-size:18px;color:var(--ink-soft);margin:0 0 22px;max-width:60ch}
+    .dek strong{color:var(--ink)}
+    .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+    .meta span{display:inline-flex;align-items:center;gap:6px}
+    .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+
+    .layout{display:grid;grid-template-columns:minmax(0,720px) 300px;gap:64px;padding-bottom:56px}
+    main article p{font-size:17px;color:var(--ink-soft);margin:0 0 1.25em}
+    main article p strong{color:var(--ink)}
+    main article ul{padding-left:0;list-style:none;margin:0 0 1.4em}
+    main article ul li{position:relative;padding-left:26px;margin-bottom:.75em;color:var(--ink-soft);font-size:17px}
+    main article ul li::before{content:"";position:absolute;left:4px;top:.62em;width:9px;height:9px;border-radius:2px;background:var(--accent);opacity:.75}
+
+    h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:30px;line-height:1.2;letter-spacing:-.01em;margin:0 0 18px;padding-top:10px}
+    h3{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:26px 0 8px}
+    .sec-num{display:block;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+    section.story{margin-bottom:48px}
+    section.story:first-of-type h2{padding-top:0}
+
+    blockquote.pull{margin:34px 0;padding:6px 0 6px 28px;border-left:3px solid var(--accent);font-family:Fraunces,Georgia,serif;font-size:23px;line-height:1.45;color:var(--ink)}
+    blockquote.pull p{margin:0;font-size:inherit;color:inherit}
+    blockquote.pull cite{display:block;font-family:Inter,sans-serif;font-size:12.5px;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+    .callout{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:10px;padding:18px 20px;margin:22px 0}
+    .callout .label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+    .callout p{margin:0;font-size:15.5px}
+
+    .bottom-line{background:var(--ink);color:#f5f1ea;border-radius:16px;padding:30px 32px;margin:34px 0}
+    .bottom-line .label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#a8d9c2;font-weight:700;margin-bottom:8px}
+    .bottom-line p{color:#e7e2da;font-size:17px;margin:0}
+    .bottom-line a{color:#bde8d3;font-weight:600}
+
+    .sources{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+
+    aside .side-card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px;margin-bottom:22px}
+    aside .side-card h3{font-family:Fraunces,Georgia,serif;font-size:16px;margin:0 0 12px}
+    aside nav.toc a{display:block;font-size:14px;color:var(--ink-soft);padding:7px 0;border-bottom:1px dashed var(--rule)}
+    aside nav.toc a:last-child{border-bottom:none}
+    aside nav.toc a:hover{color:var(--accent);text-decoration:none}
+    aside .related-list{list-style:none;margin:0;padding:0;counter-reset:rel}
+    aside .related-list li{counter-increment:rel;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14px}
+    aside .related-list li::before{content:counter(rel,decimal-leading-zero);font-family:Fraunces,serif;color:var(--accent);margin-right:8px;font-size:13px}
+
+    footer.site{border-top:1px solid var(--rule);padding:26px 0 40px;font-size:12.5px;color:var(--muted)}
+    footer.site a{color:var(--muted);text-decoration:underline}
+
+    @media (max-width:960px){
+      .hero{padding-top:36px}
+      .layout{grid-template-columns:1fr;gap:40px}
+      aside .side-card{position:static}
+    }
+    @media (max-width:520px){
+      .container{padding:0 18px}
+    }
   </style>
 </head>
 <body>
 <div class="container">
-  <header>
+  <header class="site">
     <a class="logo" href="/">zhouzk.com</a>
-    <span class="eyebrow">Trend Report · Skincare</span>
+    <nav class="site-links">
+      <a href="/article/where-to-buy-korean-skincare-online-us">Korean Skincare</a>
+      <a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">Sunscreen Guide</a>
+    </nav>
   </header>
 
   <div class="hero">
-    <div class="eyebrow">Trend Report</div>
+    <p class="kicker">Trend Report · Skincare</p>
     <h1>Bloom Skin: The 2026 K-Beauty Trend Replacing Glass Skin</h1>
-    <p class="meta">Published August 11, 2026 · Updated August 11, 2026</p>
-    <p>After two years of glass skin's mirror shine, 2026 K-beauty is rebranding around a quieter goal: <strong>bloom skin</strong>. The term has racked up <strong>1.7M+ videos on TikTok</strong>, and it means skin that glows from a healthy barrier rather than from highlighters — paired, in almost every routine, with the Korean sunscreen boom.</p>
+    <p class="dek">After two years of glass skin's mirror shine, 2026 K-beauty is rebranding around a quieter goal: <strong>bloom skin</strong> — <strong>1.7M+ TikTok videos</strong> and counting, built on a healthy barrier and daily SPF instead of highlighters.</p>
+    <p class="meta">
+      <span>Eric Zhou</span>
+      <span class="dot"></span>
+      <span>Aug 11, 2026</span>
+      <span class="dot"></span>
+      <span>4 min read</span>
+    </p>
   </div>
 
-  <div class="grid">
-    <div>
-      <section class="card">
-        <h2>What "bloom skin" actually means</h2>
-        <p>Bloom skin is barrier-first: instead of layering glow products over dehydrated skin, the trend starts with a repaired, lipid-rich barrier so skin looks healthy on its own. The routine staples are ceramides, soothing ingredients, and — crucially — <strong>daily sunscreen</strong>. Filters-free skin still needs protection, and Korean sunscreens' invisible, no-white-cast textures are the easiest way to get it.</p>
-        <p>In practice this makes bloom skin a two-pillar trend: <em>repair the barrier, protect it daily</em>. Which is why the products getting the most attention in 2026 are ceramide moisturizers and lightweight Korean SPFs rather than glow drops.</p>
-      </section>
+  <div class="layout">
+    <main>
+      <article>
+        <section class="story" id="what">
+          <span class="sec-num">01 · The Trend</span>
+          <h2>What "bloom skin" actually means</h2>
+          <p>Bloom skin is barrier-first: instead of layering glow products over dehydrated skin, the trend starts with a repaired, lipid-rich barrier so skin looks healthy on its own. The routine staples are ceramides, soothing ingredients, and — crucially — <strong>daily sunscreen</strong>. Filters-free skin still needs protection, and Korean sunscreens' invisible, no-white-cast textures are the easiest way to get it.</p>
+          <blockquote class="pull">
+            <p>"Repair the barrier, protect it daily — that's the whole trend."</p>
+            <cite>The two pillars of bloom skin</cite>
+          </blockquote>
+          <p>In practice this makes bloom skin a two-pillar trend. Which is why the products getting the most attention in 2026 are ceramide moisturizers and lightweight Korean SPFs rather than glow drops.</p>
+        </section>
 
-      <section class="card">
-        <h2>How to build a bloom-skin routine</h2>
-        <h3>1. Start with sunscreen</h3>
-        <p>The non-negotiable step. Korean sunscreens are the best match for the trend because they're light, chemical-filter based, and finish invisible. Two of the most-compared options:</p>
-        <ul>
-          <li><a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">Beauty of Joseon Relief Sun vs Round Lab Birch Juice</a> — the creamier vs the waterier pick, compared for texture, white cast, and skin type.</li>
-          <li><a href="/landing-pages/round-lab-birch-juice-moisturizing-sunscreen-spf50-50ml">Round Lab Birch Juice Sunscreen SPF50+</a> — the watery, fast-absorbing option for oily skin.</li>
-        </ul>
-        <h3>2. Repair the barrier at night</h3>
-        <p>Ceramides and soothing layers do the heavy lifting while you sleep. This is where the "barrier repair" half of the trend lives — a gentle cleanser, a ceramide moisturizer, and nothing stripping.</p>
-        <h3>3. Skip the shine layer</h3>
-        <p>The point of bloom skin is that you don't need a separate glow product. If your barrier is healthy and your SPF is on, the finish is the finish.</p>
-      </section>
+        <section class="story" id="routine">
+          <span class="sec-num">02 · The Routine</span>
+          <h2>How to build a bloom-skin routine</h2>
+          <h3>1. Start with sunscreen</h3>
+          <p>The non-negotiable step. Korean sunscreens are the best match for the trend because they're light, chemical-filter based, and finish invisible. Two of the most-compared options:</p>
+          <ul>
+            <li><a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">Beauty of Joseon Relief Sun vs Round Lab Birch Juice</a> — the creamier vs the waterier pick, compared for texture, white cast, and skin type.</li>
+            <li><a href="/landing-pages/round-lab-birch-juice-moisturizing-sunscreen-spf50-50ml">Round Lab Birch Juice Sunscreen SPF50+</a> — the watery, fast-absorbing option for oily skin.</li>
+          </ul>
+          <h3>2. Repair the barrier at night</h3>
+          <p>Ceramides and soothing layers do the heavy lifting while you sleep. This is where the "barrier repair" half of the trend lives — a gentle cleanser, a ceramide moisturizer, and nothing stripping.</p>
+          <h3>3. Skip the shine layer</h3>
+          <p>The point of bloom skin is that you don't need a separate glow product. If your barrier is healthy and your SPF is on, the finish is the finish.</p>
+        </section>
 
-      <section class="card">
-        <h2>Why it matters for 2026 buying</h2>
-        <div class="box"><strong>Don't chase the glass-skin leftovers.</strong> Heavy glow drops and glitter-finish cushions fit the 2024–2025 cycle. The 2026 cycle rewards sunscreen + ceramides — the boring products, done well.</div>
-        <div class="box"><strong>Korean vs Japanese sunscreen still matters.</strong> Texture philosophy differs: Korean formulas tend to be cream-gel, Japanese formulas lean watery-essence. Our <a href="/landing-pages/korean-vs-japanese-sunscreen-2026">Korean vs Japanese sunscreen guide</a> walks through which fits bloom skin for your skin type.</div>
-        <div class="box"><strong>Buy authentic, buy what ships from the US.</strong> For a daily-use product you'll reapply, authenticity and availability matter more than the newest launch. Yami ships authentic Korean beauty from the US with a 30-day return guarantee.</div>
-      </section>
+        <section class="story" id="buying">
+          <span class="sec-num">03 · For 2026 Buyers</span>
+          <h2>Why it matters for 2026 buying</h2>
+          <div class="callout">
+            <span class="label">Don't chase the leftovers</span>
+            <p>Heavy glow drops and glitter-finish cushions fit the 2024–2025 cycle. The 2026 cycle rewards sunscreen + ceramides — the boring products, done well.</p>
+          </div>
+          <div class="callout">
+            <span class="label">Korean vs Japanese still matters</span>
+            <p>Texture philosophy differs: Korean formulas tend to be cream-gel, Japanese formulas lean watery-essence. Our <a href="/landing-pages/korean-vs-japanese-sunscreen-2026">Korean vs Japanese sunscreen guide</a> walks through which fits bloom skin for your skin type.</p>
+          </div>
+          <div class="callout">
+            <span class="label">Buy authentic, buy from the US</span>
+            <p>For a daily-use product you'll reapply, authenticity and availability matter more than the newest launch. Yami ships authentic Korean beauty from the US with a 30-day return guarantee.</p>
+          </div>
+        </section>
 
-      <section class="card">
-        <h2>The bottom line</h2>
-        <p>Bloom skin is 2026's answer to the overdone glow trend: healthy, barrier-first, sunscreen-protected skin. If you're rebuilding your routine around it, start with the sunscreen step — it's the one both pillars of the trend agree on.</p>
-        <p style="margin-top:14px;">Related: <a href="/article/where-to-buy-asian-sunscreens-in-the-us">Where to buy Asian sunscreens in the US</a></p>
-      </section>
+        <section class="story" id="verdict">
+          <span class="sec-num">04 · The Verdict</span>
+          <h2>The bottom line</h2>
+          <p>Bloom skin is 2026's answer to the overdone glow trend: healthy, barrier-first, sunscreen-protected skin. If you're rebuilding your routine around it, start with the sunscreen step — it's the one both pillars of the trend agree on.</p>
+          <div class="bottom-line">
+            <span class="label">TL;DR</span>
+            <p>Barrier-first + daily SPF. For sunscreen, start with <a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">Beauty of Joseon or Round Lab</a> — and skip the extra glow layer entirely.</p>
+          </div>
+        </section>
 
-      <p class="note">Trend references: TikTok creator adoption reported by beauty press (2026); 1.7M video count per Grazia UK coverage, May 2026.</p>
-    </div>
+        <p class="sources">Trend references: TikTok creator adoption reported by beauty press (2026); 1.7M video count per Grazia UK coverage, May 2026.</p>
+      </article>
+    </main>
 
     <aside>
-      <div class="card">
+      <div class="side-card">
+        <h3>In this report</h3>
+        <nav class="toc">
+          <a href="#what">01 · What bloom skin is</a>
+          <a href="#routine">02 · The routine</a>
+          <a href="#buying">03 · For 2026 buyers</a>
+          <a href="#verdict">04 · The verdict</a>
+        </nav>
+      </div>
+      <div class="side-card">
         <h3>Related products &amp; guides</h3>
-        <ul>
+        <ol class="related-list">
           <li><a href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">Beauty of Joseon vs Round Lab</a></li>
           <li><a href="/landing-pages/round-lab-birch-juice-moisturizing-sunscreen-spf50-50ml">Round Lab Birch Juice SPF50+</a></li>
           <li><a href="/landing-pages/korean-vs-japanese-sunscreen-2026">Korean vs Japanese Sunscreen 2026</a></li>
           <li><a href="/article/where-to-buy-asian-sunscreens-in-the-us">Where to Buy Asian Sunscreens</a></li>
-        </ul>
+        </ol>
       </div>
     </aside>
   </div>
+
+  <footer class="site">
+    <p>© 2026 zhouzk.com · Independent buyer's guide · Some links include affiliate tracking · <a href="/landing-pages/">All guides</a></p>
+  </footer>
 </div>
 </body>
 </html>
