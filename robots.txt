@@ -23,6 +23,9 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://zhouzk.com/sitemap.xml
 Sitemap: https://zhouzk.com/blog/sitemap-index.xml
 Sitemap: https://zhouzk.com/growth-metrics-handbook/sitemap.xml

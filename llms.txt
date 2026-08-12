@@ -7,8 +7,24 @@
 
 - [E-commerce Growth Metrics Handbook](https://zhouzk.com/growth-metrics-handbook/): A comprehensive Chinese-language reference covering 37 core growth metrics across acquisition, activation, conversion, revenue, retention, and customer value. Includes interactive flashcards, comparison articles, and a practice dashboard.
 - [SEO Product Landing Pages](https://zhouzk.com/landing-pages/): 100+ SEO-optimized product pages for Asian food, beauty, and home products available in the U.S. market. Each page includes structured Product schema, buying guides, and purchase links.
-- [Buying Guides](https://zhouzk.com/article/where-to-buy-asian-sunscreens-in-the-us): In-depth editorial guides for purchasing Asian products in the United States, covering authenticity verification, retailer comparison, and practical checklists.
+- [Buying Guides](https://zhouzk.com/article/): In-depth editorial guides for purchasing Asian products in the United States, covering authenticity verification, retailer comparison, and practical checklists.
+
+## Articles
+
+- [The Missha BB Cream Boom: What Cardi B Started (2026)](https://zhouzk.com/article/missha-bb-cream-cardi-b-tiktok-boom.html): How the Missha M Perfect Cover BB cream went viral on TikTok, what Cardi B's video actually said, and where to buy it in the U.S.
+- [Bloom Skin: The 2026 K-Beauty Trend Replacing Glass Skin](https://zhouzk.com/article/bloom-skin-2026-k-beauty-trend.html): What bloom skin is, how it differs from glass skin, and the skincare routine behind the look.
+- [Why Ube Is Becoming the Next Matcha (2026)](https://zhouzk.com/article/ube-next-matcha-trend.html): The rise of ube in U.S. food and beauty products, why it is trending, and where to buy ube products.
+- [Best Asian Kitchen Appliances to Buy Online in the U.S.](https://zhouzk.com/article/best-asian-kitchen-appliances-us.html): Top-rated rice cookers, soy milk makers, and other Asian kitchen appliances available in the U.S., with buying guidance.
+- [Best Japanese Drugstore Products to Buy Online in the U.S.](https://zhouzk.com/article/best-japanese-drugstore-products-us.html): Acne care, hair masks, and other Japanese drugstore favorites you can order in the U.S.
+- [Where to Buy Asian Sunscreens in the U.S.](https://zhouzk.com/article/where-to-buy-asian-sunscreens-in-the-us.html): Trusted Korean and Japanese SPF options, authenticity checks, and retailer comparison.
+- [Where to Buy Asian Snacks, Ramen & Condiments Online in the U.S.](https://zhouzk.com/article/where-to-buy-asian-snacks-online-us.html): Best online retailers for Asian snacks, ramen, and condiments in the U.S.
+- [Where to Buy Korean Skincare Online in the U.S.](https://zhouzk.com/article/where-to-buy-korean-skincare-online-us.html): Sulwhasoo, SKIN1004, Beauty of Joseon, and other Korean skincare brands you can buy online in the U.S.
 
 ## About
 
 Eric Zhou is a growth engineer specializing in e-commerce data analytics, marketing automation, and conversion optimization at Yami. This site serves as a knowledge base and experimental playground for growth engineering practices.
+
+## Contact
+
+- Email: contact@zhouzk.com
+- Author: Eric Zhou (周兆坤)
