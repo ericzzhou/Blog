@@ -301,5 +301,5 @@ See the reference example in this skill's directory:
 - Color palette must reflect the actual brand, not a generic pink/blue
 - 使用 Playwright MCP 浏览器工具访问产品页面来验证品牌颜色和产品详情，**绝对禁止**使用 web search、web fetch、curl、wget 或任何非 Playwright 的网络工具
 - **浏览器生命周期管理**：开始时自适应复用/创建浏览器实例，任务完成后必须调用 `mcp_browser_close` 关闭浏览器以释放资源
-- The page is for marketing demonstration — include a disclaimer in the footer. Template: `© {year} This page is for marketing demonstration purposes. Product details sourced from [Platform Name](URL). All trademarks belong to their respective owners.`
+- Include a footer disclosure (not “marketing demonstration”). Product pages: `© {year} zhouzk.com. Product information sourced from [Platform Name](URL). Prices and availability may change. We may earn from qualifying purchases. All trademarks belong to their respective owners.` Guide pages: `© {year} zhouzk.com. Editorial guide by zhouzk.com. Product links may include affiliate URLs. All trademarks belong to their respective owners.`
 - **SEO is non-negotiable**: H1 = product name, structured data, canonical tag, OG tags, and image attributes must all be present in every generated page. Do not sacrifice SEO for visual design.
