@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>周兆坤 | Eric Zhou — 电商增长指标手册 & 亚洲好物购买指南</title>
-  <meta name="description" content="Yami 增长工程师。开源电商增长指标手册（37 个指标：定义/公式/SQL），以及 100+ 亚洲美妆、零食、厨房好物的真实购买指南。"/>
+  <meta name="description" content="Yami 增长工程师。开源电商增长指标手册（37 个指标：定义/公式/SQL），以及日本饮料、K-beauty、零食等真实购买指南与 100+ SEO 产品页实验。"/>
   <link rel="canonical" href="https://zhouzk.com/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="alternate" hreflang="zh-CN" href="https://zhouzk.com/" />
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zhouzk.com/" />
   <meta property="og:title" content="周兆坤 | Eric Zhou — 电商增长指标手册 & 亚洲好物购买指南" />
-  <meta property="og:description" content="Yami 增长工程师。开源 37 个电商增长指标（定义/公式/SQL）+ 100+ 亚洲好物真实购买指南。" />
+  <meta property="og:description" content="Yami 增长工程师。开源 37 个电商增长指标（定义/公式/SQL）+ 亚洲好物真实购买指南与产品页实验。" />
   <meta property="og:site_name" content="周兆坤 | Eric Zhou" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:image" content="https://zhouzk.com/images/og-image.png" />
@@ -21,7 +21,7 @@
   <meta property="og:image:height" content="1024" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="周兆坤 | Eric Zhou — 电商增长指标手册 & 亚洲好物购买指南" />
-  <meta name="twitter:description" content="Yami 增长工程师。开源 37 个电商增长指标（定义/公式/SQL）+ 100+ 亚洲好物真实购买指南。" />
+  <meta name="twitter:description" content="Yami 增长工程师。开源 37 个电商增长指标（定义/公式/SQL）+ 亚洲好物真实购买指南。" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@
     "@type": "WebSite",
     "name": "周兆坤 | Eric Zhou",
     "url": "https://zhouzk.com",
-    "description": "E-commerce growth metrics handbook (37 metrics with definitions, formulas and SQL) and 100+ real-product buying guides for Asian beauty, snacks and kitchen appliances. Built by Eric Zhou, Growth Engineer at Yami.",
+    "description": "E-commerce growth metrics handbook and buying guides for Asian beauty, snacks, drinks and kitchen appliances.",
     "publisher": {
       "@type": "Person",
       "name": "周兆坤",
@@ -55,13 +55,45 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Featured buying guides on zhouzk.com",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://zhouzk.com/landing-pages/japanese-drinks-ultimate-guide",
+        "name": "Japanese Drinks: The Ultimate Guide"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://zhouzk.com/landing-pages/ramune-japanese-marble-soda-guide",
+        "name": "Ramune Flavors Ranked Guide"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://zhouzk.com/landing-pages/japanese-canned-coffee-buyers-guide",
+        "name": "Japanese Canned Coffee Buyer's Guide"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://zhouzk.com/article/where-to-buy-asian-snacks-online-us",
+        "name": "Asian Snacks & Ramen Buying Guide"
+      }
+    ]
+  }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-87T0P4Y9L1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-87T0P4Y9L1');
   </script>
   <link
@@ -69,418 +101,520 @@
     rel="stylesheet"
   />
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
-      font-family: "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      background: #fff;
       color: #1a1a1a;
+      line-height: 1.5;
     }
+    a { color: inherit; }
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem 1rem;
+      font-size: 0.875rem;
+    }
+    .site-nav a {
+      text-decoration: none;
+      color: #374151;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+    .site-nav a:hover { color: #2563eb; background: #f3f4f6; }
     header {
-      padding: 2rem;
+      padding: 2.5rem 1.5rem 2rem;
       text-align: center;
-      background-color: #f9fafb;
+      background: linear-gradient(180deg, #f9fafb 0%, #fff 100%);
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.5rem;
+    h1 { font-size: 2.25rem; margin: 0 0 0.35rem; }
+    .tagline {
+      font-size: 1.15rem;
       font-weight: normal;
       color: #555;
-      margin-bottom: 1rem;
+      margin: 0 0 1rem;
     }
     .description {
-      max-width: 700px;
-      margin: 1rem auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #444;
     }
-    .lang-switch {
-      margin-top: 1rem;
-    }
+    .description p { margin: 0.75rem 0; }
+    .lang-switch { margin-top: 1.25rem; }
     .lang-switch button {
-      margin: 0 0.5rem;
-      padding: 0.4rem 0.8rem;
-      border: none;
-      background-color: #e5e7eb;
+      margin: 0 0.35rem;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid #e5e7eb;
+      background: #fff;
       color: #333;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: 0.85rem;
     }
+    .lang-switch button:hover { border-color: #2563eb; color: #2563eb; }
     .social-links {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      font-size: 1.5rem;
+      gap: 1.25rem;
+      font-size: 1.35rem;
     }
     .social-links a {
       color: #1a1a1a;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color 0.2s;
     }
-    .social-links a:hover {
-      color: #2563eb;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      .description {
-        padding: 0 1rem;
-      }
-    }
-
-    .projects {
-      max-width: 800px;
+    .social-links a:hover { color: #2563eb; }
+    .section {
+      max-width: 880px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 1.75rem 1.5rem;
     }
-    .project-card {
-      display: block;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.2rem;
-      text-decoration: none;
-      color: #1a1a1a;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-    .project-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-color: #2563eb;
-    }
-    .project-card h3 {
-      font-size: 1.2rem;
-      margin: 0 0 0.4rem 0;
-    }
-    .project-card p {
-      font-size: 0.95rem;
-      color: #666;
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    .experiments {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem 3rem;
-    }
-    .experiments > h2 {
-      font-size: 1.5rem;
+    .section-header { margin-bottom: 1.25rem; }
+    .section-header h2 {
+      font-size: 1.45rem;
       font-weight: 600;
+      margin: 0 0 0.35rem;
       color: #1a1a1a;
-      margin-bottom: 0.4rem;
     }
-    .experiments > .section-desc {
+    .section-header p {
+      margin: 0;
       font-size: 0.95rem;
-      color: #888;
-      margin-bottom: 1.5rem;
+      color: #6b7280;
       line-height: 1.5;
     }
-    .experiment-grid {
+    .guide-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1rem;
     }
-    .experiment-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1.2rem;
-      cursor: pointer;
-      transition: box-shadow 0.2s, border-color 0.2s;
-      background: #fff;
-    }
-    .experiment-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-color: #2563eb;
-    }
-    .experiment-card h3 {
-      font-size: 1.05rem;
-      margin: 0 0 0.3rem 0;
-    }
-    .experiment-card p {
-      font-size: 0.85rem;
-      color: #888;
-      margin: 0;
-      line-height: 1.4;
-    }
-    .experiment-card .count {
-      font-size: 0.75rem;
-      color: #2563eb;
-      margin-top: 0.6rem;
-    }
-
-    .skills {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem 2rem;
-    }
-    .skills h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 1rem;
-    }
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .skill-tag {
-      display: inline-block;
-      padding: 0.35rem 0.8rem;
-      background: #f3f4f6;
-      color: #374151;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      border: 1px solid #e5e7eb;
-    }
-
-    .latest {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem 2rem;
-    }
-    .latest h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 1rem;
-    }
-    .latest-card {
+    .guide-card {
       display: block;
+      text-decoration: none;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 1.25rem 1.35rem;
+      background: #fff;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    .guide-card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 6px 20px rgba(37,99,235,0.1);
+      transform: translateY(-2px);
+    }
+    .guide-card .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .guide-card h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.45rem;
+      line-height: 1.35;
+    }
+    .guide-card p {
+      font-size: 0.88rem;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.45;
+    }
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .pillar-card {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 1.5rem;
+      background: #f9fafb;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .pillar-card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .pillar-card h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+    .pillar-card p { font-size: 0.92rem; color: #555; margin: 0; line-height: 1.5; }
+    .card-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .content-card {
+      display: block;
+      text-decoration: none;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
-      padding: 1.2rem 1.5rem;
-      text-decoration: none;
-      color: #1a1a1a;
+      padding: 1.1rem 1.25rem;
       transition: box-shadow 0.2s, border-color 0.2s;
-      margin-bottom: 1rem;
     }
-    .latest-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    .content-card:hover {
       border-color: #2563eb;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
-    .latest-card .tag {
-      font-size: 0.75rem;
+    .content-card .tag {
+      font-size: 0.72rem;
       color: #2563eb;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
     }
-    .latest-card h3 {
-      font-size: 1.1rem;
-      margin: 0 0 0.4rem 0;
-    }
-    .latest-card p {
-      font-size: 0.9rem;
+    .content-card h3 { font-size: 1.02rem; margin: 0 0 0.35rem; }
+    .content-card p {
+      font-size: 0.88rem;
       color: #666;
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.45;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .section-alt { background: #f9fafb; }
+    .more-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .more-link:hover { text-decoration: underline; }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      justify-content: center;
+    }
+    .skill-tag {
+      padding: 0.3rem 0.75rem;
+      background: #f3f4f6;
+      color: #374151;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      border: 1px solid #e5e7eb;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 2.5rem;
+      font-size: 0.88rem;
+      color: #888;
+      border-top: 1px solid #eee;
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 1.85rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .site-nav { font-size: 0.8rem; gap: 0.25rem 0.5rem; }
     }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Site sections">
+    <a href="#guides" data-i18n="nav-guides">精选指南</a>
+    <a href="#handbook" data-i18n="nav-handbook">指标手册</a>
+    <a href="#trends" data-i18n="nav-trends">趋势解读</a>
+    <a href="#buying" data-i18n="nav-buying">购买指南</a>
+    <a href="#blog" data-i18n="nav-blog">中文博客</a>
+    <a href="/landing-pages/" data-i18n="nav-lab">产品页实验</a>
+  </nav>
+
   <header>
     <h1>周兆坤 | Eric Zhou</h1>
-    <h2 id="tagline">Works at Yami</h2>
+    <p class="tagline" id="tagline">Growth Engineer @ Yami</p>
     <div class="description" id="intro-zh">
-      <p>
-        你好，我是周兆坤，目前在 Yami（北美最大亚洲电商平台）担任 Growth Engineer。
-      </p>
-      <p>
-        我专注于电商增长全链路：营销自动化、流失预测模型、用户分层系统、转化漏斗优化。日常使用 SQL、Python 和数据仪表盘驱动决策。
-      </p>
-      <p>
-        这个网站是我的个人实验田——系统整理了 <strong>37 个电商增长指标</strong>，并用 100+ 个真实产品做了 SEO 落地页实验。所有内容开源，欢迎交流。
-      </p>
+      <p>你好，我是周兆坤，在 Yami（北美最大亚洲电商平台）做增长工程。</p>
+      <p>日常工作：SQL / Python、转化漏斗、用户分层、营销自动化。这个站是我的开源实验田——<strong>37 个增长指标手册</strong> + 真实产品的<strong>购买指南</strong>与 SEO 落地页，全部可公开访问。</p>
     </div>
     <div class="description" id="intro-en" style="display: none;">
-      <p>
-        Hi, I'm Eric Zhou, a Growth Engineer at Yami (the largest Asian e-commerce platform in North America).
-      </p>
-      <p>
-        I focus on the full e-commerce growth funnel: marketing automation, churn prediction models, user segmentation systems, and conversion funnel optimization. I use SQL, Python, and data dashboards to drive decisions daily.
-      </p>
-      <p>
-        This site is my personal playground — I've systematically organized <strong>37 core e-commerce growth metrics</strong> and built 100+ SEO landing pages for real products. All content is open. Feel free to connect.
-      </p>
+      <p>Hi, I'm Eric Zhou, Growth Engineer at Yami (the largest Asian e-commerce platform in North America).</p>
+      <p>I work on conversion funnels, segmentation, and marketing automation with SQL and Python. This site is my open lab: a <strong>37-metric growth handbook</strong>, <strong>buying guides</strong> for Asian beauty, snacks and drinks, and 100+ product landing pages.</p>
     </div>
     <div class="lang-switch">
-      <button onclick="switchLang('zh')">中文</button>
-      <button onclick="switchLang('en')">EN</button>
+      <button type="button" onclick="switchLang('zh')">中文</button>
+      <button type="button" onclick="switchLang('en')">EN</button>
     </div>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/eric-z-zhou" target="_blank"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <a href="mailto:eric.z.zhou@outlook.com"
-        ><i class="fas fa-envelope"></i
-      ></a>
-      <a href="https://zhouzk.com" target="_blank"
-        ><i class="fas fa-globe"></i
-      ></a>
+      <a href="https://www.linkedin.com/in/eric-z-zhou" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:eric.z.zhou@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://zhouzk.com" aria-label="Website"><i class="fas fa-globe"></i></a>
     </div>
   </header>
 
-  <section class="projects">
-    <a class="project-card" href="/growth-metrics-handbook/">
-      <h3>电商 Growth 指标手册</h3>
-      <p>系统整理电商增长全链路 37 个核心指标：定义、公式、SQL、优化策略、企业案例。面向增长团队内训与自学。</p>
-    </a>
-    <a class="project-card" href="/article/missha-bb-cream-cardi-b-tiktok-boom">
-      <h3>The Missha BB Cream Boom (2026)</h3>
-      <p>How a Cardi B TikTok feature sent Missha US sales up 816% and BB cream searches up 329% in a week — and why this decade-old staple went viral.</p>
-    </a>
-    <a class="project-card" href="/article/bloom-skin-2026-k-beauty-trend">
-      <h3>Bloom Skin: The 2026 K-Beauty Trend</h3>
-      <p>Barrier-first skincare is replacing glass skin — what bloom skin is, and which Korean sunscreens fit the trend.</p>
-    </a>
-    <a class="project-card" href="/article/ube-next-matcha-trend">
-      <h3>Why Ube Is Becoming the Next Matcha</h3>
-      <p>Starbucks kept expanding ube drinks through 2026. What the purple yam trend means for US shoppers — and what to buy today.</p>
-    </a>
-    <a class="project-card" href="/article/where-to-buy-asian-sunscreens-in-the-us">
-      <h3>Asian Sunscreen Buying Guide (2025)</h3>
-      <p>A practical guide to buying Korean & Japanese sunscreens in the U.S. — retailer comparison, authenticity verification, and editor picks.</p>
-    </a>
-    <a class="project-card" href="/article/where-to-buy-asian-snacks-online-us">
-      <h3>Asian Snacks & Ramen Buying Guide</h3>
-      <p>Where to buy ramen, snacks, condiments & Asian beverages online in the U.S. — category breakdown with 30+ product picks.</p>
-    </a>
-    <a class="project-card" href="/article/where-to-buy-korean-skincare-online-us">
-      <h3>Korean Skincare Shopping Guide</h3>
-      <p>How to buy authentic K-beauty online: serums, creams, sunscreens, hair care & beauty devices — with counterfeit detection tips.</p>
-    </a>
-    <a class="project-card" href="/article/best-japanese-drugstore-products-us">
-      <h3>Japanese Drugstore Products Guide</h3>
-      <p>Best Japanese drugstore picks in the U.S.: acne treatment, hair masks, pore care & personal care — usage guides included.</p>
-    </a>
-    <a class="project-card" href="/article/best-asian-kitchen-appliances-us">
-      <h3>Asian Kitchen Appliances Guide</h3>
-      <p>Rice cookers (Zojirushi vs Tatung), soy milk makers & more — voltage guide and 15+ product recommendations.</p>
-    </a>
+  <section class="section section-alt" id="guides">
+    <div class="section-header">
+      <h2 data-i18n="guides-title">精选购买指南</h2>
+      <p data-i18n="guides-desc">深度调研、对比表、美国购买渠道——从日本饮料到 K-beauty，先读指南再下单。</p>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="/landing-pages/japanese-drinks-ultimate-guide">
+        <span class="badge">Drinks · Guide</span>
+        <h3>Japanese Drinks: The Ultimate Guide</h3>
+        <p data-i18n="guide-jdrinks">Must-try 清单：Ramune、Pocari、罐装咖啡、康普茶——美国哪里买、怎么选口味。</p>
+      </a>
+      <a class="guide-card" href="/landing-pages/ramune-japanese-marble-soda-guide">
+        <span class="badge">Ramune · Guide</span>
+        <h3>Ramune Flavors Ranked (2026)</h3>
+        <p data-i18n="guide-ramune">口味排名、开瓶步骤、品牌对比——日本弹珠汽水完整入门。</p>
+      </a>
+      <a class="guide-card" href="/landing-pages/japanese-canned-coffee-buyers-guide">
+        <span class="badge">Coffee · Guide</span>
+        <h3>Japanese Canned Coffee Buyer's Guide</h3>
+        <p data-i18n="guide-coffee">BOSS、Georgia、UCC——日本罐装咖啡品牌与甜度/咖啡因对比。</p>
+      </a>
+      <a class="guide-card" href="/article/where-to-buy-asian-snacks-online-us">
+        <span class="badge">Snacks · Guide</span>
+        <h3>Asian Snacks & Ramen Online (U.S.)</h3>
+        <p data-i18n="guide-snacks">拉面、零食、饮料分类选购——30+ 产品推荐与美国线上渠道对比。</p>
+      </a>
+      <a class="guide-card" href="/article/where-to-buy-asian-sunscreens-in-the-us">
+        <span class="badge">Beauty · Guide</span>
+        <h3>Asian Sunscreens in the U.S. (2025)</h3>
+        <p data-i18n="guide-sunscreen">日韩防晒霜在哪买、怎么辨真假、编辑精选清单。</p>
+      </a>
+      <a class="guide-card" href="/article/where-to-buy-korean-skincare-online-us">
+        <span class="badge">K-Beauty · Guide</span>
+        <h3>Korean Skincare Shopping Guide</h3>
+        <p data-i18n="guide-kbeauty">正品渠道、假货识别、热门品牌选购路径。</p>
+      </a>
+    </div>
+    <a class="more-link" href="/article/" data-i18n="guides-more">查看全部英文购买指南 →</a>
   </section>
 
-  <section class="skills" id="skills">
-    <h2>技能栈</h2>
-    <div class="skill-tags">
-      <span class="skill-tag">SQL</span>
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">电商增长</span>
-      <span class="skill-tag">转化优化</span>
-      <span class="skill-tag">用户分层</span>
-      <span class="skill-tag">流失预测</span>
-      <span class="skill-tag">营销自动化</span>
-      <span class="skill-tag">SEO</span>
-      <span class="skill-tag">数据分析</span>
-      <span class="skill-tag">A/B Testing</span>
-      <span class="skill-tag">Growth Dashboard</span>
-      <span class="skill-tag">Schema Markup</span>
+  <section class="section" id="handbook">
+    <div class="section-header">
+      <h2 data-i18n="pillars-title">两大核心内容</h2>
+      <p data-i18n="pillars-desc">增长方法论与消费指南，覆盖不同语言读者。</p>
+    </div>
+    <div class="pillar-grid">
+      <a class="pillar-card" href="/growth-metrics-handbook/">
+        <h3 data-i18n="pillar-handbook-title">电商 Growth 指标手册</h3>
+        <p data-i18n="pillar-handbook-desc">37 个核心指标：定义、公式、SQL、优化策略与企业案例。面向增长团队内训与自学，含闪卡与测验。</p>
+      </a>
+      <a class="pillar-card" href="/article/">
+        <h3 data-i18n="pillar-articles-title">English Buying Guides Hub</h3>
+        <p data-i18n="pillar-articles-desc">8 篇常青购买指南：K-beauty 趋势、日韩药妆、厨房电器、零食拉面——附对比表与购买清单。</p>
+      </a>
     </div>
   </section>
 
-  <section class="latest" id="latest">
-    <h2>最新内容</h2>
-    <a class="latest-card" href="/blog/">
-      <div class="tag">博客</div>
-      <h3>AI 时代的工作安全感 · 中文博客</h3>
-      <p>140+ 篇关于裁员、岗位贬值、职业选择的判断文章——从 DeepSeek 涨价到星巴克裁员传闻，看 AI 时代普通人怎么站队。</p>
-    </a>
-    <a class="latest-card" href="/blog/deepseek-price-hike-ai-electricity-era/">
-      <div class="tag">AI 判断</div>
-      <h3>DeepSeek 涨价 350%：AI 开始"收电费"了</h3>
-      <p>从补贴圈地到按算力计费——AI 越贵，你的判断越值钱；AI 越便宜，你的执行越危险。</p>
-    </a>
-    <a class="latest-card" href="/blog/xingbake-piyao-layoff-rumor/">
-      <div class="tag">职场观察</div>
-      <h3>星巴克辟谣后，打工人为什么还是愿意信？</h3>
-      <p>传闻是假的，情绪是真的——为什么没被证实的裁员传闻能上两个热搜。</p>
-    </a>
-    <a class="latest-card" href="/growth-metrics-handbook/">
-      <div class="tag">指标手册</div>
-      <h3>37 个电商 Growth 指标 · 从漏斗认知到仪表盘落地</h3>
-      <p>涵盖获客、激活、转化、收入、留存、客户价值 6 大模块，配套闪卡、对比分析和互动测验。</p>
-    </a>
-    <a class="latest-card" href="/article/missha-bb-cream-cardi-b-tiktok-boom">
-      <div class="tag">Trend Report</div>
-      <h3>The Missha BB Cream Boom: What Cardi B Started</h3>
-      <p>816% TikTok Shop sales jump, 329% search spike in a week — the K-beauty staple at the center of the moment.</p>
-    </a>
-    <a class="latest-card" href="/article/bloom-skin-2026-k-beauty-trend">
-      <div class="tag">Trend Report</div>
-      <h3>Bloom Skin: The 2026 K-Beauty Trend Replacing Glass Skin</h3>
-      <p>Barrier-first skin + daily SPF — what the 1.7M-video TikTok trend means for your sunscreen pick.</p>
-    </a>
-    <a class="latest-card" href="/article/ube-next-matcha-trend">
-      <div class="tag">Trend Report</div>
-      <h3>Why Ube Is Becoming the Next Matcha</h3>
-      <p>The purple yam followed matcha's exact playbook. What it is, why it's trending, and what US shoppers can buy now.</p>
-    </a>
-    <a class="latest-card" href="/article/where-to-buy-asian-sunscreens-in-the-us">
-      <div class="tag">Buying Guide</div>
-      <h3>Where to Buy Asian Sunscreens in the U.S. (2025)</h3>
-      <p>Compare Yami, Amazon, YesStyle — delivery, authenticity, price ranges, and a practical buying checklist.</p>
-    </a>
-    <a class="latest-card" href="/article/where-to-buy-asian-snacks-online-us">
-      <div class="tag">Buying Guide</div>
-      <h3>Where to Buy Asian Snacks & Ramen Online in the U.S.</h3>
-      <p>From Ichiran ramen to Samyang buldak — a category-by-category guide with 30+ product recommendations.</p>
-    </a>
-    <a class="latest-card" href="/article/where-to-buy-korean-skincare-online-us">
-      <div class="tag">Buying Guide</div>
-      <h3>Where to Buy Korean Skincare Online in the U.S.</h3>
-      <p>Sulwhasoo, SKIN1004, Beauty of Joseon — authentic K-beauty shopping guide with counterfeit detection tips.</p>
-    </a>
-    <a class="latest-card" href="/article/best-japanese-drugstore-products-us">
-      <div class="tag">Buying Guide</div>
-      <h3>Best Japanese Drugstore Products You Can Buy in the U.S.</h3>
-      <p>Lion Pair acne care, Fino & Tsubaki hair masks — complete usage guides and comparison tables.</p>
-    </a>
-    <a class="latest-card" href="/article/best-asian-kitchen-appliances-us">
-      <div class="tag">Buying Guide</div>
-      <h3>Best Asian Kitchen Appliances Available in the U.S.</h3>
-      <p>Zojirushi vs Tatung rice cookers, Joyoung soy milk makers — voltage compatibility guide included.</p>
+  <section class="section section-alt" id="trends">
+    <div class="section-header">
+      <h2 data-i18n="trends-title">趋势解读</h2>
+      <p data-i18n="trends-desc">跟热点，但用数据和购买建议收尾——不是纯新闻转述。</p>
+    </div>
+    <div class="card-list">
+      <a class="content-card" href="/article/missha-bb-cream-cardi-b-tiktok-boom">
+        <div class="tag">Trend · K-Beauty</div>
+        <h3>The Missha BB Cream Boom (2026)</h3>
+        <p>Cardi B TikTok 带火 Missha：一周搜索量 +329%、销量 +816%——这款十年老网红为什么又爆了。</p>
+      </a>
+      <a class="content-card" href="/article/bloom-skin-2026-k-beauty-trend">
+        <div class="tag">Trend · Skincare</div>
+        <h3>Bloom Skin: The 2026 K-Beauty Trend</h3>
+        <p>屏障修护取代 glass skin——趋势是什么，该选哪类防晒霜。</p>
+      </a>
+      <a class="content-card" href="/article/ube-next-matcha-trend">
+        <div class="tag">Trend · Food</div>
+        <h3>Why Ube Is Becoming the Next Matcha</h3>
+        <p>星巴克持续推紫薯饮品——紫薯粉会不会走抹茶同款路径，美国能买什么。</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="buying">
+    <div class="section-header">
+      <h2 data-i18n="buying-title">分类购买指南</h2>
+      <p data-i18n="buying-desc">按品类拆分的深度指南，适合收藏后按需查阅。</p>
+    </div>
+    <div class="two-col">
+      <div class="card-list">
+        <a class="content-card" href="/article/best-japanese-drugstore-products-us">
+          <div class="tag">Japan</div>
+          <h3>Japanese Drugstore Products (U.S.)</h3>
+          <p>祛痘、发膜、毛孔护理——日本药妆在美国的选购与用法。</p>
+        </a>
+        <a class="content-card" href="/article/best-asian-kitchen-appliances-us">
+          <div class="tag">Kitchen</div>
+          <h3>Asian Kitchen Appliances Guide</h3>
+          <p>Zojirushi vs Tatung 电饭煲、豆浆机——电压与型号选购。</p>
+        </a>
+      </div>
+      <div class="card-list">
+        <a class="content-card" href="/landing-pages/chagee-boya-jasmine-tea">
+          <div class="tag">Product · Tea</div>
+          <h3>CHAGEE BOYA Jasmine Tea Bags</h3>
+          <p>霸王茶姬伯牙绝弦在家版——茶包 vs 门店奶茶，怎么泡。</p>
+        </a>
+        <a class="content-card" href="/landing-pages/beauty-of-joseon-vs-round-lab-sunscreen">
+          <div class="tag">Product · Compare</div>
+          <h3>Beauty of Joseon vs Round Lab Sunscreen</h3>
+          <p>两款热门韩系防晒的成分、肤感与适用肤质对比。</p>
+        </a>
+      </div>
+    </div>
+    <a class="more-link" href="/landing-pages/" data-i18n="buying-more">浏览 100+ 产品落地页 →</a>
+  </section>
+
+  <section class="section section-alt" id="blog">
+    <div class="section-header">
+      <h2 data-i18n="blog-title">中文博客 · 周 MO 乱谈</h2>
+      <p data-i18n="blog-desc">140+ 篇关于 AI、职场与商业判断的中文文章——和英文购买指南互补。</p>
+    </div>
+    <div class="card-list">
+      <a class="content-card" href="/blog/">
+        <div class="tag">Blog</div>
+        <h3 data-i18n="blog-all-title">全部文章索引</h3>
+        <p data-i18n="blog-all-desc">裁员、岗位贬值、AI 电价——普通人的判断框架。</p>
+      </a>
+      <a class="content-card" href="/blog/deepseek-price-hike-ai-electricity-era/">
+        <div class="tag">AI 判断</div>
+        <h3>DeepSeek 涨价 350%：AI 开始「收电费」了</h3>
+        <p>从补贴圈地到按算力计费——AI 越贵，判断越值钱。</p>
+      </a>
+      <a class="content-card" href="/blog/xingbake-piyao-layoff-rumor/">
+        <div class="tag">职场观察</div>
+        <h3>星巴克辟谣后，打工人为什么还是愿意信？</h3>
+        <p>传闻是假的，情绪是真的——没被证实的裁员传闻为何能上热搜。</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="lab">
+    <div class="section-header">
+      <h2 data-i18n="lab-title">增长实验田</h2>
+      <p data-i18n="lab-desc">真实产品的 SEO 落地页：选品、文案、Schema 结构化数据——跑通就留，跑不通当学费。</p>
+    </div>
+    <a class="pillar-card" href="/landing-pages/" style="display:block;text-decoration:none;">
+      <h3 data-i18n="lab-lp-title">SEO 产品落地页（100+）</h3>
+      <p data-i18n="lab-lp-desc">每个页面针对一个真实 SKU：完整产品信息、购买引导、Open Graph 与 Product schema。适合学习 SEO 落地页结构。</p>
     </a>
   </section>
 
-  <section class="experiments" id="experiments">
-    <h2>实验田</h2>
-    <p class="section-desc">各种增长实验和 side project，跑通了就留下，跑不通就当学费。</p>
-    <div class="experiment-grid">
-      <a class="experiment-card" href="/landing-pages/" style="text-decoration:none;color:inherit;">
-        <h3>SEO 产品落地页</h3>
-        <p>为真实产品做 SEO 营销页：选品调研、文案撰写、结构化数据，一条龙。</p>
-        <div class="count">100+ 页面</div>
-      </a>
+  <section class="section" style="padding-top:0;">
+    <div class="skill-tags" aria-label="Skills">
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Growth</span>
+      <span class="skill-tag">SEO</span>
+      <span class="skill-tag">CRO</span>
+      <span class="skill-tag">Segmentation</span>
+      <span class="skill-tag">A/B Testing</span>
+      <span class="skill-tag">Schema Markup</span>
     </div>
   </section>
 
   <footer>&copy; 2026 周兆坤 | zhouzk.com</footer>
 
   <script>
+    var i18n = {
+      zh: {
+        "nav-guides": "精选指南",
+        "nav-handbook": "指标手册",
+        "nav-trends": "趋势解读",
+        "nav-buying": "购买指南",
+        "nav-blog": "中文博客",
+        "nav-lab": "产品页实验",
+        "tagline": "Growth Engineer @ Yami",
+        "guides-title": "精选购买指南",
+        "guides-desc": "深度调研、对比表、美国购买渠道——从日本饮料到 K-beauty，先读指南再下单。",
+        "guide-jdrinks": "Must-try 清单：Ramune、Pocari、罐装咖啡、康普茶——美国哪里买、怎么选口味。",
+        "guide-ramune": "口味排名、开瓶步骤、品牌对比——日本弹珠汽水完整入门。",
+        "guide-coffee": "BOSS、Georgia、UCC——日本罐装咖啡品牌与甜度/咖啡因对比。",
+        "guide-snacks": "拉面、零食、饮料分类选购——30+ 产品推荐与美国线上渠道对比。",
+        "guide-sunscreen": "日韩防晒霜在哪买、怎么辨真假、编辑精选清单。",
+        "guide-kbeauty": "正品渠道、假货识别、热门品牌选购路径。",
+        "guides-more": "查看全部英文购买指南 →",
+        "pillars-title": "两大核心内容",
+        "pillars-desc": "增长方法论与消费指南，覆盖不同语言读者。",
+        "pillar-handbook-title": "电商 Growth 指标手册",
+        "pillar-handbook-desc": "37 个核心指标：定义、公式、SQL、优化策略与企业案例。面向增长团队内训与自学，含闪卡与测验。",
+        "pillar-articles-title": "English Buying Guides Hub",
+        "pillar-articles-desc": "8 篇常青购买指南：K-beauty 趋势、日韩药妆、厨房电器、零食拉面——附对比表与购买清单。",
+        "trends-title": "趋势解读",
+        "trends-desc": "跟热点，但用数据和购买建议收尾——不是纯新闻转述。",
+        "buying-title": "分类购买指南",
+        "buying-desc": "按品类拆分的深度指南，适合收藏后按需查阅。",
+        "buying-more": "浏览 100+ 产品落地页 →",
+        "blog-title": "中文博客 · 周 MO 乱谈",
+        "blog-desc": "140+ 篇关于 AI、职场与商业判断的中文文章——和英文购买指南互补。",
+        "blog-all-title": "全部文章索引",
+        "blog-all-desc": "裁员、岗位贬值、AI 电价——普通人的判断框架。",
+        "lab-title": "增长实验田",
+        "lab-desc": "真实产品的 SEO 落地页：选品、文案、Schema 结构化数据——跑通就留，跑不通当学费。",
+        "lab-lp-title": "SEO 产品落地页（100+）",
+        "lab-lp-desc": "每个页面针对一个真实 SKU：完整产品信息、购买引导、Open Graph 与 Product schema。适合学习 SEO 落地页结构。"
+      },
+      en: {
+        "nav-guides": "Guides",
+        "nav-handbook": "Handbook",
+        "nav-trends": "Trends",
+        "nav-buying": "Buying",
+        "nav-blog": "Blog (ZH)",
+        "nav-lab": "Landing pages",
+        "tagline": "Growth Engineer @ Yami",
+        "guides-title": "Featured Buying Guides",
+        "guides-desc": "Research-backed guides with comparison tables and U.S. retailer tips — drinks, beauty, snacks.",
+        "guide-jdrinks": "Must-try list: Ramune, Pocari, canned coffee, kombucha — where to buy in the U.S.",
+        "guide-ramune": "Flavors ranked, how to open, brand comparison — complete Ramune primer.",
+        "guide-coffee": "BOSS, Georgia, UCC — Japanese canned coffee brands compared by sweetness and caffeine.",
+        "guide-snacks": "Ramen, snacks, drinks by category — 30+ picks and online retailer comparison.",
+        "guide-sunscreen": "Where to buy K/J sunscreens in the U.S., authenticity checks, editor picks.",
+        "guide-kbeauty": "Authentic channels, counterfeit red flags, brand shopping paths.",
+        "guides-more": "All English buying guides →",
+        "pillars-title": "Two Core Hubs",
+        "pillars-desc": "Growth methodology and consumer guides for different audiences.",
+        "pillar-handbook-title": "E-commerce Growth Metrics Handbook",
+        "pillar-handbook-desc": "37 metrics: definitions, formulas, SQL, playbooks and case studies — flashcards and quizzes included.",
+        "pillar-articles-title": "English Buying Guides Hub",
+        "pillar-articles-desc": "8 evergreen guides: K-beauty trends, Japanese drugstore, kitchen appliances, snacks — with tables and checklists.",
+        "trends-title": "Trend Reports",
+        "trends-desc": "Hot topics with data and what to buy — not just headline recycling.",
+        "buying-title": "Category Guides",
+        "buying-desc": "Deep dives by category — bookmark and return when you need them.",
+        "buying-more": "Browse 100+ product landing pages →",
+        "blog-title": "Chinese Blog · 周 MO 乱谈",
+        "blog-desc": "140+ articles on AI, careers and judgment — complements the English guides.",
+        "blog-all-title": "All blog posts",
+        "blog-all-desc": "Layoffs, job decay, AI pricing — frameworks for ordinary readers.",
+        "lab-title": "Growth Lab",
+        "lab-desc": "SEO landing pages for real SKUs: copy, schema, OG tags — keep what works.",
+        "lab-lp-title": "SEO Product Landing Pages (100+)",
+        "lab-lp-desc": "One real SKU per page: product info, purchase CTAs, Product schema — a reference for landing page SEO."
+      }
+    };
+
     function switchLang(lang) {
-      document.getElementById("intro-zh").style.display =
-        lang === "zh" ? "block" : "none";
-      document.getElementById("intro-en").style.display =
-        lang === "en" ? "block" : "none";
-      document.getElementById("tagline").textContent = "Works at Yami";
+      document.getElementById("intro-zh").style.display = lang === "zh" ? "block" : "none";
+      document.getElementById("intro-en").style.display = lang === "en" ? "block" : "none";
+      document.getElementById("tagline").textContent = i18n[lang]["tagline"];
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n");
+        if (i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    }
+
+    if (window.location.search.indexOf("lang=en") !== -1) {
+      switchLang("en");
     }
   </script>
 </body>
